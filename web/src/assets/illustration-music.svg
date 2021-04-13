@@ -1,0 +1,74 @@
+<svg width="447" height="387" viewBox="0 0 447 387" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Knob">
+<path id="Rectangle 63" d="M234 199.5C234 180.998 248.998 166 267.5 166C286.002 166 301 180.998 301 199.5V236C301 240.418 297.418 244 293 244H242C237.582 244 234 240.418 234 236V199.5Z" fill="white"/>
+<rect id="Rectangle 30" x="241" y="230" width="20" height="3" rx="1.5" fill="#FFB7B7"/>
+<rect id="Rectangle 64" x="265" y="230" width="30" height="3" rx="1.5" fill="#FFB7B7"/>
+<path id="Ellipse 22" d="M241.684 218C238.392 213.248 236.45 207.679 236.069 201.894C235.688 196.109 236.883 190.33 239.523 185.18C242.163 180.031 246.148 175.708 251.047 172.68C255.947 169.652 261.573 168.034 267.319 168.001C273.064 167.967 278.709 169.52 283.642 172.491C288.576 175.462 292.61 179.738 295.309 184.856C298.007 189.974 299.267 195.74 298.953 201.529C298.638 207.317 296.76 212.909 293.523 217.699" stroke="#FFB7B7" stroke-width="3"/>
+<path id="Ellipse 23" d="M241.633 218C237.609 212.14 235.643 205.069 236.053 197.931C236.463 190.793 239.225 184.004 243.892 178.662C248.559 173.319 254.859 169.734 261.774 168.487C268.689 167.24 275.815 168.403 282 171.789" stroke="#4F6FE5" stroke-width="3"/>
+<path id="Vector 25" d="M269 195L276 181" stroke="#FFB7B7" stroke-width="3"/>
+<circle id="Ellipse 21" cx="267.5" cy="199.5" r="21" stroke="#4F6FE5" stroke-width="3"/>
+</g>
+<g id="Piano">
+<rect id="Rectangle 23" x="183.5" y="297.5" width="159.663" height="88.0002" rx="2.5" fill="white" stroke="#4F6FE5" stroke-width="3"/>
+<path id="Rectangle 30_2" d="M199.425 297.5H213.488V346.6C213.488 347.981 212.369 349.1 210.988 349.1H201.925C200.545 349.1 199.425 347.981 199.425 346.6V297.5Z" fill="#FFB7B7" stroke="#4F6FE5" stroke-width="3"/>
+<path id="Rectangle 35" d="M205 348H208V387H205V348Z" fill="#4F6FE5"/>
+<path id="Rectangle 36" d="M228 348H231V387H228V348Z" fill="#4F6FE5"/>
+<path id="Rectangle 37" d="M273 348H276V387H273V348Z" fill="#4F6FE5"/>
+<path id="Rectangle 40" d="M251 296H254V387H251V296Z" fill="#4F6FE5"/>
+<path id="Rectangle 38" d="M296 348H299V387H296V348Z" fill="#4F6FE5"/>
+<path id="Rectangle 39" d="M319 348H322V387H319V348Z" fill="#4F6FE5"/>
+<path id="Rectangle 31" d="M222.175 297.5H236.238V346.6C236.238 347.981 235.119 349.1 233.738 349.1H224.675C223.295 349.1 222.175 347.981 222.175 346.6V297.5Z" fill="#FFB7B7" stroke="#4F6FE5" stroke-width="3"/>
+<path id="Rectangle 32" d="M267.676 297.5H281.738V346.6C281.738 347.981 280.619 349.1 279.238 349.1H270.176C268.795 349.1 267.676 347.981 267.676 346.6V297.5Z" fill="#FFB7B7" stroke="#4F6FE5" stroke-width="3"/>
+<path id="Rectangle 33" d="M290.426 297.5H304.488V346.6C304.488 347.981 303.369 349.1 301.988 349.1H292.926C291.545 349.1 290.426 347.981 290.426 346.6V297.5Z" fill="#FFB7B7" stroke="#4F6FE5" stroke-width="3"/>
+<path id="Rectangle 34" d="M313.176 297.5H327.238V346.6C327.238 347.981 326.119 349.1 324.738 349.1H315.676C314.295 349.1 313.176 347.981 313.176 346.6V297.5Z" fill="#FFB7B7" stroke="#4F6FE5" stroke-width="3"/>
+</g>
+<g id="Audio File">
+<path id="Rectangle 23_2" d="M117.5 80.6569V134C117.5 135.381 116.381 136.5 115 136.5H73C71.6193 136.5 70.5 135.381 70.5 134V72C70.5 70.6193 71.6193 69.5 73 69.5H106.343C107.006 69.5 107.642 69.7634 108.111 70.2322L116.768 78.8891C117.237 79.3579 117.5 79.9938 117.5 80.6569Z" fill="white" stroke="#4F6FE5" stroke-width="3"/>
+<path id="WAV" d="M83.5337 127H85.022L85.7368 122.395L85.8013 121.961L85.8657 122.395L86.6098 127H88.0981L89.2817 118.469H87.77L87.1899 123.25L87.1489 123.607L87.0962 123.256L86.3813 118.469H85.2036L84.5298 123.221L84.477 123.572L84.436 123.238L83.8677 118.469H82.3618L83.5337 127ZM94.8594 125.219L95.3574 127H97.0918L94.3496 118.469H92.8555L90.0605 127H91.7949L92.2988 125.219H94.8594ZM92.7031 123.818L93.5996 120.678L94.4727 123.818H92.7031ZM100.343 127H102.019L104.603 118.469H102.787L101.334 124.035L101.175 124.615L101.029 124.041L99.5816 118.469H97.7652L100.343 127Z" fill="#FFB7B7"/>
+<path id="Vector 12" d="M107 71V80H116" stroke="#4F6FE5" stroke-width="3"/>
+<circle id="Ellipse 5" cx="85.8824" cy="107.588" r="3.88235" fill="#FFB7B7"/>
+<circle id="Ellipse 6" cx="100.118" cy="105" r="3.88235" fill="#FFB7B7"/>
+<path id="Vector 13" d="M89.7647 93.3529V107.588H87.1765V86.8824L104 83V105H101.412V90.7647L89.7647 93.3529Z" fill="#FFB7B7"/>
+</g>
+<g id="Metronome">
+<path id="Vector 23" d="M404.482 191L386 260H435.286L416.804 191H404.482Z" fill="white"/>
+<path id="Vector 15" d="M410.643 208.25V252.607" stroke="#FFB7B7" stroke-width="3"/>
+<path id="Vector 16" d="M403.25 242.75H418.036" stroke="#FFB7B7" stroke-width="3"/>
+<path id="Vector 17" d="M404.482 231.661H416.804" stroke="#FFB7B7" stroke-width="3"/>
+<path id="Vector 18" d="M405.714 220.572H415.571" stroke="#FFB7B7" stroke-width="3"/>
+<path id="Vector 19" d="M406.947 209.482H414.339" stroke="#FFB7B7" stroke-width="3"/>
+<path id="Vector 21" d="M410.643 252.607L438.982 218.107" stroke="#4F6FE5" stroke-width="3"/>
+<circle id="Ellipse 15" cx="438.982" cy="218.107" r="5.89286" fill="white" stroke="#4F6FE5" stroke-width="3"/>
+<path id="Vector 22" d="M386 260C390.929 257.125 399.554 252.607 410.643 252.607C421.732 252.607 430.357 257.125 435.286 260" stroke="#FFB7B7" stroke-width="3"/>
+<path id="Vector 14" d="M426.045 225.5L416.804 191H404.482L386 260H435.286L429.125 237.205" stroke="#4F6FE5" stroke-width="3"/>
+</g>
+<g id="DAW">
+<rect id="Rectangle 10" x="213.5" y="6.5" width="187" height="106" rx="6.5" fill="white" stroke="#FFB7B7" stroke-width="3"/>
+<path id="Vector 24" d="M257 12V102" stroke="#FFB7B7" stroke-width="3" stroke-linecap="round"/>
+<path id="Polygon 1" d="M263.102 1.5L257.04 12L250.978 1.5L263.102 1.5Z" fill="white" stroke="#4F6FE5" stroke-width="3"/>
+<g id="Group 35">
+<path id="Vector 23_2" d="M203 69.0001C243.5 69.0001 272 72 307 93.0001C320.5 65.5 348 69 348 69L411 81.0001" stroke="#4F6FE5" stroke-width="3"/>
+<circle id="Ellipse 16" cx="203" cy="69" r="3.5" fill="white" stroke="#FFB7B7" stroke-width="3"/>
+<circle id="Ellipse 18" cx="307" cy="93" r="3.5" fill="white" stroke="#FFB7B7" stroke-width="3"/>
+<circle id="Ellipse 19" cx="348" cy="69" r="3.5" fill="white" stroke="#FFB7B7" stroke-width="3"/>
+<circle id="Ellipse 20" cx="411" cy="81" r="3.5" fill="white" stroke="#FFB7B7" stroke-width="3"/>
+</g>
+<g id="Group 36">
+<rect id="Rectangle 12" x="199.5" y="22.5" width="215" height="32" rx="2.5" fill="white" stroke="#4F6FE5" stroke-width="3"/>
+<rect id="Rectangle 11" x="204" y="27" width="25" height="3" rx="1.5" fill="#FFB7B7"/>
+<rect id="Rectangle 13" x="231" y="32" width="25" height="3" rx="1.5" fill="#FFB7B7"/>
+<rect id="Rectangle 14" x="258" y="37" width="40" height="3" rx="1.5" fill="#FFB7B7"/>
+<rect id="Rectangle 15" x="300" y="32" width="10" height="3" rx="1.5" fill="#FFB7B7"/>
+<rect id="Rectangle 16" x="312" y="47" width="10" height="3" rx="1.5" fill="#FFB7B7"/>
+<rect id="Rectangle 20" x="324" y="42" width="10" height="3" rx="1.5" fill="#FFB7B7"/>
+<rect id="Rectangle 21" x="336" y="37" width="10" height="3" rx="1.5" fill="#FFB7B7"/>
+<rect id="Rectangle 17" x="348" y="32" width="25" height="3" rx="1.5" fill="#FFB7B7"/>
+<rect id="Rectangle 22" x="375" y="37" width="35" height="3" rx="1.5" fill="#FFB7B7"/>
+</g>
+</g>
+<g id="Cable">
+<path id="Vector 26" d="M1.90421 345.064C8.90414 322.892 15.8962 298.242 34.2487 293.325C52.6013 288.407 57.9765 312.331 75.1991 305.128C92.4216 297.925 82.984 270.431 102.897 253.923" stroke="#FFB7B7" stroke-width="3"/>
+<path id="Rectangle 64_2" d="M120.401 222.94C121.377 221.963 122.96 221.963 123.937 222.94L133.129 232.132C134.105 233.108 134.105 234.691 133.129 235.668L115.098 253.699C111.583 257.214 105.885 257.214 102.37 253.699C98.8552 250.184 98.8552 244.486 102.37 240.971L120.401 222.94Z" fill="white" stroke="#4F6FE5" stroke-width="3"/>
+<path id="Rectangle 65" d="M136.311 215.515C137.483 214.343 139.382 214.343 140.554 215.515C141.725 216.687 141.725 218.586 140.554 219.758L130.654 229.657L126.412 225.414L136.311 215.515Z" fill="white" stroke="#4F6FE5" stroke-width="3"/>
+</g>
+</svg>
