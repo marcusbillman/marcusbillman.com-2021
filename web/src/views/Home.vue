@@ -126,6 +126,7 @@
   display: grid;
   place-items: center;
   &__box {
+    position: relative;
     height: 70%;
     display: flex;
     flex-direction: column;
@@ -133,6 +134,24 @@
     border: 3px solid $grey-200;
     border-radius: 2.4rem;
     padding: 0 1.6rem;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 527px;
+      height: 359px;
+      top: -160px;
+      left: -170px;
+      background-image: url("@/assets/squiggle-1.svg");
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      width: 538px;
+      height: 348px;
+      bottom: -60px;
+      right: -275px;
+      background-image: url("@/assets/squiggle-2.svg");
+    }
   }
   &__name {
     font-weight: 600;
