@@ -12,8 +12,4 @@ import "css.gg/icons/all.css";
 @use "@/styles/colours";
 @use "@/styles/layout";
 @use "@/styles/typography";
-
-section {
-  margin-bottom: 20rem;
-}
 </style>
