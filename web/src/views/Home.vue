@@ -6,7 +6,8 @@
           <span class="hero__name">Marcus Billman</span>
           <div class="hero__main">
             <h1 class="hero__heading">
-              My art is arranging links and shapes into experiences.
+              My art is arranging links and shapes into
+              <span class="hero__bold">experiences.</span>
             </h1>
             <i class="gg-arrow-down"></i>
           </div>
@@ -147,6 +148,10 @@
   &__heading {
     text-align: center;
     margin-bottom: 6.4rem;
+  }
+  &__bold {
+    font-weight: 500;
+    color: colours.$blueberry-500;
   }
   i {
     --ggs: calc(32 / 22);
