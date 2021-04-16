@@ -14,6 +14,7 @@ import "css.gg/icons/all.css";
 @use "@/styles/typography";
 
 body {
+  color: $grey-900;
   background: $white;
   background-image: radial-gradient($grey-100 2px, transparent 0);
   background-size: 32px 32px;

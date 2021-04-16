@@ -136,6 +136,7 @@
   }
   &__name {
     font-weight: 600;
+    color: $grey-800;
     margin-top: 6.4rem;
   }
   &__main {
