@@ -128,16 +128,20 @@
   &__box {
     position: relative;
     height: 70%;
-    max-height: 60rem;
+    max-height: 80rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     border: 3px solid $grey-200;
     border-radius: 2.4rem;
     padding: 0 1.6rem;
-    &::before {
+    &::before,
+    &::after {
       content: "";
       position: absolute;
+      pointer-events: none;
+    }
+    &::before {
       width: 527px;
       height: 359px;
       top: -160px;
@@ -145,8 +149,6 @@
       background-image: url("@/assets/squiggle-1.svg");
     }
     &::after {
-      content: "";
-      position: absolute;
       width: 538px;
       height: 348px;
       bottom: -60px;
@@ -160,6 +162,7 @@
     margin-top: 6.4rem;
   }
   &__main {
+    width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -177,6 +180,33 @@
   i {
     --ggs: calc(32 / 22);
     color: $blueberry-500;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .hero {
+    &__box {
+      width: calc(100% + 12.8rem);
+      padding: 0 16rem;
+      &::before {
+        top: -60px;
+        left: -130px;
+      }
+      &::after {
+        bottom: -40px;
+        right: -80px;
+      }
+    }
+    &__name {
+      display: none;
+    }
+    &__main {
+      align-items: start;
+    }
+    &__heading {
+      max-width: 60rem;
+      text-align: left;
+    }
   }
 }
 </style>
