@@ -2,8 +2,15 @@
   <div class="page">
     <main class="page-container">
       <section class="hero">
-        <h1>My art is arranging links and shapes into experiences.</h1>
-        <i class="gg-arrow-down"></i>
+        <div class="hero__box">
+          <span class="hero__name">Marcus Billman</span>
+          <div class="hero__main">
+            <h1 class="hero__heading">
+              My art is arranging links and shapes into experiences.
+            </h1>
+            <i class="gg-arrow-down"></i>
+          </div>
+        </div>
       </section>
       <section class="bio">
         <p class="bio__content">
@@ -110,4 +117,39 @@
 
 <script setup></script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+@use "@/styles/colours";
+
+.hero {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  &__box {
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 3px solid colours.$grey-200;
+    border-radius: 2.4rem;
+    padding: 0 1.6rem;
+  }
+  &__name {
+    font-weight: 600;
+    margin-top: 6.4rem;
+  }
+  &__main {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  &__heading {
+    text-align: center;
+    margin-bottom: 6.4rem;
+  }
+  i {
+    color: colours.$blueberry-500;
+  }
+}
+</style>
