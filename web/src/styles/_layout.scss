@@ -1,8 +1,35 @@
+@use "@/styles/colours" as *;
+
 .page-container {
+  position: relative;
   width: 100%;
   max-width: 120rem;
   margin: 0 auto;
   padding: 0 1.6rem;
+  &::before,
+  &::after {
+    position: absolute;
+    width: 4px;
+    top: 0;
+    bottom: 0;
+    background-image: radial-gradient($salmon 2px, transparent 0);
+    background-size: 16px 16px;
+    background-position: -22px 0;
+    z-index: 10;
+    pointer-events: none;
+
+    @media screen and (min-width: 900px) {
+      content: "";
+    }
+  }
+  &::before {
+    left: 0;
+    transform: translateX(1.6rem);
+  }
+  &::after {
+    right: 0;
+    transform: translateX(-1.6rem);
+  }
 }
 
 section {
