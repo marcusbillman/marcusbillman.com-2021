@@ -1,6 +1,6 @@
 <template>
   <div class="page">
-    <main class="dotted-container">
+    <main class="page-container">
       <section class="hero">
         <h1>My art is arranging links and shapes into experiences.</h1>
         <i class="gg-arrow-down"></i>
