@@ -128,6 +128,7 @@
   &__box {
     position: relative;
     height: 70%;
+    max-height: 60rem;
     display: flex;
     flex-direction: column;
     align-items: center;
