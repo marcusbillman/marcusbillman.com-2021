@@ -149,6 +149,7 @@
     margin-bottom: 6.4rem;
   }
   i {
+    --ggs: calc(32 / 22);
     color: colours.$blueberry-500;
   }
 }
