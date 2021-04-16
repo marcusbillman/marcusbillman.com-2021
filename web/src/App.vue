@@ -8,11 +8,12 @@ import "css.gg/icons/all.css";
 </script>
 
 <style lang="scss">
-@use "@/styles/global";
+@use "@/styles/reset";
+@use "@/styles/colours";
+@use "@/styles/layout";
+@use "@/styles/typography";
 
-.page-container {
-  max-width: 120rem;
-  margin: 0 auto;
-  padding: 0 1.6rem;
+section {
+  margin-bottom: 20rem;
 }
 </style>
