@@ -119,7 +119,7 @@
 <script setup></script>
 
 <style lang="scss" scoped>
-@use "@/styles/colours";
+@use "@/styles/colours" as *;
 
 .hero {
   height: 100vh;
@@ -130,7 +130,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 3px solid colours.$grey-200;
+    border: 3px solid $grey-200;
     border-radius: 2.4rem;
     padding: 0 1.6rem;
   }
@@ -151,11 +151,11 @@
   }
   &__bold {
     font-weight: 500;
-    color: colours.$blueberry-500;
+    color: $blueberry-500;
   }
   i {
     --ggs: calc(32 / 22);
-    color: colours.$blueberry-500;
+    color: $blueberry-500;
   }
 }
 </style>

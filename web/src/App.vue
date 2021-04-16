@@ -9,13 +9,13 @@ import "css.gg/icons/all.css";
 
 <style lang="scss">
 @use "@/styles/reset";
-@use "@/styles/colours";
+@use "@/styles/colours" as *;
 @use "@/styles/layout";
 @use "@/styles/typography";
 
 body {
-  background: colours.$white;
-  background-image: radial-gradient(colours.$grey-100 2px, transparent 0);
+  background: $white;
+  background-image: radial-gradient($grey-100 2px, transparent 0);
   background-size: 32px 32px;
   background-attachment: fixed;
 }
