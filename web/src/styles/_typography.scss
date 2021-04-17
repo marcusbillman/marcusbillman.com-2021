@@ -7,19 +7,18 @@ body {
   line-height: 1.8;
 }
 
-h1 {
-  font-size: 3rem;
-  font-weight: 400;
+h1,
+h2 {
+  font-size: clamp(3.2rem, 6vw, 5.6rem);
   line-height: 1.5;
-  color: $grey-800;
+}
 
-  @media screen and (min-width: 900px) {
-    font-size: 5.6rem;
-  }
+h1 {
+  font-weight: 400;
+  color: $grey-800;
 }
 
 h2 {
-  font-size: 3rem;
   font-weight: 600;
   color: $blueberry-500;
 }
