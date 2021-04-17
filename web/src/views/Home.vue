@@ -253,6 +253,38 @@ section .flow {
   margin: 0 10rem;
 }
 
+.bio {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  &__content {
+    max-width: 70rem;
+    font-size: 2.4rem;
+  }
+  &::before,
+  &::after {
+    width: 6rem;
+    height: 4px;
+    background-image: radial-gradient($salmon 2px, transparent 0);
+    background-size: 16px 16px;
+    pointer-events: none;
+    @media screen and (min-width: 900px) {
+      content: "";
+    }
+  }
+  &::before {
+    background-position: -22px 10px;
+    margin-left: 1.2rem;
+    margin-right: 3.2rem;
+  }
+  &::after {
+    flex-grow: 1;
+    background-position: right -22px top 10px;
+    margin-left: 3.2rem;
+    margin-right: 1.2rem;
+  }
+}
+
 .contact {
   align-items: center;
   text-align: center;
