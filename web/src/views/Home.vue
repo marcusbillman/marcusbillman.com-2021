@@ -20,12 +20,13 @@
             experiences for the web. I’m also a hobbyist music producer.
           </p>
         </section>
-        <img
-          v-svg-inline
-          class="illustration"
-          src="@/assets/illustration-design.svg"
-          alt="Design illustration"
-        />
+        <div class="illustration">
+          <img
+            v-svg-inline
+            src="@/assets/illustration-design.svg"
+            alt="Design illustration"
+          />
+        </div>
         <section class="design">
           <div class="preheader">
             <span class="preheader__number">01</span>
@@ -61,12 +62,14 @@
             </div>
           </div>
         </section>
-        <img
-          v-svg-inline
-          class="illustration"
-          src="@/assets/illustration-music.svg"
-          alt="Music illustration"
-        />
+        <div class="illustration">
+          <img
+            v-svg-inline
+            class="illustration"
+            src="@/assets/illustration-music.svg"
+            alt="Music illustration"
+          />
+        </div>
         <section class="music">
           <div class="preheader">
             <span class="preheader__number">02</span>
@@ -309,7 +312,7 @@ section .flow {
 }
 
 .illustration {
-  margin-left: auto;
-  margin-right: auto;
+  display: grid;
+  place-items: center;
 }
 </style>
