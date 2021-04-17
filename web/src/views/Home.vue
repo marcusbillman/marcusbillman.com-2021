@@ -289,4 +289,9 @@ section .flow {
   align-items: center;
   text-align: center;
 }
+
+.illustration {
+  margin-left: auto;
+  margin-right: auto;
+}
 </style>
