@@ -23,6 +23,12 @@ h2 {
   color: $blueberry-500;
 }
 
+h3 {
+  font-size: 1.6rem;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
 p {
   max-width: 60ch;
   color: $grey-900;
