@@ -248,4 +248,9 @@ import Button from "@/components/Button.vue";
 section .flow {
   --spacing: 3.2rem;
 }
+
+.contact {
+  align-items: center;
+  text-align: center;
+}
 </style>
