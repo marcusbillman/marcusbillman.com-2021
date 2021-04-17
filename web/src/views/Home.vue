@@ -26,9 +26,9 @@
         alt="Design illustration"
       />
       <section class="design">
-        <div class="section-header">
-          <span class="section-header__number">01</span>
-          <span class="section-header__title">WEB & DESIGN</span>
+        <div class="preheader">
+          <span class="preheader__number">01</span>
+          <span class="preheader__title">WEB & DESIGN</span>
         </div>
         <div class="container">
           <div class="design__info">
@@ -67,9 +67,9 @@
         alt="Music illustration"
       />
       <section class="music">
-        <div class="section-header">
-          <span class="section-header__number">02</span>
-          <span class="section-header__title">MUSIC</span>
+        <div class="preheader">
+          <span class="preheader__number">02</span>
+          <span class="preheader__title">MUSIC</span>
         </div>
         <div class="container">
           <h2>Beats and jams</h2>
