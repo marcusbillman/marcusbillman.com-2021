@@ -33,6 +33,8 @@
 }
 
 .flow > * + * {
+  display: flex;
+  flex-direction: column;
   margin-top: var(--spacing, 1.6rem);
 }
 
