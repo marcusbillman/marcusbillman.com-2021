@@ -32,7 +32,7 @@
             <span class="preheader__title">WEB & DESIGN</span>
           </div>
           <div class="container">
-            <div class="design__info">
+            <div class="splitter design__info">
               <div class="flow design__left">
                 <h2>The web is my oyster</h2>
                 <p>
@@ -72,7 +72,7 @@
             <span class="preheader__number">02</span>
             <span class="preheader__title">MUSIC</span>
           </div>
-          <div class="container">
+          <div class="flow container">
             <h2>Beats and jams</h2>
             <p>
               During my day, I subconsciously tap drum beats on tables and hum
@@ -106,12 +106,14 @@
           </div>
         </section>
         <section class="contact">
-          <h2>Communication is key</h2>
-          <p>
-            Want to talk linear gradients or pentatonic scales (or just say hi)?
-            You’re welcome to drop a line or two.
-          </p>
-          <Button href="/contact">Contact me</Button>
+          <div class="flow">
+            <h2>Communication is key</h2>
+            <p>
+              Want to talk linear gradients or pentatonic scales (or just say
+              hi)? You’re welcome to drop a line or two.
+            </p>
+            <Button href="/contact">Contact me</Button>
+          </div>
         </section>
       </div>
     </main>
@@ -237,5 +239,13 @@ import Button from "@/components/Button.vue";
     margin-left: 1.2rem;
     margin-right: 2.4rem;
   }
+}
+
+.sections {
+  --spacing: 20rem;
+}
+
+section .flow {
+  --spacing: 3.2rem;
 }
 </style>
