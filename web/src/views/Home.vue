@@ -291,6 +291,17 @@ section .flow {
   }
 }
 
+.design {
+  &__tools {
+    max-width: 30rem;
+    margin-top: 0.8rem;
+    * {
+      margin-top: 1rem;
+      margin-right: 1rem;
+    }
+  }
+}
+
 .contact {
   align-items: center;
   text-align: center;
