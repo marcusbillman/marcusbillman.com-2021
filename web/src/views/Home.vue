@@ -124,6 +124,7 @@
 <script setup>
 import BigLink from "@/components/BigLink.vue";
 import Button from "@/components/Button.vue";
+import LinkCard from "@/components/LinkCard.vue";
 import Tag from "@/components/Tag.vue";
 </script>
 
