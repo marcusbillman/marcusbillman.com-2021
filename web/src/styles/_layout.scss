@@ -32,6 +32,6 @@
   }
 }
 
-section {
-  margin-bottom: 20rem;
+.flow > * + * {
+  margin-top: var(--spacing, 1.6rem);
 }
