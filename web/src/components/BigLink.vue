@@ -15,6 +15,10 @@ defineProps(["href", "icon"]);
 .big-link {
   display: flex;
   align-items: center;
+  font-size: 2.4rem;
+  @media screen and (min-width: 900px) {
+    font-size: 4rem;
+  }
   i {
     margin-left: 0.8rem;
     @media screen and (min-width: 900px) {
