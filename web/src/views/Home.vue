@@ -1,117 +1,119 @@
 <template>
   <div class="page">
     <main class="page-container">
-      <section class="hero">
-        <div class="hero__box">
-          <span class="hero__name">Marcus Billman</span>
-          <div class="hero__main">
-            <h1 class="hero__heading">
-              My art is arranging links and shapes into
-              <span class="hero__bold">experiences.</span>
-            </h1>
-            <i class="gg-arrow-down"></i>
-          </div>
-        </div>
-      </section>
-      <section class="bio">
-        <p class="bio__content">
-          I’m Marcus. I design websites and interfaces, and develop experiences
-          for the web. I’m also a hobbyist music producer.
-        </p>
-      </section>
-      <img
-        v-svg-inline
-        class="illustration"
-        src="@/assets/illustration-design.svg"
-        alt="Design illustration"
-      />
-      <section class="design">
-        <div class="preheader">
-          <span class="preheader__number">01</span>
-          <span class="preheader__title">WEB & DESIGN</span>
-        </div>
-        <div class="container">
-          <div class="design__info">
-            <div class="design__left">
-              <h2>The web is my oyster</h2>
-              <p>
-                Few things excite me as much as clean, smooth websites that just
-                feel spot-on. My designs focus on being expressive, helpful and
-                accessible.
-              </p>
+      <div class="flow sections">
+        <section class="hero">
+          <div class="hero__box">
+            <span class="hero__name">Marcus Billman</span>
+            <div class="hero__main">
+              <h1 class="hero__heading">
+                My art is arranging links and shapes into
+                <span class="hero__bold">experiences.</span>
+              </h1>
+              <i class="gg-arrow-down"></i>
             </div>
-            <div class="design__right">
-              <h3>Tools I like using</h3>
-              <div class="design__tools">
-                <Tag text="Vue 3" />
-                <Tag text="SCSS" />
-                <Tag text="GSAP" />
-                <Tag text="Git" />
-                <Tag text="Netlify" />
-                <Tag text="Firebase" />
-                <Tag text="Figma" />
-                <Tag text="Node.js" />
+          </div>
+        </section>
+        <section class="bio">
+          <p class="bio__content">
+            I’m Marcus. I design websites and interfaces, and develop
+            experiences for the web. I’m also a hobbyist music producer.
+          </p>
+        </section>
+        <img
+          v-svg-inline
+          class="illustration"
+          src="@/assets/illustration-design.svg"
+          alt="Design illustration"
+        />
+        <section class="design">
+          <div class="preheader">
+            <span class="preheader__number">01</span>
+            <span class="preheader__title">WEB & DESIGN</span>
+          </div>
+          <div class="container">
+            <div class="design__info">
+              <div class="flow design__left">
+                <h2>The web is my oyster</h2>
+                <p>
+                  Few things excite me as much as clean, smooth websites that
+                  just feel spot-on. My designs focus on being expressive,
+                  helpful and accessible.
+                </p>
+              </div>
+              <div class="design__right">
+                <h3>Tools I like using</h3>
+                <div class="design__tools">
+                  <Tag text="Vue 3" />
+                  <Tag text="SCSS" />
+                  <Tag text="GSAP" />
+                  <Tag text="Git" />
+                  <Tag text="Netlify" />
+                  <Tag text="Firebase" />
+                  <Tag text="Figma" />
+                  <Tag text="Node.js" />
+                </div>
               </div>
             </div>
+            <div class="design__projects">
+              <!-- Featured projects go here -->
+              <BigLink href="/portfolio" icon="arrow-right">More work</BigLink>
+            </div>
           </div>
-          <div class="design__projects">
-            <!-- Featured projects go here -->
-            <BigLink href="/portfolio" icon="arrow-right">More work</BigLink>
+        </section>
+        <img
+          v-svg-inline
+          class="illustration"
+          src="@/assets/illustration-music.svg"
+          alt="Music illustration"
+        />
+        <section class="music">
+          <div class="preheader">
+            <span class="preheader__number">02</span>
+            <span class="preheader__title">MUSIC</span>
           </div>
-        </div>
-      </section>
-      <img
-        v-svg-inline
-        class="illustration"
-        src="@/assets/illustration-music.svg"
-        alt="Music illustration"
-      />
-      <section class="music">
-        <div class="preheader">
-          <span class="preheader__number">02</span>
-          <span class="preheader__title">MUSIC</span>
-        </div>
-        <div class="container">
-          <h2>Beats and jams</h2>
+          <div class="container">
+            <h2>Beats and jams</h2>
+            <p>
+              During my day, I subconsciously tap drum beats on tables and hum
+              cheesy melodies. My free creative outlet is electronic music.
+            </p>
+            <Button href="https://soundcloud.com/xfoxx37"
+              >Listen on SoundCloud</Button
+            >
+          </div>
+        </section>
+        <section class="socials">
+          <div class="socials__content">
+            <LinkCard
+              title="GitHub"
+              desc="marcusbillman"
+              href="https://github.com/marcusbillman"
+              icon="code-slash"
+            ></LinkCard>
+            <LinkCard
+              title="SoundCloud"
+              desc="Marcus Billman"
+              href="https://soundcloud.com/xfoxx37"
+              icon="music"
+            ></LinkCard>
+            <LinkCard
+              title="Instagram"
+              desc="marcusbillman"
+              href="https://www.instagram.com/marcusbillman"
+              icon="instagram"
+            ></LinkCard>
+          </div>
+        </section>
+        <section class="contact">
+          <h2>Communication is key</h2>
           <p>
-            During my day, I subconsciously tap drum beats on tables and hum
-            cheesy melodies. My free creative outlet is electronic music.
+            Want to talk linear gradients or pentatonic scales (or just say hi)?
+            You’re welcome to drop a line or two.
           </p>
-          <Button href="https://soundcloud.com/xfoxx37"
-            >Listen on SoundCloud</Button
-          >
-        </div>
-      </section>
-      <section class="socials">
-        <div class="socials__content">
-          <LinkCard
-            title="GitHub"
-            desc="marcusbillman"
-            href="https://github.com/marcusbillman"
-            icon="code-slash"
-          ></LinkCard>
-          <LinkCard
-            title="SoundCloud"
-            desc="Marcus Billman"
-            href="https://soundcloud.com/xfoxx37"
-            icon="music"
-          ></LinkCard>
-          <LinkCard
-            title="Instagram"
-            desc="marcusbillman"
-            href="https://www.instagram.com/marcusbillman"
-            icon="instagram"
-          ></LinkCard>
-        </div>
-      </section>
-      <section class="contact">
-        <h2>Communication is key</h2>
-        <p>
-          Want to talk linear gradients or pentatonic scales (or just say hi)?
-          You’re welcome to drop a line or two.
-        </p>
-        <Button href="/contact">Contact me</Button>
-      </section>
+          <Button href="/contact">Contact me</Button>
+        </section>
+      </div>
     </main>
   </div>
 </template>
@@ -209,6 +211,31 @@ import Button from "@/components/Button.vue";
       max-width: 60rem;
       text-align: left;
     }
+  }
+}
+
+.preheader {
+  display: flex;
+  align-items: center;
+  color: $grey-800;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 6.4rem;
+  &__number {
+    color: $grey-400;
+    margin-right: 1.2rem;
+  }
+  &::before {
+    content: "";
+    width: 12.8rem;
+    height: 4px;
+    background-image: radial-gradient($salmon 2px, transparent 0);
+    background-size: 16px 16px;
+    background-position: -22px 10px;
+    pointer-events: none;
+    margin-left: 1.2rem;
+    margin-right: 2.4rem;
   }
 }
 </style>
