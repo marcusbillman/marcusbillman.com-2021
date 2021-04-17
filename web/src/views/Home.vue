@@ -31,7 +31,7 @@
             <span class="preheader__number">01</span>
             <span class="preheader__title">WEB & DESIGN</span>
           </div>
-          <div class="container">
+          <div class="section-container">
             <div class="splitter design__info">
               <div class="flow design__left">
                 <h2>The web is my oyster</h2>
@@ -72,7 +72,7 @@
             <span class="preheader__number">02</span>
             <span class="preheader__title">MUSIC</span>
           </div>
-          <div class="flow container">
+          <div class="flow section-container">
             <h2>Beats and jams</h2>
             <p>
               During my day, I subconsciously tap drum beats on tables and hum
@@ -247,6 +247,10 @@ import Button from "@/components/Button.vue";
 
 section .flow {
   --spacing: 3.2rem;
+}
+
+.section-container {
+  margin: 0 10rem;
 }
 
 .contact {
