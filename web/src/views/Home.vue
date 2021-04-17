@@ -105,15 +105,13 @@
             ></LinkCard>
           </div>
         </section>
-        <section class="contact">
-          <div class="flow">
-            <h2>Communication is key</h2>
-            <p>
-              Want to talk linear gradients or pentatonic scales (or just say
-              hi)? You’re welcome to drop a line or two.
-            </p>
-            <Button href="/contact">Contact me</Button>
-          </div>
+        <section class="flow contact">
+          <h2>Communication is key</h2>
+          <p>
+            Want to talk linear gradients or pentatonic scales (or just say hi)?
+            You’re welcome to drop a line or two.
+          </p>
+          <Button href="/contact">Contact me</Button>
         </section>
       </div>
     </main>
@@ -303,8 +301,11 @@ section .flow {
 }
 
 .contact {
+  display: flex;
+  flex-direction: column;
   align-items: center;
   text-align: center;
+  --spacing: 3.2rem;
 }
 
 .illustration {
