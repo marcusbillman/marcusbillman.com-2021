@@ -116,7 +116,9 @@
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+import Button from "@/components/Button.vue";
+</script>
 
 <style lang="scss" scoped>
 @use "@/styles/colours" as *;
