@@ -164,7 +164,6 @@ import Button from "@/components/Button.vue";
   }
   &__name {
     font-weight: 600;
-    color: $grey-800;
     margin-top: 6.4rem;
   }
   &__main {
@@ -219,7 +218,6 @@ import Button from "@/components/Button.vue";
 .preheader {
   display: flex;
   align-items: center;
-  color: $grey-800;
   font-weight: 600;
   letter-spacing: 0.05em;
   text-transform: uppercase;
