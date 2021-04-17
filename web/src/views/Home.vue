@@ -230,14 +230,18 @@ import Button from "@/components/Button.vue";
   }
   &::before {
     content: "";
-    width: 12.8rem;
+    width: 6.4rem;
     height: 4px;
     background-image: radial-gradient($salmon 2px, transparent 0);
     background-size: 16px 16px;
     background-position: -22px 10px;
     pointer-events: none;
-    margin-left: 1.2rem;
-    margin-right: 2.4rem;
+    margin-right: 1.2rem;
+    @media screen and (min-width: 900px) {
+      width: 12.8rem;
+      margin-left: 1.2rem;
+      margin-right: 2.4rem;
+    }
   }
 }
 
@@ -250,7 +254,9 @@ section .flow {
 }
 
 .section-container {
-  margin: 0 10rem;
+  @media screen and (min-width: 900px) {
+    margin: 0 10rem;
+  }
 }
 
 .bio {
