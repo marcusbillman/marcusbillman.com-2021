@@ -121,6 +121,7 @@
 </template>
 
 <script setup>
+import BigLink from "@/components/BigLink.vue";
 import Button from "@/components/Button.vue";
 </script>
 
