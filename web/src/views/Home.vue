@@ -2,18 +2,7 @@
   <div class="page">
     <main class="page-container">
       <div class="flow sections">
-        <section class="hero">
-          <div class="hero__box">
-            <span class="hero__name">Marcus Billman</span>
-            <div class="hero__main">
-              <h1 class="hero__heading">
-                My art is arranging links and shapes into
-                <span class="hero__bold">experiences.</span>
-              </h1>
-              <i class="gg-arrow-down"></i>
-            </div>
-          </div>
-        </section>
+        <Hero />
         <section class="bio">
           <p class="bio__content">
             I’m Marcus. I design websites and interfaces, and develop
@@ -124,100 +113,13 @@
 <script setup>
 import BigLink from "@/components/BigLink.vue";
 import Button from "@/components/Button.vue";
+import Hero from "@/components/Hero.vue";
 import LinkCard from "@/components/LinkCard.vue";
 import Tag from "@/components/Tag.vue";
 </script>
 
 <style lang="scss" scoped>
 @use "@/styles/colours" as *;
-
-.hero {
-  height: 100vh;
-  display: grid;
-  place-items: center;
-  &__box {
-    position: relative;
-    height: 70%;
-    max-height: 80rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border: 2px solid $grey-200;
-    border-radius: 2.4rem;
-    padding: 0 1.6rem;
-    &::before,
-    &::after {
-      content: "";
-      position: absolute;
-      pointer-events: none;
-    }
-    &::before {
-      width: 527px;
-      height: 359px;
-      top: -160px;
-      left: -170px;
-      background-image: url("@/assets/squiggle-1.svg");
-    }
-    &::after {
-      width: 538px;
-      height: 348px;
-      bottom: -60px;
-      right: -275px;
-      background-image: url("@/assets/squiggle-2.svg");
-    }
-  }
-  &__name {
-    font-weight: 600;
-    margin-top: 6.4rem;
-  }
-  &__main {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  &__heading {
-    text-align: center;
-    margin-bottom: 6.4rem;
-  }
-  &__bold {
-    font-weight: 500;
-    color: $blueberry-500;
-  }
-  i {
-    --ggs: calc(32 / 22);
-    color: $blueberry-500;
-  }
-}
-
-@media screen and (min-width: 900px) {
-  .hero {
-    &__box {
-      width: calc(100% + 12.8rem);
-      padding: 0 16rem;
-      &::before {
-        top: -60px;
-        left: -130px;
-      }
-      &::after {
-        bottom: -40px;
-        right: -80px;
-      }
-    }
-    &__name {
-      display: none;
-    }
-    &__main {
-      align-items: start;
-    }
-    &__heading {
-      max-width: 60rem;
-      text-align: left;
-    }
-  }
-}
 
 .preheader {
   display: flex;
