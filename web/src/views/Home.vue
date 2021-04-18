@@ -87,7 +87,7 @@
           </div>
         </section>
         <section class="socials">
-          <div class="socials__content">
+          <div class="splitter socials__content">
             <LinkCard
               title="GitHub"
               desc="marcusbillman"
@@ -301,6 +301,53 @@ section .flow {
       margin-top: 1rem;
       margin-right: 1rem;
     }
+  }
+}
+
+.socials {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  &__content {
+    --splitter-spacing: 2.4rem;
+    > :nth-child(1) {
+      transform: translateX(-3.2rem);
+    }
+    > :nth-child(3) {
+      transform: translateX(3.2rem);
+    }
+    @media screen and (min-width: 900px) {
+      --splitter-spacing: 3.2rem;
+      > :nth-child(1) {
+        transform: translateY(-0.8rem);
+      }
+      > :nth-child(3) {
+        transform: translateY(0.8rem);
+      }
+    }
+  }
+  &::before,
+  &::after {
+    width: 6rem;
+    height: 4px;
+    flex-grow: 1;
+    background-image: radial-gradient($salmon 2px, transparent 0);
+    background-size: 16px 16px;
+    pointer-events: none;
+    @media screen and (min-width: 900px) {
+      content: "";
+    }
+  }
+  &::before {
+    background-position: -22px 10px;
+    margin-left: 1.2rem;
+    margin-right: 3.2rem;
+  }
+  &::after {
+    background-position: right -22px top 10px;
+    margin-left: 3.2rem;
+    margin-right: 1.2rem;
   }
 }
 
