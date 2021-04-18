@@ -20,6 +20,7 @@ defineProps(["title", "desc", "href", "icon"]);
 
 .link-card {
   display: flex;
+  flex-shrink: 0;
   align-items: center;
   background: $white;
   border-radius: 1.2rem;
