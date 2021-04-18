@@ -19,4 +19,8 @@ body {
   background-size: 32px 32px;
   background-attachment: fixed;
 }
+
+#app {
+  overflow-x: hidden;
+}
 </style>
