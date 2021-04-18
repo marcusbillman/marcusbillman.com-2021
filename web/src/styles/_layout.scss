@@ -39,7 +39,7 @@
 }
 
 .splitter {
-  > :last-child {
+  > * + * {
     margin-top: var(--splitter-spacing, 3.2rem);
   }
   @media screen and (min-width: 900px) {
@@ -47,7 +47,7 @@
     > * {
       flex-grow: 1;
     }
-    > :last-child {
+    > * + * {
       margin-top: 0;
       margin-left: var(--splitter-spacing, 3.2rem);
       min-width: 24rem;
