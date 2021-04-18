@@ -121,6 +121,7 @@ import Tag from "@/components/Tag.vue";
 </script>
 
 <style lang="scss" scoped>
+@use "@/styles/breakpoints" as *;
 @use "@/styles/colours" as *;
 
 .preheader {
@@ -143,7 +144,7 @@ import Tag from "@/components/Tag.vue";
     background-position: -22px 10px;
     pointer-events: none;
     margin-right: 1.2rem;
-    @media screen and (min-width: 900px) {
+    @include for-desktop-up {
       width: 12.8rem;
       margin-left: 1.2rem;
       margin-right: 2.4rem;
@@ -160,7 +161,7 @@ section .flow {
 }
 
 .section-container {
-  @media screen and (min-width: 900px) {
+  @include for-desktop-up {
     margin: 0 10rem;
   }
 }
@@ -180,7 +181,7 @@ section .flow {
     background-image: radial-gradient($salmon 2px, transparent 0);
     background-size: 16px 16px;
     pointer-events: none;
-    @media screen and (min-width: 900px) {
+    @include for-desktop-up {
       content: "";
     }
   }
@@ -221,7 +222,7 @@ section .flow {
     > :nth-child(3) {
       transform: translateX(3.2rem);
     }
-    @media screen and (min-width: 900px) {
+    @include for-desktop-up {
       --splitter-spacing: 3.2rem;
       > :nth-child(1) {
         transform: translateY(-0.8rem);
@@ -239,7 +240,7 @@ section .flow {
     background-image: radial-gradient($salmon 2px, transparent 0);
     background-size: 16px 16px;
     pointer-events: none;
-    @media screen and (min-width: 900px) {
+    @include for-desktop-up {
       content: "";
     }
   }

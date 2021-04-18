@@ -21,6 +21,7 @@
 <script setup></script>
 
 <style lang="scss" scoped>
+@use "@/styles/breakpoints" as *;
 @use "@/styles/colours" as *;
 
 .footer {
@@ -37,7 +38,7 @@
   &__link {
     display: block;
     --splitter-spacing: 1.6rem;
-    @media screen and (min-width: 900px) {
+    @include for-desktop-up {
       --splitter-spacing: 3.2rem;
     }
   }

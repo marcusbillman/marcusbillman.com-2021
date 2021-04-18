@@ -14,6 +14,7 @@ defineProps(["href"]);
 </script>
 
 <style lang="scss" scoped>
+@use "@/styles/breakpoints" as *;
 @use "@/styles/colours" as *;
 
 .button {
@@ -41,7 +42,7 @@ defineProps(["href"]);
       transform: translate(-8px, -8px);
     }
   }
-  @media screen and (min-width: 40rem) {
+  @include for-tablet-portrait-up {
     width: auto;
   }
   &__inner {

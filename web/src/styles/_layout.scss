@@ -1,3 +1,4 @@
+@use "@/styles/breakpoints" as *;
 @use "@/styles/colours" as *;
 
 .container {
@@ -25,7 +26,7 @@
     z-index: 10;
     pointer-events: none;
 
-    @media screen and (min-width: 900px) {
+    @include for-desktop-up {
       content: "";
     }
   }
@@ -49,7 +50,7 @@
   > * + * {
     margin-top: var(--splitter-spacing, 3.2rem);
   }
-  @media screen and (min-width: 900px) {
+  @include for-desktop-up {
     display: flex;
     > * + * {
       margin-top: 0;

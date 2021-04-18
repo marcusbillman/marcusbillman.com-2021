@@ -16,6 +16,7 @@
 <script setup></script>
 
 <style lang="scss" scoped>
+@use "@/styles/breakpoints" as *;
 @use "@/styles/colours" as *;
 
 .hero {
@@ -77,7 +78,7 @@
     --ggs: calc(32 / 22);
     color: $blueberry-500;
   }
-  @media screen and (min-width: 900px) {
+  @include for-desktop-up {
     &__box {
       width: calc(100% + 12.8rem);
       padding: 0 16rem;

@@ -15,6 +15,7 @@
 <script setup></script>
 
 <style lang="scss" scoped>
+@use "@/styles/breakpoints" as *;
 @use "@/styles/colours" as *;
 
 .navbar {
@@ -29,7 +30,7 @@
   border: 2px solid $grey-200;
   padding: 1rem 3.2rem;
   z-index: 100;
-  @media screen and (min-width: 900px) {
+  @include for-desktop-up {
     display: flex;
   }
   &__separator {

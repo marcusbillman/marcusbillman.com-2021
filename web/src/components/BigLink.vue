@@ -12,16 +12,18 @@ defineProps(["href", "icon"]);
 </script>
 
 <style lang="scss" scoped>
+@use "@/styles/breakpoints" as *;
+
 .big-link {
   display: flex;
   align-items: center;
   font-size: 2.4rem;
-  @media screen and (min-width: 900px) {
+  @include for-desktop-up {
     font-size: 4rem;
   }
   i {
     margin-left: 0.8rem;
-    @media screen and (min-width: 900px) {
+    @include for-desktop-up {
       margin-left: 2.4rem;
       --ggs: calc(40 / 22);
     }
