@@ -1,4 +1,5 @@
 <template>
+  <Navbar />
   <router-view v-slot="{ Component }">
     <keep-alive>
       <component :is="Component" />
@@ -7,7 +8,7 @@
 </template>
 
 <script setup>
-import Home from "@/views/Home.vue";
+import Navbar from "@/components/Navbar.vue";
 import "css.gg/icons/all.css";
 </script>
 
