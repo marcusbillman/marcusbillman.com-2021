@@ -18,7 +18,7 @@ defineProps(["text"]);
   font-weight: 500;
   background: $white;
   border-radius: 1000px;
-  border: 3px solid $grey-200;
+  border: 2px solid $grey-200;
   padding: 0.2rem 1.6rem;
 }
 </style>

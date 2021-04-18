@@ -24,7 +24,7 @@ defineProps(["title", "desc", "href", "icon"]);
   align-items: center;
   background: $white;
   border-radius: 1.2rem;
-  border: 3px solid $grey-200;
+  border: 2px solid $grey-200;
   text-decoration: none;
   padding: 1.6rem 2.4rem;
   &__content {

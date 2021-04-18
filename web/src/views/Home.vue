@@ -142,7 +142,7 @@ import Tag from "@/components/Tag.vue";
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 3px solid $grey-200;
+    border: 2px solid $grey-200;
     border-radius: 2.4rem;
     padding: 0 1.6rem;
     &::before,

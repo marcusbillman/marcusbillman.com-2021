@@ -51,7 +51,7 @@ defineProps(["href"]);
     justify-content: center;
     color: $white;
     background: $blueberry-500;
-    border: 3px solid $blueberry-500;
+    border: 2px solid $blueberry-500;
     border-radius: 0.8rem;
     padding: 1.4rem 2.4rem;
     transition: all 0.1s;
