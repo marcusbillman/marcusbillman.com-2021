@@ -356,7 +356,9 @@ section .flow {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  --spacing: 3.2rem;
+  > * {
+    --spacing: 3.2rem;
+  }
 }
 
 .illustration {
