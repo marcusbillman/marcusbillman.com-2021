@@ -1,5 +1,12 @@
 @use "@/styles/colours" as *;
 
+.container {
+  width: 100%;
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 0 1.6rem;
+}
+
 .page-container {
   position: relative;
   width: 100%;
@@ -44,13 +51,9 @@
   }
   @media screen and (min-width: 900px) {
     display: flex;
-    > * {
-      flex-grow: 1;
-    }
     > * + * {
       margin-top: 0;
       margin-left: var(--splitter-spacing, 3.2rem);
-      min-width: 24rem;
     }
   }
 }
