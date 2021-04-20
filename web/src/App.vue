@@ -9,7 +9,15 @@
 
 <script setup>
 import Navbar from "@/components/Navbar.vue";
+import sanityClient from "@/sanityConfig";
+import { useStore } from "vuex";
 import "css.gg/icons/all.css";
+
+const store = useStore();
+
+sanityClient.fetch('*[_type == "project"]').then((result) => {
+  store.commit("setProjects", result);
+});
 </script>
 
 <style lang="scss">
