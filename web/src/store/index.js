@@ -2,9 +2,15 @@ import { createStore } from "vuex";
 
 const store = createStore({
   state() {
-    return {};
+    return {
+      projects: [],
+    };
   },
-  mutations: {},
+  mutations: {
+    setProjects(state, value) {
+      state.projects = value;
+    },
+  },
 });
 
 export default store;
