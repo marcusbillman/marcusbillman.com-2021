@@ -78,7 +78,7 @@
     --ggs: calc(32 / 22);
     color: $blueberry-500;
   }
-  @include for-desktop-up {
+  @include for-tablet-landscape-up {
     &__box {
       width: calc(100% + 12.8rem);
       padding: 0 16rem;

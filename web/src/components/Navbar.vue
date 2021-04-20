@@ -30,7 +30,7 @@
   border: 2px solid $grey-200;
   padding: 1rem 3.2rem;
   z-index: 100;
-  @include for-desktop-up {
+  @include for-tablet-landscape-up {
     display: flex;
   }
   &__separator {

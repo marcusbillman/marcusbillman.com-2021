@@ -222,7 +222,7 @@ section .flow {
     > :nth-child(3) {
       transform: translateX(3.2rem);
     }
-    @include for-desktop-up {
+    @include for-tablet-landscape-up {
       --splitter-spacing: 3.2rem;
       > :nth-child(1) {
         transform: translateY(-0.8rem);
@@ -240,7 +240,7 @@ section .flow {
     background-image: radial-gradient($salmon 2px, transparent 0);
     background-size: 16px 16px;
     pointer-events: none;
-    @include for-desktop-up {
+    @include for-tablet-landscape-up {
       content: "";
     }
   }

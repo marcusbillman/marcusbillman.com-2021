@@ -50,7 +50,7 @@
   > * + * {
     margin-top: var(--splitter-spacing, 3.2rem);
   }
-  @include for-desktop-up {
+  @include for-tablet-landscape-up {
     display: flex;
     > * + * {
       margin-top: 0;
