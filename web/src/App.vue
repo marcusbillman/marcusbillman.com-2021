@@ -15,8 +15,15 @@ import "css.gg/icons/all.css";
 
 const store = useStore();
 
-sanityClient.fetch('*[_type == "project"]').then((result) => {
+const query = `*[ _type == 'project' ]{
+    ...,
+    'roleTags': *[ _type == 'roleTag' && _id in ^.roleTags[]._ref ],
+    'techTags': *[ _type == 'techTag' && _id in ^.techTags[]._ref ]
+  }`;
+
+sanityClient.fetch(query).then((result) => {
   store.commit("setProjects", result);
+  console.log(result);
 });
 </script>
 
