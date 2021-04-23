@@ -47,8 +47,17 @@ function urlFor(source) {
   &__image {
     width: 100%;
     max-width: 100%;
+    object-fit: cover;
+    aspect-ratio: 576 / 700;
     border-radius: 1.6rem;
     margin-bottom: 2.4rem;
+    @supports not (aspect-ratio: 1 / 1) {
+      transform: rotate(10deg);
+      height: 46rem;
+      @include for-tablet-landscape-up {
+        height: 70rem;
+      }
+    }
   }
   &__info {
     min-width: 80%;
