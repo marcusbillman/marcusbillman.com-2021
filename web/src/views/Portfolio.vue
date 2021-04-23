@@ -15,4 +15,28 @@
 import ProjectCard from "@/components/ProjectCard.vue";
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+@use "@/styles/breakpoints" as *;
+
+.projects {
+  > * + * {
+    margin-top: 10rem;
+  }
+  @include for-tablet-landscape-up {
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 3.2rem;
+    .project {
+      max-width: calc(50% - 2.4rem);
+      height: min-content;
+      &:nth-child(even) {
+        transform: translateY(40rem);
+        margin-left: 4.8rem;
+      }
+      + .project {
+        margin-top: 20rem;
+      }
+    }
+  }
+}
+</style>
