@@ -5,7 +5,7 @@
       :src="urlFor(project.mainImage)"
       :alt="project.title"
     />
-    <div class="flow project__info">
+    <div class="flow project__info" :data-side="infoSide">
       <router-link class="project__link" to="/portfolio">
         <h3 class="project__title">{{ project.title }}</h3>
         <i class="gg-arrow-right"></i>
@@ -29,7 +29,7 @@ import { defineProps } from "vue";
 import sanityClient from "@/sanityConfig";
 import imageUrlBuilder from "@sanity/image-url";
 
-defineProps(["project"]);
+defineProps(["project", "info-side"]);
 
 const imageBuilder = imageUrlBuilder(sanityClient);
 
@@ -63,13 +63,19 @@ function urlFor(source) {
     min-width: 80%;
     @include for-tablet-landscape-up {
       position: absolute;
-      left: 0;
       bottom: 0;
-      transform: translate(-3.2rem, 3.2rem);
       background: $white;
       border-radius: 1.6rem;
       border: 2px solid $grey-200;
       padding: 3.2rem;
+      &[data-side="left"] {
+        left: 0;
+        transform: translate(-3.2rem, 3.2rem);
+      }
+      &[data-side="right"] {
+        right: 0;
+        transform: translate(3.2rem, 3.2rem);
+      }
     }
   }
   &__link {
