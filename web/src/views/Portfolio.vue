@@ -38,6 +38,7 @@ h1 {
 }
 
 .projects {
+  position: relative;
   margin-top: 4.8rem;
   margin-bottom: 20rem;
   > * + * {
@@ -46,7 +47,7 @@ h1 {
   @include for-tablet-landscape-up {
     display: flex;
     flex-wrap: wrap;
-    padding-bottom: 3.2rem;
+    padding-bottom: calc(20rem + 3.2rem);
     .project {
       max-width: calc(50% - 2.4rem);
       height: min-content;
@@ -58,6 +59,30 @@ h1 {
         margin-top: 20rem;
       }
     }
+  }
+  &::before,
+  &::after {
+    position: absolute;
+    width: 4px;
+    top: -20rem;
+    bottom: 0;
+    background-image: radial-gradient($salmon 2px, transparent 0);
+    background-size: 16px 16px;
+    background-position: -22px 0;
+    z-index: -1;
+    pointer-events: none;
+
+    @include for-tablet-landscape-up {
+      content: "";
+    }
+  }
+  &::before {
+    left: calc(25% - 2.4rem);
+    transform: translateX(1.6rem);
+  }
+  &::after {
+    right: calc(25% - 2.4rem);
+    transform: translateX(-1.6rem);
   }
 }
 </style>
