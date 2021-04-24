@@ -2,7 +2,7 @@
   <a class="button" :href="href">
     <div class="button__inner">
       <slot></slot>
-      <Icon name="arrow-top-right" />
+      <Icon :name="icon || 'arrow-right'" />
     </div>
   </a>
 </template>
@@ -11,7 +11,7 @@
 import Icon from "@/components/Icon.vue";
 import { defineProps } from "vue";
 
-defineProps(["href"]);
+defineProps(["href", "icon"]);
 </script>
 
 <style lang="scss" scoped>
@@ -57,6 +57,9 @@ defineProps(["href"]);
     border-radius: 0.8rem;
     padding: 1.4rem 2.4rem;
     transition: all 0.1s;
+  }
+  .icon {
+    margin-left: 1.2rem;
   }
 }
 </style>
