@@ -1,24 +1,45 @@
 <template>
   <div class="container">
-    <div class="projects">
+    <h1>Portfolio</h1>
+    <section class="projects">
       <ProjectCard
         v-for="(project, index) in $store.state.projects"
         :key="project._key"
         :project="project"
         :info-side="index % 2 === 0 ? 'left' : 'right'"
       />
-    </div>
+    </section>
+    <ContactSection />
   </div>
 </template>
 
 <script setup>
+import ContactSection from "@/components/ContactSection.vue";
 import ProjectCard from "@/components/ProjectCard.vue";
 </script>
 
 <style lang="scss" scoped>
 @use "@/styles/breakpoints" as *;
+@use "@/styles/colours" as *;
+
+.container {
+  margin-top: 4.8rem;
+  @include for-tablet-landscape-up {
+    margin-top: 20rem;
+  }
+}
+
+h1 {
+  font-size: 4rem;
+  color: $blueberry-500;
+  @include for-tablet-landscape-up {
+    display: none;
+  }
+}
 
 .projects {
+  margin-top: 4.8rem;
+  margin-bottom: 20rem;
   > * + * {
     margin-top: 10rem;
   }
