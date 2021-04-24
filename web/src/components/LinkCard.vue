@@ -1,15 +1,16 @@
 <template>
   <a class="link-card" :href="href">
-    <i :class="'gg-' + icon"></i>
+    <Icon :name="icon" size="32" />
     <div class="link-card__content">
       <span class="link-card__title">{{ title }}</span>
       <span class="link-card__desc">{{ desc }}</span>
     </div>
-    <i class="gg-arrow-top-right"></i>
+    <Icon name="arrow-top-right" />
   </a>
 </template>
 
 <script setup>
+import Icon from "@/components/Icon.vue";
 import { defineProps } from "vue";
 
 defineProps(["title", "desc", "href", "icon"]);
@@ -28,7 +29,7 @@ defineProps(["title", "desc", "href", "icon"]);
   text-decoration: none;
   padding: 1.6rem 2.4rem;
   &__content {
-    margin: 0 2.4rem;
+    margin: 0 1.6rem;
   }
   span {
     display: block;
@@ -40,11 +41,10 @@ defineProps(["title", "desc", "href", "icon"]);
   &__desc {
     color: $grey-600;
   }
-  i:first-child {
+  .icon:first-child {
     color: $blueberry-500;
-    --ggs: calc(32 / 22);
   }
-  i:last-child {
+  .icon:last-child {
     color: $grey-400;
   }
 }
