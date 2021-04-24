@@ -1,8 +1,13 @@
 <template>
-  <a class="big-link" :href="href">
+  <component
+    class="big-link"
+    :is="/^\/.*/.test(href) ? 'router-link' : 'a'"
+    :href="href"
+    :to="href"
+  >
     <slot></slot>
     <Icon :name="icon" />
-  </a>
+  </component>
 </template>
 
 <script setup>
