@@ -97,14 +97,7 @@
             ></LinkCard>
           </div>
         </section>
-        <section class="flow contact">
-          <h2>Communication is key</h2>
-          <p>
-            Want to talk linear gradients or pentatonic scales (or just say hi)?
-            You’re welcome to drop a line or two.
-          </p>
-          <Button href="/contact">Contact me</Button>
-        </section>
+        <ContactSection />
       </div>
     </main>
     <Footer />
@@ -114,6 +107,7 @@
 <script setup>
 import BigLink from "@/components/BigLink.vue";
 import Button from "@/components/Button.vue";
+import ContactSection from "@/components/ContactSection.vue";
 import Footer from "@/components/Footer.vue";
 import Hero from "@/components/Hero.vue";
 import LinkCard from "@/components/LinkCard.vue";
@@ -253,16 +247,6 @@ section .flow {
     background-position: right -22px top 10px;
     margin-left: 3.2rem;
     margin-right: 1.2rem;
-  }
-}
-
-.contact {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  > * {
-    --spacing: 3.2rem;
   }
 }
 
