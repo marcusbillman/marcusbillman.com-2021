@@ -2,12 +2,13 @@
   <a class="button" :href="href">
     <div class="button__inner">
       <slot></slot>
-      <i class="gg-arrow-top-right"></i>
+      <Icon name="arrow-top-right" />
     </div>
   </a>
 </template>
 
 <script setup>
+import Icon from "@/components/Icon.vue";
 import { defineProps } from "vue";
 
 defineProps(["href"]);
@@ -56,10 +57,6 @@ defineProps(["href"]);
     border-radius: 0.8rem;
     padding: 1.4rem 2.4rem;
     transition: all 0.1s;
-    i {
-      transform: translateY(-2px);
-      margin-left: 1.6rem;
-    }
   }
 }
 </style>
