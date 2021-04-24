@@ -8,7 +8,7 @@
     <div class="flow project__info" :data-side="infoSide">
       <router-link class="project__link" to="/portfolio">
         <h3 class="project__title">{{ project.title }}</h3>
-        <i class="gg-arrow-right"></i>
+        <Icon name="arrow-right" />
       </router-link>
       <ul class="project__roles">
         <li
@@ -24,6 +24,7 @@
 </template>
 
 <script setup>
+import Icon from "@/components/Icon.vue";
 import Tag from "@/components/Tag.vue";
 import { defineProps } from "vue";
 import sanityClient from "@/sanityConfig";
@@ -94,9 +95,9 @@ function urlFor(source) {
       font-size: 3.2rem;
     }
   }
-  i {
+  .icon {
     @include for-tablet-landscape-up {
-      --ggs: calc(32 / 22);
+      transform: scale(calc(32 / 24));
       margin-left: 1.2rem;
     }
   }
