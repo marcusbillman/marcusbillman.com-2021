@@ -5,9 +5,11 @@
       <component :is="Component" />
     </keep-alive>
   </router-view>
+  <Footer />
 </template>
 
 <script setup>
+import Footer from "@/components/Footer.vue";
 import Navbar from "@/components/Navbar.vue";
 import sanityClient from "@/sanityConfig";
 import { useStore } from "vuex";
