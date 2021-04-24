@@ -7,13 +7,15 @@
           My art is arranging links and shapes into
           <span class="hero__bold">experiences.</span>
         </h1>
-        <i class="gg-arrow-down"></i>
+        <Icon name="arrow-down" size="32" />
       </div>
     </div>
   </section>
 </template>
 
-<script setup></script>
+<script setup>
+import Icon from "@/components/Icon.vue";
+</script>
 
 <style lang="scss" scoped>
 @use "@/styles/breakpoints" as *;
@@ -74,8 +76,7 @@
     font-weight: 500;
     color: $blueberry-500;
   }
-  i {
-    --ggs: calc(32 / 22);
+  .icon {
     color: $blueberry-500;
   }
   @include for-tablet-landscape-up {
