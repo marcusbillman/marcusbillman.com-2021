@@ -1,10 +1,15 @@
 <template>
-  <a class="button" :href="href">
+  <component
+    class="button"
+    :is="/^\/.*/.test(href) ? 'router-link' : 'a'"
+    :href="href"
+    :to="href"
+  >
     <div class="button__inner">
       <slot></slot>
       <Icon :name="icon || 'arrow-right'" />
     </div>
-  </a>
+  </component>
 </template>
 
 <script setup>
