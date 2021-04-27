@@ -9,7 +9,6 @@
   "dependencies": {
     "@sanity/client": "^2.8.0",
     "@sanity/image-url": "^0.140.22",
-    "css.gg": "^2.0.0",
     "sanity-blocks-vue-component": "^1.0.0",
     "sass": "^1.32.8",
     "vue": "^3.0.5",

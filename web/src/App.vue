@@ -13,7 +13,6 @@ import Footer from "@/components/Footer.vue";
 import Navbar from "@/components/Navbar.vue";
 import sanityClient from "@/sanityConfig";
 import { useStore } from "vuex";
-import "css.gg/icons/all.css";
 
 const store = useStore();
 
