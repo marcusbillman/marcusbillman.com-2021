@@ -1,6 +1,7 @@
 import { createWebHistory, createRouter } from "vue-router";
 import Home from "@/views/Home.vue";
 import Portfolio from "@/views/Portfolio.vue";
+import CaseStudy from "@/views/CaseStudy.vue";
 import Contact from "@/views/Contact.vue";
 
 const router = createRouter({
@@ -21,6 +22,11 @@ const router = createRouter({
       meta: {
         index: 1,
       },
+    },
+    {
+      path: "/portfolio/:slug",
+      name: "Case Study",
+      component: CaseStudy,
     },
     {
       path: "/contact",
