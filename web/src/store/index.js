@@ -6,6 +6,11 @@ const store = createStore({
       projects: [],
     };
   },
+  getters: {
+    getProjectBySlug: (state) => (slug) => {
+      return state.projects.find((project) => project.slug.current === slug);
+    },
+  },
   mutations: {
     setProjects(state, value) {
       state.projects = value;
