@@ -12,8 +12,9 @@ import { useStore } from "vuex";
 const route = useRoute();
 const store = useStore();
 
-const slug = route.params.slug;
-const project = computed(() => store.getters.getProjectBySlug(slug));
+const project = computed(() =>
+  store.getters.getProjectBySlug(route.params.slug)
+);
 </script>
 
 <style lang="scss" scoped></style>
