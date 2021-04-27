@@ -6,7 +6,10 @@
       :alt="project.title"
     />
     <div class="flow project__info" :data-side="infoSide">
-      <router-link class="project__link" to="/portfolio">
+      <router-link
+        class="project__link"
+        :to="`/portfolio/${project.slug.current}`"
+      >
         <h3 class="project__title">{{ project.title }}</h3>
         <Icon name="arrow-right" />
       </router-link>
