@@ -9,5 +9,5 @@ createApp(App)
   .use(router)
   .use(store)
   .use(VueSvgInlinePlugin)
-  .component("sanity-blocks", SanityBlocks)
+  .component("SanityBlocks", SanityBlocks)
   .mount("#app");
