@@ -39,9 +39,12 @@
             <Button :href="project.primaryLink.url" icon="arrow-top-right">{{
               project.primaryLink.text
             }}</Button>
-            <Button :href="project.secondaryLink.url" icon="arrow-top-right">{{
-              project.secondaryLink.text
-            }}</Button>
+            <Button
+              :href="project.secondaryLink.url"
+              icon="arrow-top-right"
+              variant="secondary"
+              >{{ project.secondaryLink.text }}</Button
+            >
           </div>
         </div>
       </div>
