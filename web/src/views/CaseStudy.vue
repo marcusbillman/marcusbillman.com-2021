@@ -99,15 +99,25 @@ img {
 }
 
 .header {
-  margin-bottom: 10rem;
   h1 {
-    font-size: 7.2rem;
+    font-size: clamp(4rem, 6vw, 7.2rem);
     font-weight: 500;
     color: $blueberry-500;
-    margin-bottom: 3.2rem;
+    margin-bottom: 2.4rem;
   }
-  &__description {
+}
+
+.header__description,
+.body {
+  @include for-tablet-landscape-up {
     font-size: 2.4rem;
+  }
+}
+
+.main-image {
+  margin: 6.4rem 0;
+  @include for-tablet-landscape-up {
+    margin: 15rem 0;
   }
 }
 
@@ -115,15 +125,10 @@ img {
   display: grid;
   grid-template-columns: 1fr;
   gap: 6.4rem 4.8rem;
-  margin-top: 15rem;
   margin-bottom: 15rem;
   @include for-desktop-up {
     grid-template-columns: repeat(2, 1fr);
   }
-}
-
-.body {
-  font-size: 2.4rem;
 }
 
 .data {
