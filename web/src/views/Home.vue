@@ -46,7 +46,14 @@
               </div>
             </div>
             <div class="design__projects">
-              <!-- Featured projects go here -->
+              <div class="design__featured-projects">
+                <ProjectCard
+                  v-for="project in $store.getters.getFeaturedProjects"
+                  :key="project._key"
+                  :project="project"
+                  compact="true"
+                />
+              </div>
               <BigLink href="/portfolio" icon="arrow-right">More work</BigLink>
             </div>
           </div>
@@ -109,6 +116,7 @@ import Button from "@/components/Button.vue";
 import ContactSection from "@/components/ContactSection.vue";
 import Hero from "@/components/Hero.vue";
 import LinkCard from "@/components/LinkCard.vue";
+import ProjectCard from "@/components/ProjectCard.vue";
 import Tag from "@/components/Tag.vue";
 </script>
 
@@ -201,6 +209,21 @@ section .flow {
     * {
       margin-top: 1rem;
       margin-right: 1rem;
+    }
+  }
+  &__featured-projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 6.4rem 3.2rem;
+    margin-top: 15rem;
+    margin-bottom: 10rem;
+    @include for-desktop-up {
+      > :nth-child(2) {
+        transform: translateY(1.6rem);
+      }
+      > :nth-child(3) {
+        transform: translateY(3.2rem);
+      }
     }
   }
 }
