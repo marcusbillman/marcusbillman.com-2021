@@ -8,44 +8,42 @@
       <img :src="urlFor(project.mainImage)" :alt="project.title" />
     </section>
     <section class="container content" v-if="project">
-      <div class="splitter">
-        <div class="flow body">
-          <SanityBlocks :blocks="project.body" />
+      <div class="flow body">
+        <SanityBlocks :blocks="project.body" />
+      </div>
+      <div>
+        <div class="data">
+          <div class="data__roles">
+            <h3>My roles</h3>
+            <ul class="data__roles-list">
+              <li v-for="roleTag in project.roleTags" :key="roleTag._key">
+                <Tag :text="roleTag.name" />
+              </li>
+            </ul>
+          </div>
+          <div class="data__technologies">
+            <h3>Technologies</h3>
+            <ul class="data__roles-list">
+              <li v-for="techTag in project.techTags" :key="techTag._key">
+                <Tag :text="techTag.name" />
+              </li>
+            </ul>
+          </div>
+          <div class="data__date">
+            <h3>Date</h3>
+            <p>{{ project.date }}</p>
+          </div>
         </div>
-        <div>
-          <div class="splitter data">
-            <div class="data__roles">
-              <h3>My roles</h3>
-              <ul class="data__roles-list">
-                <li v-for="roleTag in project.roleTags" :key="roleTag._key">
-                  <Tag :text="roleTag.name" />
-                </li>
-              </ul>
-            </div>
-            <div class="data__technologies">
-              <h3>Technologies</h3>
-              <ul class="data__roles-list">
-                <li v-for="techTag in project.techTags" :key="techTag._key">
-                  <Tag :text="techTag.name" />
-                </li>
-              </ul>
-            </div>
-            <div class="data__date">
-              <h3>Date</h3>
-              <p>{{ project.date }}</p>
-            </div>
-          </div>
-          <div class="splitter links">
-            <Button :href="project.primaryLink.url" icon="arrow-top-right">{{
-              project.primaryLink.text
-            }}</Button>
-            <Button
-              :href="project.secondaryLink.url"
-              icon="arrow-top-right"
-              variant="secondary"
-              >{{ project.secondaryLink.text }}</Button
-            >
-          </div>
+        <div class="links">
+          <Button :href="project.primaryLink.url" icon="arrow-top-right">{{
+            project.primaryLink.text
+          }}</Button>
+          <Button
+            :href="project.secondaryLink.url"
+            icon="arrow-top-right"
+            variant="secondary"
+            >{{ project.secondaryLink.text }}</Button
+          >
         </div>
       </div>
     </section>
@@ -105,23 +103,41 @@ function urlFor(source) {
 }
 
 .content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 6.4rem 4.8rem;
   margin-top: 15rem;
   margin-bottom: 15rem;
-  --spacing: 2.4rem;
-  --splitter-spacing: 4.8rem;
+  @include for-desktop-up {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .body {
   font-size: 2.4rem;
 }
 
+.data {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  gap: 3.2rem 6.4rem;
+  ul {
+    display: grid;
+    gap: 1rem;
+  }
+}
+
 .links {
-  width: max-content;
+  display: grid;
+  gap: 2rem;
   margin-top: 4.8rem;
-  --splitter-spacing: 2rem;
+  @include for-tablet-portrait-up {
+    grid-template-columns: repeat(2, max-content);
+  }
 }
 
 .additional-images {
+  margin-bottom: 20rem;
   > * + * {
     margin-top: 6.4rem;
   }
@@ -129,7 +145,6 @@ function urlFor(source) {
     display: flex;
     flex-wrap: wrap;
     img {
-      // aspect-ratio: 16 / 9;
       max-width: calc(50% - 2.4rem);
       &:nth-child(even) {
         transform: translateY(6.4rem);
@@ -140,10 +155,6 @@ function urlFor(source) {
   }
 }
 
-.next-project {
-  margin-top: 20rem;
-}
-
 h3 {
   margin-bottom: 1.6rem;
 }
@@ -151,9 +162,5 @@ h3 {
 img {
   object-fit: cover;
   border-radius: 1.6rem;
-}
-
-li {
-  margin-bottom: 1rem;
 }
 </style>
