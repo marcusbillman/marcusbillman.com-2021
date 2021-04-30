@@ -43,11 +43,11 @@ h1 {
 .projects {
   position: relative;
   display: grid;
-  grid-template-columns: repeat(1, minmax(280px, 1fr));
+  grid-template-columns: repeat(1, minmax(20rem, 1fr));
   gap: 6.4rem 3.2rem;
   margin-bottom: 20rem;
-  @include for-tablet-landscape-up {
-    grid-template-columns: repeat(2, minmax(280px, 1fr));
+  @include for-tablet-portrait-up {
+    grid-template-columns: repeat(2, minmax(20rem, 1fr));
     row-gap: 20rem;
     padding-bottom: 40rem;
     .project {
@@ -69,7 +69,7 @@ h1 {
     z-index: -1;
     pointer-events: none;
 
-    @include for-tablet-landscape-up {
+    @include for-tablet-portrait-up {
       content: "";
     }
   }
