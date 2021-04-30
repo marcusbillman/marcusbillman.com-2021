@@ -22,8 +22,11 @@ defineProps(["href", "icon"]);
 
 .big-link {
   display: flex;
+  width: max-content;
   align-items: center;
   font-size: 2.4rem;
+  margin-left: auto;
+  margin-right: auto;
   @include for-desktop-up {
     font-size: 4rem;
   }

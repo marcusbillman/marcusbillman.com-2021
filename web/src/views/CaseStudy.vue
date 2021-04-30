@@ -138,8 +138,6 @@ function urlFor(source) {
 }
 
 .next-project {
-  display: flex;
-  justify-content: center;
   margin-top: 20rem;
 }
 
