@@ -56,7 +56,6 @@ function urlFor(source) {
     border-radius: 1.6rem;
     margin-bottom: 2.4rem;
     @supports not (aspect-ratio: 1 / 1) {
-      transform: rotate(10deg);
       height: 46rem;
       @include for-tablet-landscape-up {
         height: 70rem;
