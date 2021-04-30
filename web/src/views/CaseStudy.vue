@@ -56,7 +56,9 @@
         />
       </div>
     </section>
-    <BigLink href="/portfolio" icon="arrow-right">More work</BigLink>
+    <section class="container next-project">
+      <BigLink href="/portfolio" icon="arrow-right">Next project</BigLink>
+    </section>
   </div>
 </template>
 
@@ -117,9 +119,10 @@ function urlFor(source) {
   --splitter-spacing: 2rem;
 }
 
-.big-link {
+.next-project {
+  display: flex;
+  justify-content: center;
   margin-top: 20rem;
-  margin-bottom: 20rem;
 }
 
 p {
