@@ -9,7 +9,7 @@
     </section>
     <section class="container content" v-if="project">
       <div class="splitter">
-        <div class="flow">
+        <div class="flow body">
           <SanityBlocks :blocks="project.body" />
         </div>
         <div>
@@ -84,7 +84,7 @@ function urlFor(source) {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @use "@/styles/breakpoints" as *;
 @use "@/styles/colours" as *;
 
@@ -96,20 +96,20 @@ function urlFor(source) {
     color: $blueberry-500;
     margin-bottom: 3.2rem;
   }
+  &__description {
+    font-size: 2.4rem;
+  }
 }
 
 .content {
   margin-top: 15rem;
   margin-bottom: 15rem;
   --spacing: 2.4rem;
+  --splitter-spacing: 4.8rem;
 }
 
-.data {
-  &__date {
-    p {
-      font-size: 1.6rem;
-    }
-  }
+.body {
+  font-size: 2.4rem;
 }
 
 .links {
@@ -141,10 +141,6 @@ function urlFor(source) {
   display: flex;
   justify-content: center;
   margin-top: 20rem;
-}
-
-p {
-  font-size: 2.4rem;
 }
 
 h3 {
