@@ -1,22 +1,22 @@
 <template>
   <div class="page">
-    <div class="container" v-if="project">
-      <h1>{{ project.title }}</h1>
-      <p>Description should go here</p>
-    </div>
-    <div class="wide-container">
+    <section class="container header" v-if="project">
+      <h1 class="header__title">{{ project.title }}</h1>
+      <p class="header__description">Description should go here</p>
+    </section>
+    <section class="container container--wide main-image">
       <img :src="urlFor(project.mainImage)" :alt="project.title" />
-    </div>
-    <div class="container">
+    </section>
+    <section class="container content">
       <div class="splitter">
-        <div>
+        <div class="flow">
           <SanityBlocks :blocks="project.body" />
         </div>
         <div>
-          <div class="data">
+          <div class="splitter data">
             <div class="data__roles">
               <h3>My roles</h3>
-              <ul>
+              <ul class="data__roles-list">
                 <li v-for="roleTag in project.roleTags" :key="roleTag._key">
                   <Tag :text="roleTag.name" />
                 </li>
@@ -24,7 +24,7 @@
             </div>
             <div class="data__technologies">
               <h3>Technologies</h3>
-              <ul>
+              <ul class="data__roles-list">
                 <li v-for="techTag in project.techTags" :key="techTag._key">
                   <Tag :text="techTag.name" />
                 </li>
@@ -35,7 +35,7 @@
               <p>{{ project.date }}</p>
             </div>
           </div>
-          <div class="links">
+          <div class="splitter links">
             <Button :href="project.primaryLink.url">{{
               project.primaryLink.text
             }}</Button>
@@ -45,8 +45,8 @@
           </div>
         </div>
       </div>
-    </div>
-    <div class="wide-container">
+    </section>
+    <section class="container container--wide additional-images">
       <div class="additional-images">
         <img
           v-for="image in project.additionalImages"
@@ -55,7 +55,7 @@
           :alt="image.caption"
         />
       </div>
-    </div>
+    </section>
     <BigLink href="/portfolio" icon="arrow-right">More work</BigLink>
   </div>
 </template>
@@ -84,4 +84,57 @@ function urlFor(source) {
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss">
+@use "@/styles/colours" as *;
+
+.header {
+  margin-bottom: 10rem;
+  h1 {
+    font-size: 7.2rem;
+    font-weight: 500;
+    color: $blueberry-500;
+    margin-bottom: 3.2rem;
+  }
+}
+
+.content {
+  margin-top: 15rem;
+  margin-bottom: 15rem;
+  --spacing: 2.4rem;
+}
+
+.data {
+  &__date {
+    p {
+      font-size: 1.6rem;
+    }
+  }
+}
+
+.links {
+  width: max-content;
+  margin-top: 4.8rem;
+  --splitter-spacing: 2rem;
+}
+
+.big-link {
+  margin-top: 20rem;
+  margin-bottom: 20rem;
+}
+
+p {
+  font-size: 2.4rem;
+}
+
+h3 {
+  margin-bottom: 1.6rem;
+}
+
+img {
+  border-radius: 1.6rem;
+}
+
+li {
+  margin-bottom: 1rem;
+}
+</style>
