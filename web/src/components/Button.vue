@@ -1,6 +1,7 @@
 <template>
   <component
     class="button"
+    :class="variant ? `button--${variant}` : ''"
     :is="/^\/.*/.test(href) ? 'router-link' : 'a'"
     :href="href"
     :to="href"
@@ -16,7 +17,7 @@
 import Icon from "@/components/Icon.vue";
 import { defineProps } from "vue";
 
-defineProps(["href", "icon"]);
+defineProps(["href", "icon", "variant"]);
 </script>
 
 <style lang="scss" scoped>
@@ -45,6 +46,7 @@ defineProps(["href", "icon"]);
     .button__inner {
       color: $blueberry-500;
       background: transparent;
+      border-color: $blueberry-500;
       transform: translate(-8px, -8px);
     }
   }
@@ -58,10 +60,18 @@ defineProps(["href", "icon"]);
     justify-content: center;
     color: $white;
     background: $blueberry-500;
-    border: 2px solid $blueberry-500;
+    border: 2px solid transparent;
     border-radius: 0.8rem;
     padding: 1.4rem 2.4rem;
     transition: all 0.1s;
+  }
+  &--secondary .button__inner {
+    color: $blueberry-500;
+    background: $blueberry-50;
+  }
+  &--outline .button__inner {
+    color: $blueberry-500;
+    background: $white;
   }
   .icon {
     margin-left: 1.2rem;
