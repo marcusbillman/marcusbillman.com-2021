@@ -1,15 +1,17 @@
 <template>
-  <div class="container">
-    <h1>Portfolio</h1>
-    <section class="projects">
-      <ProjectCard
-        v-for="(project, index) in $store.state.projects"
-        :key="project._key"
-        :project="project"
-        :info-side="index % 2 === 0 ? 'left' : 'right'"
-      />
-    </section>
-    <ContactSection />
+  <div class="page">
+    <div class="container">
+      <h1>Portfolio</h1>
+      <section class="projects">
+        <ProjectCard
+          v-for="(project, index) in $store.state.projects"
+          :key="project._key"
+          :project="project"
+          :info-side="index % 2 === 0 ? 'left' : 'right'"
+        />
+      </section>
+      <ContactSection />
+    </div>
   </div>
 </template>
 
