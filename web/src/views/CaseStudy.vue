@@ -36,10 +36,10 @@
             </div>
           </div>
           <div class="splitter links">
-            <Button :href="project.primaryLink.url">{{
+            <Button :href="project.primaryLink.url" icon="arrow-top-right">{{
               project.primaryLink.text
             }}</Button>
-            <Button :href="project.secondaryLink.url">{{
+            <Button :href="project.secondaryLink.url" icon="arrow-top-right">{{
               project.secondaryLink.text
             }}</Button>
           </div>
