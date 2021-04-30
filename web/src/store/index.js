@@ -10,6 +10,9 @@ const store = createStore({
     getProjectBySlug: (state) => (slug) => {
       return state.projects.find((project) => project.slug.current === slug);
     },
+    getFeaturedProjects: (state) => {
+      return state.projects.filter((project) => project.featured);
+    },
   },
   mutations: {
     setProjects(state, value) {
