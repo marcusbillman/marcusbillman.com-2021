@@ -116,6 +116,10 @@ import Tag from "@/components/Tag.vue";
 @use "@/styles/breakpoints" as *;
 @use "@/styles/colours" as *;
 
+.page {
+  margin-top: 0;
+}
+
 .preheader {
   display: flex;
   align-items: center;
