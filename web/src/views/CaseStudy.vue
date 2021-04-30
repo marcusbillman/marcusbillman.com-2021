@@ -47,14 +47,12 @@
       </div>
     </section>
     <section class="container container--wide additional-images" v-if="project">
-      <div class="additional-images">
-        <img
-          v-for="image in project.additionalImages"
-          :key="image._key"
-          :src="urlFor(image)"
-          :alt="image.caption"
-        />
-      </div>
+      <img
+        v-for="image in project.additionalImages"
+        :key="image._key"
+        :src="urlFor(image)"
+        :alt="image.caption"
+      />
     </section>
     <section class="container next-project">
       <BigLink href="/portfolio" icon="arrow-right">Next project</BigLink>
@@ -87,6 +85,7 @@ function urlFor(source) {
 </script>
 
 <style lang="scss">
+@use "@/styles/breakpoints" as *;
 @use "@/styles/colours" as *;
 
 .header {
@@ -119,6 +118,25 @@ function urlFor(source) {
   --splitter-spacing: 2rem;
 }
 
+.additional-images {
+  > * + * {
+    margin-top: 6.4rem;
+  }
+  @include for-tablet-landscape-up {
+    display: flex;
+    flex-wrap: wrap;
+    img {
+      // aspect-ratio: 16 / 9;
+      max-width: calc(50% - 2.4rem);
+      &:nth-child(even) {
+        transform: translateY(6.4rem);
+        margin-top: 0;
+        margin-left: 4.8rem;
+      }
+    }
+  }
+}
+
 .next-project {
   display: flex;
   justify-content: center;
@@ -134,6 +152,7 @@ h3 {
 }
 
 img {
+  object-fit: cover;
   border-radius: 1.6rem;
 }
 
