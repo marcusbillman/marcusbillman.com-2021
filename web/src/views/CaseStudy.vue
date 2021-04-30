@@ -4,10 +4,10 @@
       <h1 class="header__title">{{ project.title }}</h1>
       <p class="header__description">Description should go here</p>
     </section>
-    <section class="container container--wide main-image">
+    <section class="container container--wide main-image" v-if="project">
       <img :src="urlFor(project.mainImage)" :alt="project.title" />
     </section>
-    <section class="container content">
+    <section class="container content" v-if="project">
       <div class="splitter">
         <div class="flow">
           <SanityBlocks :blocks="project.body" />
@@ -46,7 +46,7 @@
         </div>
       </div>
     </section>
-    <section class="container container--wide additional-images">
+    <section class="container container--wide additional-images" v-if="project">
       <div class="additional-images">
         <img
           v-for="image in project.additionalImages"
