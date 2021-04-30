@@ -34,6 +34,7 @@ import ProjectCard from "@/components/ProjectCard.vue";
 h1 {
   font-size: 4rem;
   color: $blueberry-500;
+  margin-bottom: 4.8rem;
   @include for-tablet-landscape-up {
     display: none;
   }
@@ -41,24 +42,18 @@ h1 {
 
 .projects {
   position: relative;
-  margin-top: 4.8rem;
+  display: grid;
+  grid-template-columns: repeat(1, minmax(280px, 1fr));
+  gap: 6.4rem 3.2rem;
   margin-bottom: 20rem;
-  > * + * {
-    margin-top: 10rem;
-  }
   @include for-tablet-landscape-up {
-    display: flex;
-    flex-wrap: wrap;
-    padding-bottom: calc(20rem + 3.2rem);
+    grid-template-columns: repeat(2, minmax(280px, 1fr));
+    row-gap: 20rem;
+    padding-bottom: 40rem;
     .project {
-      max-width: calc(50% - 2.4rem);
       height: min-content;
       &:nth-child(even) {
-        transform: translateY(40rem);
-        margin-left: 4.8rem;
-      }
-      + .project {
-        margin-top: 20rem;
+        transform: translateY(50%);
       }
     }
   }
