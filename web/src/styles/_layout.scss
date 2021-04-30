@@ -2,7 +2,10 @@
 @use "@/styles/colours" as *;
 
 .page {
-  margin-top: 15rem;
+  margin-top: 4.8rem;
+  @include for-tablet-landscape-up {
+    margin-top: 15rem;
+  }
 }
 
 .container {
