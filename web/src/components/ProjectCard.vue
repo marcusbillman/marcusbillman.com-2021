@@ -4,29 +4,31 @@
     :class="{ 'project--compact': compact }"
     v-if="project"
   >
-    <img
-      class="project__image"
-      :src="urlFor(project.mainImage)"
-      :alt="project.title"
-    />
-    <div class="project__info" :data-side="infoSide">
-      <router-link
-        class="project__link"
-        :to="`/portfolio/${project.slug.current}`"
-      >
-        <h3 class="project__title">{{ project.title }}</h3>
-        <Icon name="arrow-right" />
-      </router-link>
-      <ul class="project__roles">
-        <li
-          class="project__role"
-          v-for="roleTag in project.roleTags"
-          :key="roleTag._key"
-        >
-          <Tag :text="roleTag.name" />
-        </li>
-      </ul>
-    </div>
+    <router-link
+      class="project__link-wrapper"
+      :to="`/portfolio/${project.slug.current}`"
+    >
+      <img
+        class="project__image"
+        :src="urlFor(project.mainImage)"
+        :alt="project.title"
+      />
+      <div class="project__info" :data-side="infoSide">
+        <div class="project__header">
+          <h3 class="project__title">{{ project.title }}</h3>
+          <Icon name="arrow-right" />
+        </div>
+        <ul class="project__roles">
+          <li
+            class="project__role"
+            v-for="roleTag in project.roleTags"
+            :key="roleTag._key"
+          >
+            <Tag :text="roleTag.name" />
+          </li>
+        </ul>
+      </div>
+    </router-link>
   </article>
 </template>
 
@@ -52,6 +54,9 @@ function urlFor(source) {
 
 .project {
   position: relative;
+  &__link-wrapper {
+    text-decoration: none;
+  }
   &__image {
     width: 100%;
     max-width: 100%;
@@ -66,28 +71,17 @@ function urlFor(source) {
       }
     }
   }
-  &__link {
+  &__header {
     display: flex;
     align-items: center;
-    color: $blueberry-500;
-    text-decoration: none;
     margin-bottom: 1.6rem;
   }
   &__title {
     font-size: 2.4rem;
-    font-weight: 500;
+    font-weight: 400;
     text-transform: unset;
     letter-spacing: unset;
     margin-right: 0.8rem;
-    @include for-tablet-landscape-up {
-      font-size: 3.2rem;
-    }
-  }
-  .icon {
-    @include for-tablet-landscape-up {
-      transform: scale(calc(32 / 24));
-      margin-left: 1.2rem;
-    }
   }
   &__roles {
     display: flex;
@@ -96,7 +90,6 @@ function urlFor(source) {
       margin-right: 1rem;
     }
   }
-
   &:not(&--compact) {
     .project__info {
       @include for-tablet-landscape-up {
@@ -115,6 +108,21 @@ function urlFor(source) {
           right: 0;
           transform: translate(3.2rem, 3.2rem);
         }
+      }
+    }
+    .project__header {
+      color: $blueberry-500;
+    }
+    .project__title {
+      font-weight: 500;
+      @include for-tablet-landscape-up {
+        font-size: 3.2rem;
+      }
+    }
+    .icon {
+      @include for-tablet-landscape-up {
+        transform: scale(calc(32 / 24));
+        margin-left: 1.2rem;
       }
     }
   }
