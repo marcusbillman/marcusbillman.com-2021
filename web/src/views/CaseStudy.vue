@@ -2,7 +2,7 @@
   <div class="page">
     <section class="container header" v-if="project">
       <h1 class="header__title">{{ project.title }}</h1>
-      <p class="header__description">Description should go here</p>
+      <p class="header__description">{{ project.description }}</p>
     </section>
     <section class="container container--wide main-image" v-if="project">
       <img :src="urlFor(project.mainImage)" :alt="project.title" />
