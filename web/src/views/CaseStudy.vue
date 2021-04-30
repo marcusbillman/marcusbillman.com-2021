@@ -13,25 +13,25 @@
       </div>
       <div>
         <div class="data">
-          <div class="data__roles">
+          <div class="data__group">
             <h3>My roles</h3>
-            <ul class="data__roles-list">
+            <ul class="data__list">
               <li v-for="roleTag in project.roleTags" :key="roleTag._key">
                 <Tag :text="roleTag.name" />
               </li>
             </ul>
           </div>
-          <div class="data__technologies">
+          <div class="data__group">
             <h3>Technologies</h3>
-            <ul class="data__roles-list">
+            <ul class="data__list">
               <li v-for="techTag in project.techTags" :key="techTag._key">
                 <Tag :text="techTag.name" />
               </li>
             </ul>
           </div>
-          <div class="data__date">
+          <div class="data__group">
             <h3>Date</h3>
-            <p>{{ project.date }}</p>
+            <p class="data__date">{{ project.date }}</p>
           </div>
         </div>
         <div class="links">
@@ -89,10 +89,6 @@ function urlFor(source) {
 @use "@/styles/breakpoints" as *;
 @use "@/styles/colours" as *;
 
-h3 {
-  margin-bottom: 1.6rem;
-}
-
 img {
   object-fit: cover;
   border-radius: 1.6rem;
@@ -135,7 +131,12 @@ img {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
   gap: 3.2rem 6.4rem;
-  ul {
+  &__group {
+    display: grid;
+    gap: 1.6rem;
+    height: max-content;
+  }
+  &__list {
     display: grid;
     gap: 1rem;
   }
