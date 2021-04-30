@@ -1,11 +1,15 @@
 <template>
-  <article class="project" v-if="project">
+  <article
+    class="project"
+    :class="{ 'project--compact': compact }"
+    v-if="project"
+  >
     <img
       class="project__image"
       :src="urlFor(project.mainImage)"
       :alt="project.title"
     />
-    <div class="flow project__info" :data-side="infoSide">
+    <div class="project__info" :data-side="infoSide">
       <router-link
         class="project__link"
         :to="`/portfolio/${project.slug.current}`"
@@ -33,7 +37,7 @@ import { defineProps } from "vue";
 import sanityClient from "@/sanityConfig";
 import imageUrlBuilder from "@sanity/image-url";
 
-defineProps(["project", "info-side"]);
+defineProps(["project", "info-side", "compact"]);
 
 const imageBuilder = imageUrlBuilder(sanityClient);
 
@@ -62,30 +66,12 @@ function urlFor(source) {
       }
     }
   }
-  &__info {
-    min-width: 80%;
-    @include for-tablet-landscape-up {
-      position: absolute;
-      bottom: 0;
-      background: $white;
-      border-radius: 1.6rem;
-      border: 2px solid $grey-200;
-      padding: 3.2rem;
-      &[data-side="left"] {
-        left: 0;
-        transform: translate(-3.2rem, 3.2rem);
-      }
-      &[data-side="right"] {
-        right: 0;
-        transform: translate(3.2rem, 3.2rem);
-      }
-    }
-  }
   &__link {
     display: flex;
     align-items: center;
     color: $blueberry-500;
     text-decoration: none;
+    margin-bottom: 1.6rem;
   }
   &__title {
     font-size: 2.4rem;
@@ -108,6 +94,28 @@ function urlFor(source) {
     flex-wrap: wrap;
     * {
       margin-right: 1rem;
+    }
+  }
+
+  &:not(&--compact) {
+    .project__info {
+      @include for-tablet-landscape-up {
+        position: absolute;
+        min-width: 80%;
+        bottom: 0;
+        background: $white;
+        border-radius: 1.6rem;
+        border: 2px solid $grey-200;
+        padding: 3.2rem;
+        &[data-side="left"] {
+          left: 0;
+          transform: translate(-3.2rem, 3.2rem);
+        }
+        &[data-side="right"] {
+          right: 0;
+          transform: translate(3.2rem, 3.2rem);
+        }
+      }
     }
   }
 }
