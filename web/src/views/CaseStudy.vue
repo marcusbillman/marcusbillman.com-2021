@@ -89,6 +89,15 @@ function urlFor(source) {
 @use "@/styles/breakpoints" as *;
 @use "@/styles/colours" as *;
 
+h3 {
+  margin-bottom: 1.6rem;
+}
+
+img {
+  object-fit: cover;
+  border-radius: 1.6rem;
+}
+
 .header {
   margin-bottom: 10rem;
   h1 {
@@ -137,30 +146,17 @@ function urlFor(source) {
 }
 
 .additional-images {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(20rem, 1fr));
+  gap: 6.4rem 4.8rem;
   margin-bottom: 20rem;
-  > * + * {
-    margin-top: 6.4rem;
-  }
   @include for-tablet-landscape-up {
-    display: flex;
-    flex-wrap: wrap;
+    grid-template-columns: repeat(2, minmax(20rem, 1fr));
     img {
-      max-width: calc(50% - 2.4rem);
       &:nth-child(even) {
         transform: translateY(6.4rem);
-        margin-top: 0;
-        margin-left: 4.8rem;
       }
     }
   }
-}
-
-h3 {
-  margin-bottom: 1.6rem;
-}
-
-img {
-  object-fit: cover;
-  border-radius: 1.6rem;
 }
 </style>
