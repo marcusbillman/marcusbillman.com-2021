@@ -9,7 +9,7 @@
             prefer, you may also
             <a href="mailto:hello@marcusbillman.com">email me directly.</a>
           </p>
-          <form class="form" method="post">
+          <form class="form" method="post" name="contact" netlify>
             <div class="form__fields">
               <div class="form__field">
                 <label for="name">Your name</label>
