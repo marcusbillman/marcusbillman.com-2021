@@ -45,6 +45,7 @@ function getComponent(href, type) {
   border: none;
   border-radius: 0.8rem;
   padding: 0;
+  cursor: pointer;
   &::after {
     content: "";
     position: absolute;
