@@ -118,7 +118,9 @@ textarea {
 }
 
 textarea {
-  height: 19.2rem;
+  min-height: 20rem;
+  max-height: 100vh;
+  resize: vertical;
 }
 
 .button {
