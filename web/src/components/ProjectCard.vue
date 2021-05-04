@@ -36,7 +36,7 @@
 import Icon from "@/components/Icon.vue";
 import Tag from "@/components/Tag.vue";
 import { defineProps } from "vue";
-import sanityClient from "@/sanityConfig";
+import sanityClient from "@/utilities/sanityConfig";
 import imageUrlBuilder from "@sanity/image-url";
 
 defineProps(["project", "info-side", "compact"]);

@@ -68,7 +68,7 @@ import Tag from "@/components/Tag.vue";
 import { computed } from "vue";
 import { useRoute } from "vue-router";
 import { useStore } from "vuex";
-import sanityClient from "@/sanityConfig";
+import sanityClient from "@/utilities/sanityConfig";
 import imageUrlBuilder from "@sanity/image-url";
 
 const route = useRoute();

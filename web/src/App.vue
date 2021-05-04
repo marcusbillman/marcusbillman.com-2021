@@ -11,7 +11,7 @@
 <script setup>
 import Footer from "@/components/Footer.vue";
 import Navbar from "@/components/Navbar.vue";
-import sanityClient from "@/sanityConfig";
+import sanityClient from "@/utilities/sanityConfig";
 import { useStore } from "vuex";
 
 const store = useStore();
