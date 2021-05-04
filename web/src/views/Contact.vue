@@ -85,7 +85,7 @@ p {
   display: grid;
   grid-template-columns: 1fr;
   gap: 6.4rem 4.8rem;
-  @include for-desktop-up {
+  @include for-tablet-landscape-up {
     grid-template-columns: repeat(2, 1fr);
   }
 }
@@ -119,5 +119,21 @@ textarea {
 
 textarea {
   height: 19.2rem;
+}
+
+.button {
+  @include for-tablet-portrait-up {
+    width: max-content;
+  }
+}
+
+.socials {
+  display: none;
+  @include for-tablet-landscape-up {
+    display: grid;
+    align-content: start;
+    justify-items: end;
+    gap: 2.4rem;
+  }
 }
 </style>
