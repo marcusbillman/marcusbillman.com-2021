@@ -24,7 +24,7 @@
                 <textarea name="message" id="message" />
               </div>
             </div>
-            <button type="submit">Send message</button>
+            <Button type="submit">Send message</Button>
           </form>
         </div>
         <section class="socials">
@@ -53,7 +53,71 @@
 </template>
 
 <script setup>
+import Button from "@/components/Button.vue";
 import LinkCard from "@/components/LinkCard.vue";
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+@use "@/styles/breakpoints" as *;
+@use "@/styles/colours" as *;
+
+h1 {
+  font-size: 4rem;
+  color: $blueberry-500;
+  margin-bottom: 4.8rem;
+  @include for-tablet-landscape-up {
+    display: none;
+  }
+}
+
+p {
+  font-size: 2.4rem;
+  a {
+    color: $blueberry-500;
+  }
+}
+
+.page {
+  display: grid;
+}
+
+.contact {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 6.4rem 4.8rem;
+  @include for-desktop-up {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.form {
+  display: grid;
+  gap: 3.2rem;
+  margin-top: 6.4rem;
+  &__fields {
+    display: grid;
+    gap: 2.4rem;
+  }
+  &__field {
+    display: block;
+  }
+}
+
+label {
+  font-weight: 500;
+}
+
+input,
+textarea {
+  width: 100%;
+  background: $white;
+  border: 2px solid $grey-200;
+  border-radius: 0.8rem;
+  padding: 0.8rem 1.6rem;
+  margin-top: 0.4rem;
+}
+
+textarea {
+  height: 19.2rem;
+}
+</style>
