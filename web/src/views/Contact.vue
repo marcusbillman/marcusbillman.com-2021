@@ -10,6 +10,7 @@
             <a href="mailto:hello@marcusbillman.com">email me directly.</a>
           </p>
           <form class="form" method="post" name="contact" netlify>
+            <input type="hidden" name="form-name" value="contact" />
             <div class="form__fields">
               <div class="form__field">
                 <label for="name">Your name</label>
@@ -21,7 +22,7 @@
               </div>
               <div class="form__field">
                 <label for="message">Message</label>
-                <textarea name="message" id="message" />
+                <textarea name="message" id="message"></textarea>
               </div>
             </div>
             <Button type="submit">Send message</Button>
