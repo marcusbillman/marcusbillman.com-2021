@@ -2,7 +2,7 @@
   <component
     class="button"
     :class="variant ? `button--${variant}` : ''"
-    :is="/^\/.*/.test(href) ? 'router-link' : 'a'"
+    :is="getComponent(href, type)"
     :href="href"
     :to="href"
   >
@@ -17,7 +17,17 @@
 import Icon from "@/components/Icon.vue";
 import { defineProps } from "vue";
 
-defineProps(["href", "icon", "variant"]);
+defineProps(["href", "icon", "variant", "type"]);
+
+function getComponent(href, type) {
+  if (type) {
+    return "button";
+  } else if (/^\/.*/.test(href)) {
+    return "router-link";
+  } else {
+    return "a";
+  }
+}
 </script>
 
 <style lang="scss" scoped>
@@ -31,6 +41,10 @@ defineProps(["href", "icon", "variant"]);
   font-size: 1.6rem;
   font-weight: 500;
   text-decoration: none;
+  background: transparent;
+  border: none;
+  border-radius: 0.8rem;
+  padding: 0;
   &::after {
     content: "";
     position: absolute;
