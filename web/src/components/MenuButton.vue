@@ -2,7 +2,7 @@
   <button
     class="menu-button"
     :class="{ 'menu-button--open': $store.state.menuOpen }"
-    @click="toggleMenu"
+    @click="$store.commit('toggleMenuOpen')"
   >
     <Icon :name="$store.state.menuOpen ? 'close' : 'menu-right'" />
   </button>
@@ -10,13 +10,6 @@
 
 <script setup>
 import Icon from "@/components/Icon.vue";
-import { useStore } from "vuex";
-
-const store = useStore();
-
-function toggleMenu() {
-  store.commit("toggleMenuOpen");
-}
 </script>
 
 <style lang="scss" scoped>
