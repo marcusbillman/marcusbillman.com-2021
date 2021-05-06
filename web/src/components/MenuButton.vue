@@ -4,7 +4,7 @@
     :class="{ 'menu-button--open': $store.state.menuOpen }"
     @click="toggleMenu"
   >
-    <Icon name="menu-right" />
+    <Icon :name="$store.state.menuOpen ? 'close' : 'menu-right'" />
   </button>
 </template>
 
@@ -19,4 +19,21 @@ function toggleMenu() {
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+@use "@/styles/colours" as *;
+
+.menu-button {
+  position: fixed;
+  top: 3.2rem;
+  right: 3.2rem;
+  display: grid;
+  place-items: center;
+  width: 4.8rem;
+  height: 4.8rem;
+  background: $white;
+  border: 2px solid $grey-200;
+  border-radius: 1000px;
+  z-index: 100;
+  cursor: pointer;
+}
+</style>
