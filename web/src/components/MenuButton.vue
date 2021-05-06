@@ -20,11 +20,12 @@ function toggleMenu() {
 </script>
 
 <style lang="scss" scoped>
+@use "@/styles/breakpoints" as *;
 @use "@/styles/colours" as *;
 
 .menu-button {
   position: fixed;
-  top: 3.2rem;
+  bottom: 3.2rem;
   right: 3.2rem;
   display: grid;
   place-items: center;
@@ -35,5 +36,8 @@ function toggleMenu() {
   border-radius: 1000px;
   z-index: 100;
   cursor: pointer;
+  @include for-tablet-landscape-up {
+    top: 3.2rem;
+  }
 }
 </style>
