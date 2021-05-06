@@ -37,15 +37,16 @@
 
 .menu {
   position: fixed;
-  top: 9.6rem;
-  right: 3.2rem;
-  width: 64rem;
+  width: calc(100% - 3.2rem);
+  max-width: 60rem;
+  right: 1.6rem;
+  bottom: 8.8rem;
   display: grid;
-  gap: 6.4rem;
+  gap: 3.2rem;
   background: $white;
   border: 2px solid $grey-200;
   border-radius: 1.6rem;
-  padding: 6.4rem;
+  padding: 2.4rem;
   transform: translateX(calc(100% + 3.2rem));
   z-index: 100;
   &--open {
@@ -56,6 +57,7 @@
     text-decoration: none;
   }
   h3 {
+    display: none;
     font-weight: 600;
     color: $grey-400;
     margin-bottom: 4.8rem;
@@ -64,15 +66,16 @@
     display: grid;
     grid-template-columns: auto 1fr;
     gap: 10rem;
-    margin-top: 10rem;
-    margin-bottom: 15rem;
+  }
+  &__socials {
+    display: none;
   }
   &__social-link {
     margin-bottom: 0.8rem;
   }
   &__link {
-    font-size: 4rem;
-    margin-bottom: 0.8rem;
+    font-size: 2.4rem;
+    margin-bottom: 1.6rem;
   }
   .router-link-exact-active:not(&__name) {
     font-weight: 500;
@@ -80,6 +83,27 @@
   }
   &__name {
     font-weight: 600;
+  }
+  @include for-tablet-portrait-up {
+    top: 9.6rem;
+    bottom: unset;
+    padding: 6.4rem;
+    h3 {
+      display: block;
+    }
+    &__body {
+      margin: 15rem 0;
+    }
+    &__socials {
+      display: block;
+    }
+    &__link {
+      font-size: 4rem;
+      margin-bottom: 0.8rem;
+    }
+  }
+  @include for-tablet-landscape-up {
+    right: 3.2rem;
   }
 }
 </style>

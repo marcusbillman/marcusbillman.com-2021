@@ -25,19 +25,25 @@ function toggleMenu() {
 
 .menu-button {
   position: fixed;
-  bottom: 3.2rem;
-  right: 3.2rem;
+  bottom: 1.6rem;
+  right: 1.6rem;
   display: grid;
   place-items: center;
-  width: 4.8rem;
-  height: 4.8rem;
+  width: 5.6rem;
+  height: 5.6rem;
   background: $white;
   border: 2px solid $grey-200;
   border-radius: 1000px;
   z-index: 100;
   cursor: pointer;
-  @include for-tablet-landscape-up {
+  @include for-tablet-portrait-up {
     top: 3.2rem;
+    right: 1.6rem;
+    width: 4.8rem;
+    height: 4.8rem;
+  }
+  @include for-tablet-landscape-up {
+    right: 3.2rem;
   }
 }
 </style>
