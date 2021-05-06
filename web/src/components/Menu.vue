@@ -31,4 +31,55 @@
 
 <script setup></script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+@use "@/styles/breakpoints" as *;
+@use "@/styles/colours" as *;
+
+.menu {
+  position: fixed;
+  top: 9.6rem;
+  right: 3.2rem;
+  width: 64rem;
+  display: grid;
+  gap: 6.4rem;
+  background: $white;
+  border: 2px solid $grey-200;
+  border-radius: 1.6rem;
+  padding: 6.4rem;
+  transform: translateX(calc(100% + 3.2rem));
+  z-index: 100;
+  &--open {
+    transform: none;
+  }
+  a {
+    display: block;
+    text-decoration: none;
+  }
+  h3 {
+    font-weight: 600;
+    color: $grey-400;
+    margin-bottom: 4.8rem;
+  }
+  &__body {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 10rem;
+    margin-top: 10rem;
+    margin-bottom: 15rem;
+  }
+  &__social-link {
+    margin-bottom: 0.8rem;
+  }
+  &__link {
+    font-size: 4rem;
+    margin-bottom: 0.8rem;
+  }
+  .router-link-exact-active:not(&__name) {
+    font-weight: 500;
+    color: $blueberry-500;
+  }
+  &__name {
+    font-weight: 600;
+  }
+}
+</style>
