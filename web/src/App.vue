@@ -1,5 +1,6 @@
 <template>
   <Navbar />
+  <MenuButton />
   <router-view v-slot="{ Component }">
     <keep-alive>
       <component :is="Component" />
@@ -10,6 +11,7 @@
 
 <script setup>
 import Footer from "@/components/Footer.vue";
+import MenuButton from "@/components/MenuButton.vue";
 import Navbar from "@/components/Navbar.vue";
 import sanityClient from "@/utilities/sanityConfig";
 import { useStore } from "vuex";
