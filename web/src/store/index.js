@@ -4,6 +4,7 @@ const store = createStore({
   state() {
     return {
       projects: [],
+      menuOpen: false,
     };
   },
   getters: {
@@ -17,6 +18,12 @@ const store = createStore({
   mutations: {
     setProjects(state, value) {
       state.projects = value;
+    },
+    setMenuOpen(state, value) {
+      state.menuOpen = value;
+    },
+    toggleMenuOpen(state) {
+      state.menuOpen = !state.menuOpen;
     },
   },
 });
