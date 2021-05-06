@@ -34,7 +34,7 @@ function toggleMenu() {
   background: $white;
   border: 2px solid $grey-200;
   border-radius: 1000px;
-  z-index: 100;
+  z-index: 101;
   cursor: pointer;
   @include for-tablet-portrait-up {
     top: 3.2rem;

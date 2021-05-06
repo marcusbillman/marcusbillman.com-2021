@@ -27,6 +27,11 @@
       </div>
     </div>
   </div>
+  <div
+    class="dim-overlay"
+    :class="{ 'dim-overlay--open': $store.state.menuOpen }"
+    @click="$store.commit('setMenuOpen', false)"
+  ></div>
 </template>
 
 <script setup></script>
@@ -48,7 +53,7 @@
   border-radius: 1.6rem;
   padding: 2.4rem;
   transform: translateX(calc(100% + 3.2rem));
-  z-index: 100;
+  z-index: 101;
   &--open {
     transform: none;
   }
@@ -104,6 +109,20 @@
   }
   @include for-tablet-landscape-up {
     right: 3.2rem;
+  }
+}
+
+.dim-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: $white;
+  opacity: 0;
+  z-index: 100;
+  &--open {
+    opacity: 0.8;
   }
 }
 </style>
