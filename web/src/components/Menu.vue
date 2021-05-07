@@ -121,8 +121,10 @@
   background: $white;
   opacity: 0;
   z-index: 100;
+  pointer-events: none;
   &--open {
     opacity: 0.8;
+    pointer-events: initial;
   }
 }
 </style>
