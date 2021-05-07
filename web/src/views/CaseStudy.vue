@@ -56,7 +56,12 @@
       />
     </section>
     <section class="container next-project">
-      <BigLink href="/portfolio" icon="arrow-right">Next project</BigLink>
+      <BigLink
+        :href="`/portfolio/${nextProject.slug.current}`"
+        icon="arrow-right"
+        v-if="nextProject"
+        >Next project</BigLink
+      >
     </section>
   </div>
 </template>
@@ -83,6 +88,10 @@ const imageBuilder = imageUrlBuilder(sanityClient);
 function urlFor(source) {
   return imageBuilder.image(source);
 }
+
+const nextProject = computed(() =>
+  store.getters.getNextProject(route.params.slug)
+);
 </script>
 
 <style lang="scss" scoped>
