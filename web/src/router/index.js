@@ -1,4 +1,6 @@
 import { createWebHistory, createRouter } from "vue-router";
+import store from "@/store";
+
 import Home from "@/views/Home.vue";
 import Portfolio from "@/views/Portfolio.vue";
 import CaseStudy from "@/views/CaseStudy.vue";
@@ -37,6 +39,10 @@ const router = createRouter({
       },
     },
   ],
+});
+
+router.beforeEach((to, from) => {
+  store.commit("setMenuOpen", false);
 });
 
 export default router;
