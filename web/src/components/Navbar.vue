@@ -1,5 +1,5 @@
 <template>
-  <header class="navbar">
+  <header class="navbar" :class="variant ? `navbar--${variant}` : ''">
     <router-link class="navbar__name navbar__link" to="/"
       >Marcus Billman</router-link
     >
@@ -12,7 +12,16 @@
   </header>
 </template>
 
-<script setup></script>
+<script setup>
+import { computed } from "vue";
+import { useRoute } from "vue-router";
+
+const route = useRoute();
+
+const variant = computed(() =>
+  route.path.startsWith("/portfolio/") ? "case-study" : ""
+);
+</script>
 
 <style lang="scss" scoped>
 @use "@/styles/breakpoints" as *;
