@@ -17,7 +17,10 @@ const store = createStore({
   },
   mutations: {
     setProjects(state, value) {
-      state.projects = value;
+      const sortedArray = value.sort((a, b) => {
+        return a.sortingIndex - b.sortingIndex;
+      });
+      state.projects = sortedArray;
     },
     setMenuOpen(state, value) {
       state.menuOpen = value;
