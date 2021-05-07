@@ -1,12 +1,12 @@
 <template>
   <header class="navbar" :class="variant ? `navbar--${variant}` : ''">
     <router-link
-      class="navbar__close navbar__link"
+      class="navbar__close-link navbar__link"
       to="/portfolio"
       v-if="variant === 'case-study'"
     >
       <Icon name="close" />
-      Close project
+      <span class="navbar__close-text">Close project</span>
     </router-link>
     <router-link class="navbar__name navbar__link" to="/" v-else
       >Marcus Billman</router-link
@@ -68,24 +68,32 @@ const prevProject = computed(() =>
 .navbar {
   position: absolute;
   display: none;
-  top: 3.2rem;
-  left: 50%;
-  transform: translateX(-50%);
   align-items: center;
+  left: 1.6rem;
+  bottom: 1.9rem;
+  width: max-content;
+  height: 4.8rem;
   background: $white;
   border-radius: 1000px;
   border: 2px solid $grey-200;
-  padding: 1rem 3.2rem;
+  padding: 0 3.2rem;
   z-index: 100;
-  @include for-tablet-landscape-up {
+  @include for-tablet-portrait-up {
     display: flex;
+    top: 3.2rem;
+    left: 50%;
+    bottom: unset;
+    transform: translateX(-50%);
   }
   &__separator {
     width: 2px;
     height: 2.4rem;
     background: $grey-200;
     border-radius: 1000px;
-    margin: 0 4rem;
+    margin: 0 1.6rem;
+    @include for-tablet-portrait-up {
+      margin: 0 4rem;
+    }
   }
   &__links {
     display: flex;
@@ -111,8 +119,24 @@ const prevProject = computed(() =>
     }
   }
   &__name {
-    width: max-content;
     font-weight: 600;
+  }
+  &--case-study {
+    display: flex;
+    position: fixed;
+  }
+  &__close-link,
+  &__project-nav {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 0.8rem;
+    font-weight: 600;
+  }
+  &__close-text {
+    display: none;
+    @include for-tablet-portrait-up {
+      display: block;
+    }
   }
 }
 </style>
