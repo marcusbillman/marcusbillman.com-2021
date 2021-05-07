@@ -1,10 +1,33 @@
 <template>
   <header class="navbar" :class="variant ? `navbar--${variant}` : ''">
-    <router-link class="navbar__name navbar__link" to="/"
+    <router-link
+      class="navbar__close navbar__link"
+      to="/portfolio"
+      v-if="variant === 'case-study'"
+    >
+      <Icon name="close" />
+      Close project
+    </router-link>
+    <router-link class="navbar__name navbar__link" to="/" v-else
       >Marcus Billman</router-link
     >
     <div class="navbar__separator"></div>
-    <nav class="navbar__links">
+    <div class="navbar__project-nav" v-if="variant === 'case-study'">
+      <router-link
+        class="navbar__project"
+        :to="`/portfolio/${prevProject.slug.current}`"
+        v-if="variant === 'case-study'"
+        ><Icon name="chevron-left"
+      /></router-link>
+      <span>{{ projectIndex + 1 }} / {{ $store.state.projects.length }}</span>
+      <router-link
+        class="navbar__project"
+        :to="`/portfolio/${nextProject.slug.current}`"
+        v-if="variant === 'case-study'"
+        ><Icon name="chevron-right"
+      /></router-link>
+    </div>
+    <nav class="navbar__links" v-else>
       <router-link class="navbar__link" to="/">Home</router-link>
       <router-link class="navbar__link" to="/portfolio">Portfolio</router-link>
       <router-link class="navbar__link" to="/contact">Contact</router-link>
@@ -13,13 +36,28 @@
 </template>
 
 <script setup>
+import Icon from "@/components/Icon.vue";
 import { computed } from "vue";
 import { useRoute } from "vue-router";
+import { useStore } from "vuex";
 
 const route = useRoute();
+const store = useStore();
 
 const variant = computed(() =>
   route.path.startsWith("/portfolio/") ? "case-study" : ""
+);
+
+const projectIndex = computed(() =>
+  store.getters.getIndexBySlug(route.params.slug)
+);
+
+const nextProject = computed(() =>
+  store.getters.getNextProject(route.params.slug)
+);
+
+const prevProject = computed(() =>
+  store.getters.getPrevProject(route.params.slug)
 );
 </script>
 
