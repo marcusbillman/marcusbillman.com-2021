@@ -23,6 +23,13 @@ export default {
       },
     },
     {
+      name: "sortingIndex",
+      title: "Sorting index",
+      type: "number",
+      description:
+        "Used for sorting the projects on the front-end and in the Studio",
+    },
+    {
       name: "featured",
       title: "Featured",
       type: "boolean",
@@ -110,6 +117,18 @@ export default {
     },
     publishedAt: new Date().toISOString(),
   }),
+  orderings: [
+    {
+      title: "Sorting index",
+      name: "sortingIndex",
+      by: [{ field: "sortingIndex", direction: "asc" }],
+    },
+    {
+      title: "Title",
+      name: "title",
+      by: [{ field: "title", direction: "asc" }],
+    },
+  ],
   preview: {
     select: {
       title: "title",
