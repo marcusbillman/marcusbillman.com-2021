@@ -11,6 +11,26 @@ const store = createStore({
     getProjectBySlug: (state) => (slug) => {
       return state.projects.find((project) => project.slug.current === slug);
     },
+    getNextProject: (state, getters) => (currentSlug) => {
+      const currentProject = getters.getProjectBySlug(currentSlug);
+      const currentProjectIndex = state.projects.indexOf(currentProject);
+      const nextProjectIndex = currentProjectIndex + 1;
+
+      if (nextProjectIndex > state.projects.length - 1) {
+        return state.projects[0];
+      }
+      return state.projects[nextProjectIndex];
+    },
+    getPrevProject: (state, getters) => (currentSlug) => {
+      const currentProject = getters.getProjectBySlug(currentSlug);
+      const currentProjectIndex = state.projects.indexOf(currentProject);
+      const prevProjectIndex = currentProjectIndex - 1;
+
+      if (prevProjectIndex < 0) {
+        return state.projects[state.projects.length - 1];
+      }
+      return state.projects[prevProjectIndex];
+    },
     getFeaturedProjects: (state) => {
       return state.projects.filter((project) => project.featured);
     },
