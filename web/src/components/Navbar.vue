@@ -8,7 +8,11 @@
       <Icon name="close" />
       <span class="navbar__close-text">Close project</span>
     </router-link>
-    <router-link class="navbar__name navbar__link" to="/" v-else
+    <router-link
+      class="navbar__name navbar__link"
+      to="/"
+      @animationend.prevent="holdFinish"
+      v-else
       >Marcus Billman</router-link
     >
     <div class="navbar__separator"></div>
@@ -59,6 +63,13 @@ const nextProject = computed(() =>
 const prevProject = computed(() =>
   store.getters.getPrevProject(route.params.slug)
 );
+
+// Easter egg when clicking and holding navbar name
+function holdFinish(e) {
+  if (e.animationName.startsWith("holdName")) {
+    window.location.href = "https://gudweb.marcusbillman.com/";
+  }
+}
 </script>
 
 <style lang="scss" scoped>
@@ -120,6 +131,9 @@ const prevProject = computed(() =>
   }
   &__name {
     font-weight: 600;
+    &:active {
+      animation: holdName 3s cubic-bezier(0.895, 0.03, 0.685, 0.22) forwards;
+    }
   }
   &--case-study {
     display: flex;
@@ -137,6 +151,15 @@ const prevProject = computed(() =>
     @include for-tablet-portrait-up {
       display: block;
     }
+  }
+}
+
+@keyframes holdName {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0);
   }
 }
 </style>
