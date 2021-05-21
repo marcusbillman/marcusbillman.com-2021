@@ -1,13 +1,13 @@
 <template>
   <div class="page">
-    <section class="container header" v-if="project">
+    <section v-if="project" class="container header">
       <h1 class="header__title">{{ project.title }}</h1>
       <p class="header__description">{{ project.description }}</p>
     </section>
-    <section class="container container--wide main-image" v-if="project">
+    <section v-if="project" class="container container--wide main-image">
       <img :src="urlFor(project.mainImage)" :alt="project.title" />
     </section>
-    <section class="container content" v-if="project">
+    <section v-if="project" class="container content">
       <div class="flow body">
         <SanityBlocks :blocks="project.body" />
       </div>
@@ -47,7 +47,7 @@
         </div>
       </div>
     </section>
-    <section class="container container--wide additional-images" v-if="project">
+    <section v-if="project" class="container container--wide additional-images">
       <img
         v-for="image in project.additionalImages"
         :key="image._key"
@@ -57,9 +57,9 @@
     </section>
     <section class="container next-project">
       <BigLink
+        v-if="nextProject"
         :href="`/portfolio/${nextProject.slug.current}`"
         icon="arrow-right"
-        v-if="nextProject"
         >Next project</BigLink
       >
     </section>
@@ -67,31 +67,31 @@
 </template>
 
 <script setup>
-import BigLink from "@/components/BigLink.vue";
-import Button from "@/components/Button.vue";
-import Tag from "@/components/Tag.vue";
-import { computed } from "vue";
-import { useRoute } from "vue-router";
-import { useStore } from "vuex";
-import sanityClient from "@/utilities/sanityConfig";
-import imageUrlBuilder from "@sanity/image-url";
+import BigLink from '@/components/BigLink.vue'
+import Button from '@/components/Button.vue'
+import Tag from '@/components/Tag.vue'
+import { computed } from 'vue'
+import { useRoute } from 'vue-router'
+import { useStore } from 'vuex'
+import sanityClient from '@/utilities/sanityConfig'
+import imageUrlBuilder from '@sanity/image-url'
 
-const route = useRoute();
-const store = useStore();
+const route = useRoute()
+const store = useStore()
 
 const project = computed(() =>
   store.getters.getProjectBySlug(route.params.slug)
-);
+)
 
-const imageBuilder = imageUrlBuilder(sanityClient);
+const imageBuilder = imageUrlBuilder(sanityClient)
 
 function urlFor(source) {
-  return imageBuilder.image(source);
+  return imageBuilder.image(source)
 }
 
 const nextProject = computed(() =>
   store.getters.getNextProject(route.params.slug)
-);
+)
 </script>
 
 <style lang="scss" scoped>

@@ -1,37 +1,37 @@
 <template>
   <header class="navbar" :class="variant ? `navbar--${variant}` : ''">
     <router-link
+      v-if="variant === 'case-study'"
       class="navbar__close-link navbar__link"
       to="/portfolio"
-      v-if="variant === 'case-study'"
     >
       <Icon name="close" />
       <span class="navbar__close-text">Close project</span>
     </router-link>
     <router-link
+      v-else
       class="navbar__name navbar__link"
       to="/"
       @animationend.prevent="holdFinish"
-      v-else
       >Marcus Billman</router-link
     >
     <div class="navbar__separator"></div>
-    <div class="navbar__project-nav" v-if="variant === 'case-study'">
+    <div v-if="variant === 'case-study'" class="navbar__project-nav">
       <router-link
+        v-if="variant === 'case-study'"
         class="navbar__project"
         :to="`/portfolio/${prevProject.slug.current}`"
-        v-if="variant === 'case-study'"
         ><Icon name="chevron-left"
       /></router-link>
       <span>{{ projectIndex + 1 }} / {{ $store.state.projects.length }}</span>
       <router-link
+        v-if="variant === 'case-study'"
         class="navbar__project"
         :to="`/portfolio/${nextProject.slug.current}`"
-        v-if="variant === 'case-study'"
         ><Icon name="chevron-right"
       /></router-link>
     </div>
-    <nav class="navbar__links" v-else>
+    <nav v-else class="navbar__links">
       <router-link class="navbar__link" to="/">Home</router-link>
       <router-link class="navbar__link" to="/portfolio">Portfolio</router-link>
       <router-link class="navbar__link" to="/contact">Contact</router-link>
@@ -40,34 +40,34 @@
 </template>
 
 <script setup>
-import Icon from "@/components/Icon.vue";
-import { computed } from "vue";
-import { useRoute } from "vue-router";
-import { useStore } from "vuex";
+import Icon from '@/components/Icon.vue'
+import { computed } from 'vue'
+import { useRoute } from 'vue-router'
+import { useStore } from 'vuex'
 
-const route = useRoute();
-const store = useStore();
+const route = useRoute()
+const store = useStore()
 
 const variant = computed(() =>
-  route.path.startsWith("/portfolio/") ? "case-study" : ""
-);
+  route.path.startsWith('/portfolio/') ? 'case-study' : ''
+)
 
 const projectIndex = computed(() =>
   store.getters.getIndexBySlug(route.params.slug)
-);
+)
 
 const nextProject = computed(() =>
   store.getters.getNextProject(route.params.slug)
-);
+)
 
 const prevProject = computed(() =>
   store.getters.getPrevProject(route.params.slug)
-);
+)
 
 // Easter egg when clicking and holding navbar name
 function holdFinish(e) {
-  if (e.animationName.startsWith("holdName")) {
-    window.location.href = "https://gudweb.marcusbillman.com/";
+  if (e.animationName.startsWith('holdName')) {
+    window.location.href = 'https://gudweb.marcusbillman.com/'
   }
 }
 </script>
@@ -119,7 +119,7 @@ function holdFinish(e) {
     font-weight: 600;
     color: $blueberry-500;
     &::after {
-      content: "";
+      content: '';
       position: absolute;
       left: 50%;
       bottom: calc(-1rem - 2px);

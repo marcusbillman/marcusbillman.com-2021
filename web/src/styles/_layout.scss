@@ -37,7 +37,7 @@
     pointer-events: none;
 
     @include for-desktop-up {
-      content: "";
+      content: '';
     }
   }
   &::before {

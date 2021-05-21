@@ -16,8 +16,8 @@
 </template>
 
 <script setup>
-import ContactSection from "@/components/ContactSection.vue";
-import ProjectCard from "@/components/ProjectCard.vue";
+import ContactSection from '@/components/ContactSection.vue'
+import ProjectCard from '@/components/ProjectCard.vue'
 </script>
 
 <style lang="scss" scoped>
@@ -70,7 +70,7 @@ h1 {
     pointer-events: none;
 
     @include for-tablet-portrait-up {
-      content: "";
+      content: '';
     }
   }
   &::before {

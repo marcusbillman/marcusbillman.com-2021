@@ -14,15 +14,15 @@
             <div class="form__fields">
               <div class="form__field">
                 <label for="name">Your name</label>
-                <input type="text" name="name" id="name" />
+                <input id="name" type="text" name="name" />
               </div>
               <div class="form__field">
                 <label for="email">Your email</label>
-                <input type="email" name="email" id="email" />
+                <input id="email" type="email" name="email" />
               </div>
               <div class="form__field">
                 <label for="message">Message</label>
-                <textarea name="message" id="message"></textarea>
+                <textarea id="message" name="message"></textarea>
               </div>
             </div>
             <Button type="submit">Send message</Button>
@@ -54,8 +54,8 @@
 </template>
 
 <script setup>
-import Button from "@/components/Button.vue";
-import LinkCard from "@/components/LinkCard.vue";
+import Button from '@/components/Button.vue'
+import LinkCard from '@/components/LinkCard.vue'
 </script>
 
 <style lang="scss" scoped>

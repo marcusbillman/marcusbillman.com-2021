@@ -10,10 +10,10 @@
 </template>
 
 <script setup>
-import Icon from "@/components/Icon.vue";
-import { defineProps } from "vue";
+import Icon from '@/components/Icon.vue'
+import { defineProps } from 'vue'
 
-defineProps(["title", "desc", "href", "icon"]);
+defineProps(['title', 'desc', 'href', 'icon'])
 </script>
 
 <style lang="scss" scoped>

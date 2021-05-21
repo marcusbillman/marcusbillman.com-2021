@@ -11,25 +11,25 @@
 </template>
 
 <script setup>
-import Footer from "@/components/Footer.vue";
-import Menu from "@/components/Menu.vue";
-import MenuButton from "@/components/MenuButton.vue";
-import Navbar from "@/components/Navbar.vue";
-import sanityClient from "@/utilities/sanityConfig";
-import { useStore } from "vuex";
+import Footer from '@/components/Footer.vue'
+import Menu from '@/components/Menu.vue'
+import MenuButton from '@/components/MenuButton.vue'
+import Navbar from '@/components/Navbar.vue'
+import sanityClient from '@/utilities/sanityConfig'
+import { useStore } from 'vuex'
 
-const store = useStore();
+const store = useStore()
 
 const query = `*[ _type == 'project' ]{
     ...,
     'roleTags': *[ _type == 'roleTag' && _id in ^.roleTags[]._ref ],
     'techTags': *[ _type == 'techTag' && _id in ^.techTags[]._ref ]
-  }`;
+  }`
 
 sanityClient.fetch(query).then((result) => {
-  store.commit("setProjects", result);
-  console.log(result);
-});
+  store.commit('setProjects', result)
+  console.log(result)
+})
 </script>
 
 <style lang="scss">

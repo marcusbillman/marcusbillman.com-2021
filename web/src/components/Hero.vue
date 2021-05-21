@@ -14,7 +14,7 @@
 </template>
 
 <script setup>
-import Icon from "@/components/Icon.vue";
+import Icon from '@/components/Icon.vue'
 </script>
 
 <style lang="scss" scoped>
@@ -37,7 +37,7 @@ import Icon from "@/components/Icon.vue";
     padding: 0 1.6rem;
     &::before,
     &::after {
-      content: "";
+      content: '';
       position: absolute;
       pointer-events: none;
     }
@@ -46,14 +46,14 @@ import Icon from "@/components/Icon.vue";
       height: 359px;
       top: -160px;
       left: -170px;
-      background-image: url("@/assets/squiggle-1.svg");
+      background-image: url('@/assets/squiggle-1.svg');
     }
     &::after {
       width: 538px;
       height: 348px;
       bottom: -60px;
       right: -275px;
-      background-image: url("@/assets/squiggle-2.svg");
+      background-image: url('@/assets/squiggle-2.svg');
     }
   }
   &__name {

@@ -111,13 +111,13 @@
 </template>
 
 <script setup>
-import BigLink from "@/components/BigLink.vue";
-import Button from "@/components/Button.vue";
-import ContactSection from "@/components/ContactSection.vue";
-import Hero from "@/components/Hero.vue";
-import LinkCard from "@/components/LinkCard.vue";
-import ProjectCard from "@/components/ProjectCard.vue";
-import Tag from "@/components/Tag.vue";
+import BigLink from '@/components/BigLink.vue'
+import Button from '@/components/Button.vue'
+import ContactSection from '@/components/ContactSection.vue'
+import Hero from '@/components/Hero.vue'
+import LinkCard from '@/components/LinkCard.vue'
+import ProjectCard from '@/components/ProjectCard.vue'
+import Tag from '@/components/Tag.vue'
 </script>
 
 <style lang="scss" scoped>
@@ -140,7 +140,7 @@ import Tag from "@/components/Tag.vue";
     margin-right: 1.2rem;
   }
   &::before {
-    content: "";
+    content: '';
     width: 6.4rem;
     height: 4px;
     background-image: radial-gradient($salmon 2px, transparent 0);
@@ -186,7 +186,7 @@ section .flow {
     background-size: 16px 16px;
     pointer-events: none;
     @include for-desktop-up {
-      content: "";
+      content: '';
     }
   }
   &::before {
@@ -260,7 +260,7 @@ section .flow {
     background-size: 16px 16px;
     pointer-events: none;
     @include for-tablet-landscape-up {
-      content: "";
+      content: '';
     }
   }
   &::before {

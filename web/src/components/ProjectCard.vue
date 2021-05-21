@@ -1,8 +1,8 @@
 <template>
   <article
+    v-if="project"
     class="project"
     :class="{ 'project--compact': compact }"
-    v-if="project"
   >
     <router-link
       class="project__link-wrapper"
@@ -20,9 +20,9 @@
         </div>
         <ul class="project__roles">
           <li
-            class="project__role"
             v-for="roleTag in project.roleTags"
             :key="roleTag._key"
+            class="project__role"
           >
             <Tag :text="roleTag.name" />
           </li>
@@ -33,18 +33,18 @@
 </template>
 
 <script setup>
-import Icon from "@/components/Icon.vue";
-import Tag from "@/components/Tag.vue";
-import { defineProps } from "vue";
-import sanityClient from "@/utilities/sanityConfig";
-import imageUrlBuilder from "@sanity/image-url";
+import Icon from '@/components/Icon.vue'
+import Tag from '@/components/Tag.vue'
+import { defineProps } from 'vue'
+import sanityClient from '@/utilities/sanityConfig'
+import imageUrlBuilder from '@sanity/image-url'
 
-defineProps(["project", "info-side", "compact"]);
+defineProps(['project', 'info-side', 'compact'])
 
-const imageBuilder = imageUrlBuilder(sanityClient);
+const imageBuilder = imageUrlBuilder(sanityClient)
 
 function urlFor(source) {
-  return imageBuilder.image(source);
+  return imageBuilder.image(source)
 }
 </script>
 
@@ -100,11 +100,11 @@ function urlFor(source) {
         border-radius: 1.6rem;
         border: 2px solid $grey-200;
         padding: 3.2rem;
-        &[data-side="left"] {
+        &[data-side='left'] {
           left: 0;
           transform: translate(-3.2rem, 3.2rem);
         }
-        &[data-side="right"] {
+        &[data-side='right'] {
           right: 0;
           transform: translate(3.2rem, 3.2rem);
         }

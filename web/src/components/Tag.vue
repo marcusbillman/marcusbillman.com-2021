@@ -5,9 +5,9 @@
 </template>
 
 <script setup>
-import { defineProps } from "vue";
+import { defineProps } from 'vue'
 
-defineProps(["text"]);
+defineProps(['text'])
 </script>
 
 <style lang="scss" scoped>

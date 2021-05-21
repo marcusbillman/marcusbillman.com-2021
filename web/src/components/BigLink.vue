@@ -1,7 +1,7 @@
 <template>
   <component
-    class="big-link"
     :is="/^\/.*/.test(href) ? 'router-link' : 'a'"
+    class="big-link"
     :href="href"
     :to="href"
   >
@@ -11,10 +11,10 @@
 </template>
 
 <script setup>
-import Icon from "@/components/Icon.vue";
-import { defineProps } from "vue";
+import Icon from '@/components/Icon.vue'
+import { defineProps } from 'vue'
 
-defineProps(["href", "icon"]);
+defineProps(['href', 'icon'])
 </script>
 
 <style lang="scss" scoped>

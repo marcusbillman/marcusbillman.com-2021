@@ -1,8 +1,8 @@
 <template>
   <component
+    :is="getComponent(href, type)"
     class="button"
     :class="variant ? `button--${variant}` : ''"
-    :is="getComponent(href, type)"
     :href="href"
     :to="href"
   >
@@ -14,18 +14,18 @@
 </template>
 
 <script setup>
-import Icon from "@/components/Icon.vue";
-import { defineProps } from "vue";
+import Icon from '@/components/Icon.vue'
+import { defineProps } from 'vue'
 
-defineProps(["href", "icon", "variant", "type"]);
+defineProps(['href', 'icon', 'variant', 'type'])
 
 function getComponent(href, type) {
   if (type) {
-    return "button";
+    return 'button'
   } else if (/^\/.*/.test(href)) {
-    return "router-link";
+    return 'router-link'
   } else {
-    return "a";
+    return 'a'
   }
 }
 </script>
@@ -47,7 +47,7 @@ function getComponent(href, type) {
   padding: 0;
   cursor: pointer;
   &::after {
-    content: "";
+    content: '';
     position: absolute;
     top: 0;
     left: 0;

@@ -1,51 +1,51 @@
-import { createWebHistory, createRouter } from "vue-router";
-import store from "@/store";
+import { createWebHistory, createRouter } from 'vue-router'
+import store from '@/store'
 
-import Home from "@/views/Home.vue";
-import Portfolio from "@/views/Portfolio.vue";
-import CaseStudy from "@/views/CaseStudy.vue";
-import Contact from "@/views/Contact.vue";
+import Home from '@/views/Home.vue'
+import Portfolio from '@/views/Portfolio.vue'
+import CaseStudy from '@/views/CaseStudy.vue'
+import Contact from '@/views/Contact.vue'
 
 const router = createRouter({
   history: createWebHistory(),
   routes: [
     {
-      path: "/",
-      name: "Home",
+      path: '/',
+      name: 'Home',
       component: Home,
       meta: {
-        index: 0,
-      },
+        index: 0
+      }
     },
     {
-      path: "/portfolio",
-      name: "Portfolio",
+      path: '/portfolio',
+      name: 'Portfolio',
       component: Portfolio,
       meta: {
-        index: 1,
-      },
+        index: 1
+      }
     },
     {
-      path: "/portfolio/:slug",
-      name: "Case Study",
-      component: CaseStudy,
+      path: '/portfolio/:slug',
+      name: 'Case Study',
+      component: CaseStudy
     },
     {
-      path: "/contact",
-      name: "Contact",
+      path: '/contact',
+      name: 'Contact',
       component: Contact,
       meta: {
-        index: 2,
-      },
-    },
+        index: 2
+      }
+    }
   ],
   scrollBehavior(to, from, savedPosition) {
-    return savedPosition ? savedPosition : { top: 0 };
-  },
-});
+    return savedPosition || { top: 0 }
+  }
+})
 
 router.beforeEach((to, from) => {
-  store.commit("setMenuOpen", false);
-});
+  store.commit('setMenuOpen', false)
+})
 
-export default router;
+export default router
