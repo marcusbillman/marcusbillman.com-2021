@@ -36,16 +36,9 @@
 import Icon from '@/components/Icon.vue'
 import Tag from '@/components/Tag.vue'
 import { defineProps } from 'vue'
-import sanityClient from '@/utilities/sanityConfig'
-import imageUrlBuilder from '@sanity/image-url'
+import { urlFor } from '@/utilities/sanityImageUrl.js'
 
 defineProps(['project', 'info-side', 'compact'])
-
-const imageBuilder = imageUrlBuilder(sanityClient)
-
-function urlFor(source) {
-  return imageBuilder.image(source)
-}
 </script>
 
 <style lang="scss" scoped>

@@ -73,8 +73,7 @@ import Tag from '@/components/Tag.vue'
 import { computed } from 'vue'
 import { useRoute } from 'vue-router'
 import { useStore } from 'vuex'
-import sanityClient from '@/utilities/sanityConfig'
-import imageUrlBuilder from '@sanity/image-url'
+import { urlFor } from '@/utilities/sanityImageUrl.js'
 
 const route = useRoute()
 const store = useStore()
@@ -82,12 +81,6 @@ const store = useStore()
 const project = computed(() =>
   store.getters.getProjectBySlug(route.params.slug)
 )
-
-const imageBuilder = imageUrlBuilder(sanityClient)
-
-function urlFor(source) {
-  return imageBuilder.image(source)
-}
 
 const nextProject = computed(() =>
   store.getters.getNextProject(route.params.slug)
