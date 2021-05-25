@@ -1,10 +1,13 @@
 <template>
+  <a href="#" ref="skipLinkWrapper">
+    <a href="#main" class="skip-link">Skip to main content</a>
+  </a>
   <Navbar />
   <MenuButton />
   <Menu />
   <router-view v-slot="{ Component }">
     <keep-alive>
-      <component :is="Component" />
+      <component :is="Component" id="main" />
     </keep-alive>
   </router-view>
   <Footer />
@@ -16,8 +19,11 @@ import Menu from '@/components/Menu.vue'
 import MenuButton from '@/components/MenuButton.vue'
 import Navbar from '@/components/Navbar.vue'
 import sanityClient from '@/utilities/sanityConfig'
+import { ref, watch } from 'vue'
+import { useRoute } from 'vue-router'
 import { useStore } from 'vuex'
 
+const route = useRoute()
 const store = useStore()
 
 const query = `*[ _type == 'project' ]{
@@ -29,6 +35,14 @@ const query = `*[ _type == 'project' ]{
 sanityClient.fetch(query).then((result) => {
   store.commit('setProjects', result)
   console.log(result)
+})
+
+// Skip link
+
+const skipLinkWrapper = ref(null)
+
+watch(route, () => {
+  skipLinkWrapper.value.focus()
 })
 </script>
 
@@ -47,5 +61,15 @@ body {
 
 #app {
   overflow-x: hidden;
+}
+
+.skip-link {
+  position: absolute;
+  top: 3.2rem;
+  left: 3.2rem;
+  &:not(:focus) {
+    opacity: 0;
+    pointer-events: none;
+  }
 }
 </style>
