@@ -217,14 +217,6 @@ section .flow {
     gap: 6.4rem 3.2rem;
     margin-top: 15rem;
     margin-bottom: 10rem;
-    @include for-desktop-up {
-      > :nth-child(2) {
-        transform: translateY(1.6rem);
-      }
-      > :nth-child(3) {
-        transform: translateY(3.2rem);
-      }
-    }
   }
 }
 
@@ -243,11 +235,9 @@ section .flow {
     }
     @include for-tablet-landscape-up {
       --splitter-spacing: 3.2rem;
-      > :nth-child(1) {
-        transform: translateY(-0.8rem);
-      }
+      > :nth-child(1),
       > :nth-child(3) {
-        transform: translateY(0.8rem);
+        transform: none;
       }
     }
   }
