@@ -1,10 +1,25 @@
 import { createStore } from 'vuex'
+import sanityClient from '@/utilities/sanityConfig'
 
 const store = createStore({
   state() {
     return {
       projects: [],
       menuOpen: false
+    }
+  },
+  actions: {
+    fetchContent(context) {
+      const query = `*[ _type == 'project' ]{
+        ...,
+        'roleTags': *[ _type == 'roleTag' && _id in ^.roleTags[]._ref ],
+        'techTags': *[ _type == 'techTag' && _id in ^.techTags[]._ref ]
+      }`
+
+      sanityClient.fetch(query).then((result) => {
+        context.commit('setProjects', result)
+        console.log(result)
+      })
     }
   },
   getters: {
