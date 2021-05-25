@@ -120,9 +120,11 @@ img {
 }
 
 .main-image {
-  margin: 6.4rem 0;
+  margin-top: 6.4rem;
+  margin-bottom: 6.4rem;
   @include for-tablet-landscape-up {
-    margin: 15rem 0;
+    margin-top: 15rem;
+    margin-bottom: 15rem;
   }
 }
 
