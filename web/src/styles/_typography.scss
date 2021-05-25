@@ -1,3 +1,4 @@
+@use "@/styles/breakpoints" as *;
 @use "@/styles/colours" as *;
 
 body {
@@ -10,11 +11,19 @@ body {
 h1,
 h2 {
   font-size: clamp(3.2rem, 6vw, 5.6rem);
+  font-weight: 500;
+  line-height: 1.5;
+  color: $blueberry-500;
 }
 
-h1 {
-  font-weight: 400;
-  line-height: 1.5;
+h1:not([class]) {
+  font-size: 4rem;
+  margin-bottom: 4.8rem;
+  @include for-tablet-portrait-up {
+    height: 0;
+    margin: 0;
+    overflow: hidden;
+  }
 }
 
 h2 {
