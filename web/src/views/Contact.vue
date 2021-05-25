@@ -62,15 +62,6 @@ import LinkCard from '@/components/LinkCard.vue'
 @use "@/styles/breakpoints" as *;
 @use "@/styles/colours" as *;
 
-h1 {
-  font-size: 4rem;
-  color: $blueberry-500;
-  margin-bottom: 4.8rem;
-  @include for-tablet-landscape-up {
-    display: none;
-  }
-}
-
 p {
   font-size: 2.4rem;
   a {

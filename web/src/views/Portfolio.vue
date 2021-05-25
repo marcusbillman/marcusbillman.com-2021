@@ -31,15 +31,6 @@ import ProjectCard from '@/components/ProjectCard.vue'
   }
 }
 
-h1 {
-  font-size: 4rem;
-  color: $blueberry-500;
-  margin-bottom: 4.8rem;
-  @include for-tablet-landscape-up {
-    display: none;
-  }
-}
-
 .projects {
   position: relative;
   display: grid;

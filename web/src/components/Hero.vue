@@ -69,7 +69,9 @@ import Icon from '@/components/Icon.vue'
     justify-content: center;
   }
   &__heading {
+    font-weight: 400;
     text-align: center;
+    color: $grey-800;
     margin-bottom: 6.4rem;
   }
   &__bold {
