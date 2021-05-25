@@ -2,6 +2,7 @@
   <button
     class="menu-button"
     :class="{ 'menu-button--open': $store.state.menuOpen }"
+    aria-label="Toggle menu"
     @click="$store.commit('toggleMenuOpen')"
   >
     <Icon :name="$store.state.menuOpen ? 'close' : 'menu-right'" />
