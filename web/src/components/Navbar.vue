@@ -16,16 +16,17 @@
       >Marcus Billman</router-link
     >
     <div class="navbar__separator"></div>
-    <div v-if="variant === 'case-study'" class="navbar__project-nav">
+    <div
+      v-if="variant === 'case-study' && projectCount"
+      class="navbar__project-nav"
+    >
       <router-link
-        v-if="variant === 'case-study'"
         class="navbar__project"
         :to="`/portfolio/${prevProject.slug.current}`"
         ><Icon name="chevron-left"
       /></router-link>
-      <span>{{ projectIndex + 1 }} / {{ $store.state.projects.length }}</span>
+      <span>{{ projectIndex + 1 }} / {{ projectCount }}</span>
       <router-link
-        v-if="variant === 'case-study'"
         class="navbar__project"
         :to="`/portfolio/${nextProject.slug.current}`"
         ><Icon name="chevron-right"
@@ -51,6 +52,8 @@ const store = useStore()
 const variant = computed(() =>
   route.path.startsWith('/portfolio/') ? 'case-study' : ''
 )
+
+const projectCount = computed(() => store.getters.getProjectCount)
 
 const projectIndex = computed(() =>
   store.getters.getIndexBySlug(route.params.slug)
