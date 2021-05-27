@@ -42,6 +42,9 @@ const store = createStore({
     },
     getFeaturedProjects: (state) => {
       return state.projects.filter((project) => project.featured)
+    },
+    getProjectCount: (state) => {
+      return state.projects.length
     }
   },
   mutations: {
