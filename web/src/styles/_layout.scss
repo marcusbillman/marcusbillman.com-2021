@@ -19,17 +19,6 @@
   }
 }
 
-.page-container {
-  position: relative;
-  width: 100%;
-  max-width: 120rem;
-  margin: 0 auto;
-  padding: 0 1.6rem;
-  @include for-desktop-up {
-    @include vertical-lines;
-  }
-}
-
 .flow {
   > * + * {
     margin-top: var(--spacing, 1.6rem);

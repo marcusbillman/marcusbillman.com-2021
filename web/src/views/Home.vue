@@ -1,6 +1,6 @@
 <template>
   <div class="page">
-    <main class="page-container">
+    <main class="container">
       <div class="flow sections">
         <Hero />
         <section class="bio">
@@ -127,6 +127,12 @@ import Tag from '@/components/Tag.vue'
 
 .page {
   margin-top: 0;
+}
+
+.container {
+  @include for-desktop-up {
+    @include vertical-lines;
+  }
 }
 
 .preheader {
