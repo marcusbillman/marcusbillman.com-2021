@@ -23,6 +23,7 @@ import ProjectCard from '@/components/ProjectCard.vue'
 <style lang="scss" scoped>
 @use "@/styles/breakpoints" as *;
 @use "@/styles/colours" as *;
+@use "@/styles/lines" as *;
 
 .container {
   margin-top: 4.8rem;
@@ -48,29 +49,18 @@ import ProjectCard from '@/components/ProjectCard.vue'
       }
     }
   }
-  &::before,
-  &::after {
-    position: absolute;
-    width: 4px;
-    top: -20rem;
-    bottom: 0;
-    background-image: radial-gradient($salmon 2px, transparent 0);
-    background-size: 16px 16px;
-    background-position: -22px 0;
-    z-index: -1;
-    pointer-events: none;
-
-    @include for-tablet-portrait-up {
-      content: '';
+  @include vertical-lines {
+    &::before,
+    &::after {
+      top: -20rem;
+      z-index: -1;
     }
-  }
-  &::before {
-    left: calc(25% - 2.4rem);
-    transform: translateX(1.6rem);
-  }
-  &::after {
-    right: calc(25% - 2.4rem);
-    transform: translateX(-1.6rem);
+    &::before {
+      left: calc(25% - 2.4rem);
+    }
+    &::after {
+      right: calc(25% - 2.4rem);
+    }
   }
 }
 </style>

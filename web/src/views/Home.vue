@@ -123,6 +123,7 @@ import Tag from '@/components/Tag.vue'
 <style lang="scss" scoped>
 @use "@/styles/breakpoints" as *;
 @use "@/styles/colours" as *;
+@use "@/styles/lines" as *;
 
 .page {
   margin-top: 0;
@@ -140,17 +141,10 @@ import Tag from '@/components/Tag.vue'
     margin-right: 1.2rem;
   }
   &::before {
-    content: '';
-    width: 6.4rem;
-    height: 4px;
-    background-image: radial-gradient($salmon 2px, transparent 0);
-    background-size: 16px 16px;
-    background-position: -22px 10px;
-    pointer-events: none;
-    margin-right: 1.2rem;
+    @include horizontal-line;
     @include for-desktop-up {
       width: 12.8rem;
-      margin-left: 1.2rem;
+      margin-left: 1.6rem;
       margin-right: 2.4rem;
     }
   }
@@ -178,27 +172,12 @@ section .flow {
     max-width: 70rem;
     font-size: 2.4rem;
   }
-  &::before,
-  &::after {
-    width: 6rem;
-    height: 4px;
-    background-image: radial-gradient($salmon 2px, transparent 0);
-    background-size: 16px 16px;
-    pointer-events: none;
-    @include for-desktop-up {
-      content: '';
+  @include for-desktop-up {
+    @include horizontal-lines {
+      &::before {
+        flex-grow: 0;
+      }
     }
-  }
-  &::before {
-    background-position: -22px 10px;
-    margin-left: 1.2rem;
-    margin-right: 3.2rem;
-  }
-  &::after {
-    flex-grow: 1;
-    background-position: right -22px top 10px;
-    margin-left: 3.2rem;
-    margin-right: 1.2rem;
   }
 }
 
@@ -241,27 +220,8 @@ section .flow {
       }
     }
   }
-  &::before,
-  &::after {
-    width: 6rem;
-    height: 4px;
-    flex-grow: 1;
-    background-image: radial-gradient($salmon 2px, transparent 0);
-    background-size: 16px 16px;
-    pointer-events: none;
-    @include for-tablet-landscape-up {
-      content: '';
-    }
-  }
-  &::before {
-    background-position: -22px 10px;
-    margin-left: 1.2rem;
-    margin-right: 3.2rem;
-  }
-  &::after {
-    background-position: right -22px top 10px;
-    margin-left: 3.2rem;
-    margin-right: 1.2rem;
+  @include for-tablet-landscape-up {
+    @include horizontal-lines;
   }
 }
 
