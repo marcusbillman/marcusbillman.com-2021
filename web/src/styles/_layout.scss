@@ -20,9 +20,9 @@
 }
 
 .flow {
-  > * + * {
-    margin-top: var(--spacing, 1.6rem);
-  }
+  display: grid;
+  justify-items: start;
+  gap: 2em;
 }
 
 .splitter {

@@ -1,5 +1,5 @@
 <template>
-  <section class="flow contact">
+  <section class="contact">
     <h2>Communication is key</h2>
     <p>
       Want to talk linear gradients or pentatonic scales (or just say hi)?
@@ -15,12 +15,9 @@ import Button from '@/components/Button.vue'
 
 <style lang="scss" scoped>
 .contact {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: grid;
+  justify-items: center;
   text-align: center;
-  > * {
-    --spacing: 3.2rem;
-  }
+  gap: 3.2rem;
 }
 </style>

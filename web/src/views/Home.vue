@@ -1,7 +1,7 @@
 <template>
   <div class="page">
     <main class="container">
-      <div class="flow sections">
+      <div class="sections">
         <Hero />
         <section class="section bio">
           <p class="bio__content">
@@ -157,7 +157,8 @@ import Tag from '@/components/Tag.vue'
 }
 
 .sections {
-  --spacing: 20rem;
+  display: grid;
+  gap: 20rem;
 }
 
 .section {
@@ -165,9 +166,6 @@ import Tag from '@/components/Tag.vue'
     @include for-desktop-up {
       margin: 0 10rem;
     }
-  }
-  .flow {
-    --spacing: 3.2rem;
   }
 }
 
