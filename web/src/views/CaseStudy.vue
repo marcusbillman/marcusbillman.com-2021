@@ -99,8 +99,6 @@ img {
 .header {
   h1 {
     font-size: clamp(4rem, 6vw, 7.2rem);
-    font-weight: 500;
-    color: $blueberry-500;
     margin-bottom: 2.4rem;
   }
 }
