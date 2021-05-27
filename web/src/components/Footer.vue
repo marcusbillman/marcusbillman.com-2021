@@ -29,8 +29,21 @@
   margin-top: 20rem;
   padding: 4.8rem 0;
   &__inner {
+    position: relative;
     justify-content: space-between;
     --splitter-spacing: 3.2rem;
+    @include for-desktop-up {
+      &::before {
+        content: '';
+        position: absolute;
+        width: 363px;
+        height: 226px;
+        left: 1.6rem;
+        bottom: calc(100% + 4.8rem);
+        background-image: url('@/assets/squiggle-3.svg');
+        pointer-events: none;
+      }
+    }
   }
   &__name {
     font-weight: 500;

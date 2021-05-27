@@ -131,7 +131,12 @@ import Tag from '@/components/Tag.vue'
 
 .container {
   @include for-desktop-up {
-    @include vertical-lines;
+    @include vertical-lines {
+      &::before,
+      &::after {
+        bottom: 32rem;
+      }
+    }
   }
 }
 
