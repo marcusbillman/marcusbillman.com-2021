@@ -3,7 +3,7 @@
     <main class="container">
       <div class="flow sections">
         <Hero />
-        <section class="bio">
+        <section class="section bio">
           <p class="bio__content">
             I’m Marcus. I design websites and interfaces, and develop
             experiences for the web. I’m also a hobbyist music producer.
@@ -16,12 +16,12 @@
             alt="Design illustration"
           />
         </div>
-        <section class="design">
+        <section class="section design">
           <div class="preheader">
             <span class="preheader__number">01</span>
             <span class="preheader__title">WEB & DESIGN</span>
           </div>
-          <div class="section-container">
+          <div class="section__content">
             <div class="splitter design__info">
               <div class="flow design__left">
                 <h2>The web is my oyster</h2>
@@ -66,12 +66,12 @@
             alt="Music illustration"
           />
         </div>
-        <section class="music">
+        <section class="section music">
           <div class="preheader">
             <span class="preheader__number">02</span>
             <span class="preheader__title">MUSIC</span>
           </div>
-          <div class="flow section-container">
+          <div class="flow section__content">
             <h2>Beats and jams</h2>
             <p>
               During my day, I subconsciously tap drum beats on tables and hum
@@ -82,7 +82,7 @@
             >
           </div>
         </section>
-        <section class="socials">
+        <section class="section socials">
           <div class="splitter socials__content">
             <LinkCard
               title="GitHub"
@@ -160,13 +160,14 @@ import Tag from '@/components/Tag.vue'
   --spacing: 20rem;
 }
 
-section .flow {
-  --spacing: 3.2rem;
-}
-
-.section-container {
-  @include for-desktop-up {
-    margin: 0 10rem;
+.section {
+  &__content {
+    @include for-desktop-up {
+      margin: 0 10rem;
+    }
+  }
+  .flow {
+    --spacing: 3.2rem;
   }
 }
 
