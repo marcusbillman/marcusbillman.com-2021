@@ -230,7 +230,7 @@ import Tag from '@/components/Tag.vue'
       }
     }
   }
-  @include for-tablet-landscape-up {
+  @include for-desktop-up {
     @include horizontal-lines;
   }
 }
@@ -238,5 +238,8 @@ import Tag from '@/components/Tag.vue'
 .illustration {
   display: grid;
   place-items: center;
+  svg {
+    max-height: min(50vh, 40rem);
+  }
 }
 </style>
