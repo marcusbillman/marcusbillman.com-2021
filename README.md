@@ -4,6 +4,16 @@
 
 My personal website and portfolio, hosted at [marcusbillman.com](https://marcusbillman.com). This monorepo contains both the front-end web application and the Studio application where I can edit the website's cloud-hosted data.
 
+## Documentation
+
+🖼 [Kanban board](https://github.com/NTIG-Umea/projekt-marcusbillman/projects/1)
+
+📑 [Installation (Swedish)](https://github.com/NTIG-Umea/projekt-marcusbillman/wiki/Installation)
+
+📑 [Post mortem (Swedish)](https://github.com/NTIG-Umea/projekt-marcusbillman/wiki/Post-mortem)
+
+📑 [Planning (Swedish)](https://github.com/NTIG-Umea/projekt-marcusbillman/wiki/Planering)
+
 ## Built with
 
 These are some of the nifty technologies I've used:
@@ -12,16 +22,6 @@ These are some of the nifty technologies I've used:
 - [Vite](https://vitejs.dev/)
 - [Sanity](https://www.sanity.io)
 - [Netlify](https://www.netlify.com/)
-
-## Documentation
-
-These documents are used by me to keep track of development:
-
-🖼 [Kanban board](https://github.com/NTIG-Umea/projekt-marcusbillman/projects/1)
-
-📑 [Post mortem (Swedish)](https://github.com/NTIG-Umea/projekt-marcusbillman/wiki/Post-mortem)
-
-📑 [Planning (Swedish)](https://github.com/NTIG-Umea/projekt-marcusbillman/wiki/Planering)
 
 ## Code style
 
