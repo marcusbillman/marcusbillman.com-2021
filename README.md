@@ -18,6 +18,9 @@ These are some of the nifty technologies I've used:
 These documents are used by me to keep track of development:
 
 🖼 [Kanban board](https://github.com/NTIG-Umea/projekt-marcusbillman/projects/1)
+
+📑 [Post mortem (Swedish)](https://github.com/NTIG-Umea/projekt-marcusbillman/wiki/Post-mortem)
+
 📑 [Planning (Swedish)](https://github.com/NTIG-Umea/projekt-marcusbillman/wiki/Planering)
 
 ## Code style
