@@ -1,18 +1,24 @@
 <template>
   <footer class="footer">
-    <div class="splitter container footer__inner">
-      <span class="footer__name">&copy; 2021 MARCUS BILLMAN</span>
-      <div class="splitter footer__links">
-        <a class="footer__link" href="https://github.com/marcusbillman"
-          >GitHub</a
+    <div class="container footer__inner">
+      <p class="footer__name">Marcus Billman</p>
+      <div class="footer__links">
+        <div class="footer__navigation">
+          <a class="footer__link" href="https://github.com/marcusbillman"
+            >GitHub</a
+          >
+          <a class="footer__link" href="https://soundcloud.com/xfoxx37"
+            >SoundCloud</a
+          >
+          <a class="footer__link" href="https://www.instagram.com/marcusbillman"
+            >Instagram</a
+          >
+        </div>
+        <a
+          class="footer__link footer__email"
+          href="mailto:hello@marcusbillman.com"
+          >hello@marcusbillman.com</a
         >
-        <a class="footer__link" href="https://soundcloud.com/xfoxx37"
-          >SoundCloud</a
-        >
-        <a class="footer__link" href="https://www.instagram.com/marcusbillman"
-          >Instagram</a
-        >
-        <a class="footer__link" href="mailto:hello@marcusbillman.com">Email</a>
       </div>
     </div>
   </footer>
@@ -25,35 +31,47 @@
 @use "@/styles/colours" as *;
 
 .footer {
-  background: $white;
-  margin-top: 20rem;
-  padding: 4.8rem 0;
+  // General footer styles
+  margin-top: clamp(10rem, 20rem, 20vh);
+  padding-bottom: 4.8rem;
   &__inner {
-    position: relative;
-    justify-content: space-between;
-    --splitter-spacing: 3.2rem;
-    @include for-desktop-up {
-      &::before {
-        content: '';
-        position: absolute;
-        width: 363px;
-        height: 226px;
-        left: 1.6rem;
-        bottom: calc(100% + 4.8rem);
-        background-image: url('@/assets/squiggle-3.svg');
-        pointer-events: none;
-      }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.6rem;
+    @include for-tablet-portrait-up {
+      flex-direction: row;
+      justify-content: space-between;
     }
   }
+
+  // Name (left on desktop)
   &__name {
     font-weight: 500;
   }
-  &__link {
-    display: block;
-    --splitter-spacing: 1.6rem;
-    @include for-desktop-up {
-      --splitter-spacing: 3.2rem;
+
+  // Links (right on desktop)
+  &__links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include for-tablet-portrait-up {
+      align-items: flex-end;
     }
+  }
+  &__navigation {
+    display: flex;
+    gap: 1.6rem;
+    margin-bottom: 1.6rem;
+    @include for-tablet-portrait-up {
+      gap: 3.2rem;
+      margin-bottom: 0.8rem;
+    }
+  }
+  &__link:not(.footer__email) {
+    display: block;
+    font-weight: 500;
+    text-decoration: none;
   }
 }
 </style>
