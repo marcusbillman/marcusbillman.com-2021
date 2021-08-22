@@ -1,12 +1,12 @@
 <template>
   <section class="contact">
     <h2>Communication is key</h2>
-    <Button href="/contact">Contact me</Button>
+    <BaseButton href="/contact">Contact me</BaseButton>
   </section>
 </template>
 
 <script setup>
-import Button from '@/components/Button.vue'
+import BaseButton from '@/components/BaseButton.vue'
 </script>
 
 <style lang="scss" scoped>

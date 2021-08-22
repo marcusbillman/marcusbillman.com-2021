@@ -17,7 +17,7 @@
             <h3>My roles</h3>
             <ul class="data__list">
               <li v-for="roleTag in project.roleTags" :key="roleTag._key">
-                <Tag :text="roleTag.name" />
+                <BaseTag :text="roleTag.name" />
               </li>
             </ul>
           </div>
@@ -25,7 +25,7 @@
             <h3>Technologies</h3>
             <ul class="data__list">
               <li v-for="techTag in project.techTags" :key="techTag._key">
-                <Tag :text="techTag.name" />
+                <BaseTag :text="techTag.name" />
               </li>
             </ul>
           </div>
@@ -35,14 +35,14 @@
           </div>
         </div>
         <div class="links">
-          <Button :href="project.primaryLink.url" icon="arrow-top-right">{{
+          <BaseButton :href="project.primaryLink.url" icon="arrow-top-right">{{
             project.primaryLink.text
-          }}</Button>
-          <Button
+          }}</BaseButton>
+          <BaseButton
             :href="project.secondaryLink.url"
             icon="arrow-top-right"
             variant="secondary"
-            >{{ project.secondaryLink.text }}</Button
+            >{{ project.secondaryLink.text }}</BaseButton
           >
         </div>
       </div>
@@ -56,20 +56,19 @@
       />
     </section>
     <section class="container next-project">
-      <BigLink
+      <BaseButton
         v-if="nextProject"
         :href="`/portfolio/${nextProject.slug.current}`"
         icon="arrow-right"
-        >Next project</BigLink
+        >Next project</BaseButton
       >
     </section>
   </div>
 </template>
 
 <script setup>
-import BigLink from '@/components/BigLink.vue'
-import Button from '@/components/Button.vue'
-import Tag from '@/components/Tag.vue'
+import BaseButton from '@/components/BaseButton.vue'
+import BaseTag from '@/components/BaseTag.vue'
 import { computed } from 'vue'
 import { useRoute } from 'vue-router'
 import { useStore } from 'vuex'

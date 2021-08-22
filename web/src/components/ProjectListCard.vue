@@ -16,7 +16,7 @@
       <div class="project__info" :data-side="infoSide">
         <div class="project__header">
           <h3 class="project__title">{{ project.title }}</h3>
-          <Icon name="arrow-right" />
+          <BaseIcon name="arrow-right" />
         </div>
         <p class="project__description">{{ project.description }}</p>
         <ul class="project__roles">
@@ -25,7 +25,7 @@
             :key="roleTag._key"
             class="project__role"
           >
-            <Tag :text="roleTag.name" />
+            <BaseTag :text="roleTag.name" />
           </li>
         </ul>
       </div>
@@ -34,8 +34,8 @@
 </template>
 
 <script setup>
-import Icon from '@/components/Icon.vue'
-import Tag from '@/components/Tag.vue'
+import BaseIcon from '@/components/BaseIcon.vue'
+import BaseTag from '@/components/BaseTag.vue'
 import { defineProps } from 'vue'
 import { urlFor } from '@/utilities/sanityImageUrl.js'
 

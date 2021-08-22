@@ -5,7 +5,7 @@
       class="navbar__close-link navbar__link"
       to="/portfolio"
     >
-      <Icon name="close" />
+      <BaseIcon name="close" />
       <span class="navbar__close-text">Close project</span>
     </router-link>
     <router-link
@@ -23,13 +23,13 @@
       <router-link
         class="navbar__project"
         :to="`/portfolio/${prevProject.slug.current}`"
-        ><Icon name="chevron-left"
+        ><BaseIcon name="chevron-left"
       /></router-link>
       <span>{{ projectIndex + 1 }} / {{ projectCount }}</span>
       <router-link
         class="navbar__project"
         :to="`/portfolio/${nextProject.slug.current}`"
-        ><Icon name="chevron-right"
+        ><BaseIcon name="chevron-right"
       /></router-link>
     </div>
     <nav v-else class="navbar__links">
@@ -41,7 +41,7 @@
 </template>
 
 <script setup>
-import Icon from '@/components/Icon.vue'
+import BaseIcon from '@/components/BaseIcon.vue'
 import { computed } from 'vue'
 import { useRoute } from 'vue-router'
 import { useStore } from 'vuex'

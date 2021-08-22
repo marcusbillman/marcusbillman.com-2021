@@ -25,7 +25,7 @@
                 <textarea id="message" name="message"></textarea>
               </div>
             </div>
-            <Button type="submit">Send message</Button>
+            <BaseButton type="submit">Send message</BaseButton>
           </form>
         </div>
         <section class="socials">
@@ -54,7 +54,7 @@
 </template>
 
 <script setup>
-import Button from '@/components/Button.vue'
+import BaseButton from '@/components/BaseButton.vue'
 import LinkCard from '@/components/LinkCard.vue'
 </script>
 

@@ -2,22 +2,22 @@
   <a ref="skipLinkWrapper" href="#">
     <a href="#main" class="skip-link">Skip to main content</a>
   </a>
-  <Navbar />
+  <TheNavbar />
   <MenuButton />
-  <Menu />
+  <TheMenu />
   <router-view v-slot="{ Component }">
     <keep-alive>
       <component :is="Component" id="main" />
     </keep-alive>
   </router-view>
-  <Footer />
+  <TheFooter />
 </template>
 
 <script setup>
-import Footer from '@/components/Footer.vue'
-import Menu from '@/components/Menu.vue'
 import MenuButton from '@/components/MenuButton.vue'
-import Navbar from '@/components/Navbar.vue'
+import TheFooter from '@/components/TheFooter.vue'
+import TheMenu from '@/components/TheMenu.vue'
+import TheNavbar from '@/components/TheNavbar.vue'
 import { ref, watch } from 'vue'
 import { useRoute } from 'vue-router'
 import { useStore } from 'vuex'

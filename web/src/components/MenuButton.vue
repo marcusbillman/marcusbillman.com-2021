@@ -5,12 +5,12 @@
     aria-label="Toggle menu"
     @click="$store.commit('toggleMenuOpen')"
   >
-    <Icon :name="$store.state.menuOpen ? 'close' : 'menu-right'" />
+    <BaseIcon :name="$store.state.menuOpen ? 'close' : 'menu-right'" />
   </button>
 </template>
 
 <script setup>
-import Icon from '@/components/Icon.vue'
+import BaseIcon from '@/components/BaseIcon.vue'
 </script>
 
 <style lang="scss" scoped>

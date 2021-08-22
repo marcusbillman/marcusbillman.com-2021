@@ -1,6 +1,6 @@
 <template>
   <section class="projects">
-    <ProjectCard
+    <ProjectListCard
       v-for="(project, index) in $store.state.projects"
       :key="project._key"
       :project="project"
@@ -11,7 +11,7 @@
 </template>
 
 <script setup>
-import ProjectCard from '@/components/ProjectCard.vue'
+import ProjectListCard from '@/components/ProjectListCard.vue'
 import { defineProps } from 'vue'
 
 defineProps(['compact'])

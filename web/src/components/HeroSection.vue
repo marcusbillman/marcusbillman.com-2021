@@ -7,14 +7,14 @@
           My art is arranging links and shapes into
           <span class="hero__bold">experiences.</span>
         </h1>
-        <Icon name="arrow-down" size="32" />
+        <BaseIcon name="arrow-down" size="32" />
       </div>
     </div>
   </section>
 </template>
 
 <script setup>
-import Icon from '@/components/Icon.vue'
+import BaseIcon from '@/components/BaseIcon.vue'
 </script>
 
 <style lang="scss" scoped>

@@ -2,7 +2,7 @@
   <div class="page">
     <main class="container">
       <div class="sections">
-        <Hero />
+        <HeroSection />
         <section class="section bio">
           <p class="bio__content">
             I’m Marcus. I design websites and interfaces, and develop
@@ -34,27 +34,22 @@
               <div class="design__right">
                 <h3>Tools I like using</h3>
                 <div class="design__tools">
-                  <Tag text="Vue 3" />
-                  <Tag text="SCSS" />
-                  <Tag text="GSAP" />
-                  <Tag text="Git" />
-                  <Tag text="Netlify" />
-                  <Tag text="Firebase" />
-                  <Tag text="Figma" />
-                  <Tag text="Node.js" />
+                  <BaseTag text="Vue 3" />
+                  <BaseTag text="SCSS" />
+                  <BaseTag text="GSAP" />
+                  <BaseTag text="Git" />
+                  <BaseTag text="Netlify" />
+                  <BaseTag text="Firebase" />
+                  <BaseTag text="Figma" />
+                  <BaseTag text="Node.js" />
                 </div>
               </div>
             </div>
             <div class="design__projects">
-              <div class="design__featured-projects">
-                <ProjectCard
-                  v-for="project in $store.getters.getFeaturedProjects"
-                  :key="project._key"
-                  :project="project"
-                  compact="true"
-                />
-              </div>
-              <BigLink href="/portfolio" icon="arrow-right">More work</BigLink>
+              <ProjectList compact="true" />
+              <BaseButton href="/portfolio" icon="arrow-right"
+                >More work</BaseButton
+              >
             </div>
           </div>
         </section>
@@ -77,8 +72,8 @@
               During my day, I subconsciously tap drum beats on tables and hum
               cheesy melodies. My free creative outlet is electronic music.
             </p>
-            <Button href="https://soundcloud.com/xfoxx37"
-              >Listen on SoundCloud</Button
+            <BaseButton href="https://soundcloud.com/xfoxx37"
+              >Listen on SoundCloud</BaseButton
             >
           </div>
         </section>
@@ -111,13 +106,12 @@
 </template>
 
 <script setup>
-import BigLink from '@/components/BigLink.vue'
-import Button from '@/components/Button.vue'
+import BaseButton from '@/components/BaseButton.vue'
+import BaseTag from '@/components/BaseTag.vue'
 import ContactSection from '@/components/ContactSection.vue'
-import Hero from '@/components/Hero.vue'
+import HeroSection from '@/components/HeroSection.vue'
 import LinkCard from '@/components/LinkCard.vue'
-import ProjectCard from '@/components/ProjectCard.vue'
-import Tag from '@/components/Tag.vue'
+import ProjectList from '@/components/ProjectList.vue'
 </script>
 
 <style lang="scss" scoped>

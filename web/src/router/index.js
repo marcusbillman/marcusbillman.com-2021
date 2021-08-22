@@ -1,10 +1,10 @@
 import { createWebHistory, createRouter } from 'vue-router'
 import store from '@/store'
 
-import Home from '@/views/Home.vue'
-import Portfolio from '@/views/Portfolio.vue'
-import CaseStudy from '@/views/CaseStudy.vue'
-import Contact from '@/views/Contact.vue'
+import HomePage from '@/views/HomePage.vue'
+import PortfolioPage from '@/views/PortfolioPage.vue'
+import CaseStudyPage from '@/views/CaseStudyPage.vue'
+import ContactPage from '@/views/ContactPage.vue'
 
 const router = createRouter({
   history: createWebHistory(),
@@ -12,7 +12,7 @@ const router = createRouter({
     {
       path: '/',
       name: 'Home',
-      component: Home,
+      component: HomePage,
       meta: {
         index: 0
       }
@@ -20,7 +20,7 @@ const router = createRouter({
     {
       path: '/portfolio',
       name: 'Portfolio',
-      component: Portfolio,
+      component: PortfolioPage,
       meta: {
         index: 1
       }
@@ -28,12 +28,12 @@ const router = createRouter({
     {
       path: '/portfolio/:slug',
       name: 'Case Study',
-      component: CaseStudy
+      component: CaseStudyPage
     },
     {
       path: '/contact',
       name: 'Contact',
-      component: Contact,
+      component: ContactPage,
       meta: {
         index: 2
       }

@@ -8,13 +8,13 @@
   >
     <div class="button__inner">
       <slot></slot>
-      <Icon :name="icon || 'arrow-right'" />
+      <BaseIcon :name="icon || 'arrow-right'" />
     </div>
   </component>
 </template>
 
 <script setup>
-import Icon from '@/components/Icon.vue'
+import BaseIcon from '@/components/BaseIcon.vue'
 import { defineProps } from 'vue'
 
 defineProps(['href', 'icon', 'variant', 'type'])
