@@ -44,9 +44,6 @@ watch(route, () => {
 
 body {
   background: $white;
-  background-image: radial-gradient($grey-100 2px, transparent 0);
-  background-size: 32px 32px;
-  background-attachment: fixed;
 }
 
 #app {
