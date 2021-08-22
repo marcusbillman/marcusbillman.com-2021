@@ -80,6 +80,7 @@ function holdFinish(e) {
 @use "@/styles/colours" as *;
 
 .navbar {
+  // General navbar styles
   position: absolute;
   display: none;
   align-items: center;
@@ -90,28 +91,21 @@ function holdFinish(e) {
   background: $white;
   border-radius: 1000px;
   border: 2px solid $grey-200;
-  padding: 0 3.2rem;
+  padding: 0 2rem;
   z-index: 100;
   @include for-tablet-portrait-up {
     display: flex;
     top: 3.2rem;
     left: 50%;
     bottom: unset;
+    padding: 0 3.2rem;
     transform: translateX(-50%);
   }
-  &__separator {
-    width: 2px;
-    height: 2.4rem;
-    background: $grey-200;
-    border-radius: 1000px;
-    margin: 0 1.6rem;
-    @include for-tablet-portrait-up {
-      margin: 0 4rem;
-    }
-  }
+
+  // Links (Right side)
   &__links {
     display: flex;
-    gap: 2.4rem;
+    gap: 3.2rem;
   }
   &__link {
     position: relative;
@@ -119,7 +113,7 @@ function holdFinish(e) {
     text-decoration: none;
   }
   .router-link-active:not(&__name) {
-    font-weight: 600;
+    font-weight: 700;
     color: $blueberry-500;
     &::after {
       content: '';
@@ -132,12 +126,28 @@ function holdFinish(e) {
       background: currentColor;
     }
   }
+
+  // Name (left side)
   &__name {
-    font-weight: 600;
+    font-weight: 700;
     &:active {
       animation: holdName 3s cubic-bezier(0.895, 0.03, 0.685, 0.22) forwards;
     }
   }
+
+  // Separator
+  &__separator {
+    width: 2px;
+    height: 100%;
+    background: $grey-200;
+    border-radius: 1000px;
+    margin: 0 1.6rem;
+    @include for-tablet-portrait-up {
+      margin: 0 3.2rem;
+    }
+  }
+
+  // Case study variant (left & right sides)
   &--case-study {
     display: flex;
     position: fixed;
@@ -147,7 +157,7 @@ function holdFinish(e) {
     display: grid;
     grid-auto-flow: column;
     gap: 0.8rem;
-    font-weight: 600;
+    font-weight: 500;
   }
   &__close-text {
     display: none;
