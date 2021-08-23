@@ -22,12 +22,7 @@
             />
           </div>
         </section>
-        <section class="featured-work section">
-          <ProjectList compact="true" />
-          <BaseButton href="/portfolio" icon="arrow-right"
-            >More work</BaseButton
-          >
-        </section>
+        <WorkSection featured-only="true" />
         <section class="socials section">
           <div class="socials__content">
             <LinkCard
@@ -62,7 +57,7 @@ import BaseTag from '@/components/BaseTag.vue'
 import ContactSection from '@/components/ContactSection.vue'
 import HeroSection from '@/components/HeroSection.vue'
 import LinkCard from '@/components/LinkCard.vue'
-import ProjectList from '@/components/ProjectList.vue'
+import WorkSection from '@/components/WorkSection.vue'
 </script>
 
 <style lang="scss" scoped>
@@ -113,14 +108,6 @@ import ProjectList from '@/components/ProjectList.vue'
       display: block;
     }
   }
-}
-
-.featured-work {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 6.4rem;
-  padding: 0 1.6rem;
 }
 
 .socials {
