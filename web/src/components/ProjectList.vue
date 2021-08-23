@@ -40,10 +40,10 @@ const projectsToShow = computed(() =>
     grid-template-columns: repeat(2, minmax(20rem, 1fr));
     .project {
       &:nth-child(even) {
-        transform: translateY(50%);
-      }
-      &:last-child {
-        margin-bottom: 50%;
+        top: 20rem;
+        &:last-child {
+          margin-bottom: 20rem;
+        }
       }
     }
   }
