@@ -21,7 +21,6 @@ defineProps(['title', 'desc', 'href', 'icon'])
 
 .link-card {
   display: flex;
-  flex-shrink: 0;
   align-items: center;
   background: $white;
   border-radius: 1.2rem;
@@ -29,14 +28,15 @@ defineProps(['title', 'desc', 'href', 'icon'])
   text-decoration: none;
   padding: 1.6rem 2.4rem;
   &__content {
+    flex-grow: 1;
     margin: 0 1.6rem;
   }
   span {
     display: block;
-    line-height: 1.5;
+    line-height: 1.2;
   }
   &__title {
-    font-weight: 600;
+    font-weight: 700;
   }
   &__desc {
     color: $grey-600;
