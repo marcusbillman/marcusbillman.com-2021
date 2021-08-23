@@ -1,84 +1,28 @@
 <template>
   <div class="page">
-    <main class="container">
+    <main>
+      <HeroSection />
       <div class="sections">
-        <HeroSection />
-        <section class="section bio">
-          <p class="bio__content">
-            I’m Marcus. I design websites and interfaces, and develop
-            experiences for the web. I’m also a hobbyist music producer.
-          </p>
-        </section>
-        <div class="illustration">
-          <img
-            v-svg-inline
-            src="@/assets/illustration-design.svg"
-            alt="Design illustration"
-          />
-        </div>
-        <section class="section design">
-          <div class="preheader">
-            <span class="preheader__number">01</span>
-            <span class="preheader__title">WEB & DESIGN</span>
-          </div>
-          <div class="section__content">
-            <div class="splitter design__info">
-              <div class="flow design__left">
-                <h2>The web is my oyster</h2>
-                <p>
-                  Few things excite me as much as clean, smooth websites that
-                  just feel spot-on. My designs focus on being expressive,
-                  helpful and accessible.
-                </p>
-              </div>
-              <div class="design__right">
-                <h3>Tools I like using</h3>
-                <div class="design__tools">
-                  <BaseTag text="Vue 3" />
-                  <BaseTag text="SCSS" />
-                  <BaseTag text="GSAP" />
-                  <BaseTag text="Git" />
-                  <BaseTag text="Netlify" />
-                  <BaseTag text="Firebase" />
-                  <BaseTag text="Figma" />
-                  <BaseTag text="Node.js" />
-                </div>
-              </div>
-            </div>
-            <div class="design__projects">
-              <ProjectList compact="true" />
-              <BaseButton href="/portfolio" icon="arrow-right"
-                >More work</BaseButton
-              >
-            </div>
-          </div>
-        </section>
-        <div class="illustration">
-          <img
-            v-svg-inline
-            class="illustration"
-            src="@/assets/illustration-music.svg"
-            alt="Music illustration"
-          />
-        </div>
-        <section class="section music">
-          <div class="preheader">
-            <span class="preheader__number">02</span>
-            <span class="preheader__title">MUSIC</span>
-          </div>
-          <div class="flow section__content">
-            <h2>Beats and jams</h2>
-            <p>
-              During my day, I subconsciously tap drum beats on tables and hum
-              cheesy melodies. My free creative outlet is electronic music.
+        <section class="bio section">
+          <div class="bio__content container">
+            <p class="bio__body">
+              I’m Marcus. I design cohesive, helpful and accessible web
+              experiences that simply feel great. I’m also a hobbyist music
+              producer.
             </p>
-            <BaseButton href="https://soundcloud.com/xfoxx37"
-              >Listen on SoundCloud</BaseButton
+            <BaseButton href="/about" variant="secondary" icon="arrow-right"
+              >About me</BaseButton
             >
           </div>
         </section>
-        <section class="section socials">
-          <div class="splitter socials__content">
+        <section class="featured-work section">
+          <ProjectList compact="true" />
+          <BaseButton href="/portfolio" icon="arrow-right"
+            >More work</BaseButton
+          >
+        </section>
+        <section class="socials section">
+          <div class="socials__content">
             <LinkCard
               title="GitHub"
               desc="marcusbillman"
@@ -119,121 +63,49 @@ import ProjectList from '@/components/ProjectList.vue'
 @use "@/styles/colours" as *;
 @use "@/styles/lines" as *;
 
-.page {
-  margin-top: 0;
-}
-
-.container {
-  @include for-desktop-up {
-    @include vertical-lines {
-      &::before,
-      &::after {
-        bottom: 32rem;
-      }
-    }
-  }
-}
-
-.preheader {
-  display: flex;
-  align-items: center;
-  font-weight: 600;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  margin-bottom: 6.4rem;
-  &__number {
-    color: $grey-400;
-    margin-right: 1.2rem;
-  }
-  &::before {
-    @include horizontal-line;
-    @include for-desktop-up {
-      width: 12.8rem;
-      margin-left: 1.6rem;
-      margin-right: 2.4rem;
-    }
-  }
-}
-
 .sections {
-  display: grid;
-  gap: 20rem;
-}
-
-.section {
-  &__content {
-    @include for-desktop-up {
-      margin: 0 10rem;
-    }
-  }
+  display: flex;
+  flex-direction: column;
+  gap: clamp(10rem, 20rem, 20vh);
+  padding-top: 6.4rem;
 }
 
 .bio {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
   &__content {
-    max-width: 70rem;
-    font-size: 2.4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3.2rem;
+    max-width: 106.4rem;
   }
-  @include for-desktop-up {
-    @include horizontal-lines {
-      &::before {
-        flex-grow: 0;
-      }
+  @include for-tablet-landscape-up {
+    &__content {
+      flex-direction: row;
+      align-items: center;
+      padding: 3.2rem;
     }
   }
 }
 
-.design {
-  &__tools {
-    max-width: 30rem;
-    margin-top: 0.8rem;
-    * {
-      margin-top: 1rem;
-      margin-right: 1rem;
-    }
-  }
-  &__featured-projects {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 6.4rem 3.2rem;
-    margin-top: 15rem;
-    margin-bottom: 10rem;
-  }
+.featured-work {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6.4rem;
+  padding: 0 1.6rem;
 }
 
 .socials {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  &__content {
-    --splitter-spacing: 2.4rem;
-    > :nth-child(1) {
-      transform: translateX(-3.2rem);
-    }
-    > :nth-child(3) {
-      transform: translateX(3.2rem);
-    }
-    @include for-tablet-landscape-up {
-      --splitter-spacing: 3.2rem;
-      > :nth-child(1),
-      > :nth-child(3) {
-        transform: none;
-      }
-    }
-  }
-  @include for-desktop-up {
-    @include horizontal-lines;
-  }
-}
-
-.illustration {
   display: grid;
   place-items: center;
-  svg {
-    max-height: min(50vh, 40rem);
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+    @include for-tablet-landscape-up {
+      flex-direction: row;
+      gap: 3.2rem;
+    }
   }
 }
 </style>
