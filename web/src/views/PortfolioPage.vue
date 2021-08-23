@@ -1,8 +1,8 @@
 <template>
   <div class="page">
     <TheHeader title="Portfolio" />
-    <ProjectList />
-    <div class="container">
+    <div class="sections">
+      <WorkSection />
       <ContactSection />
     </div>
   </div>
@@ -10,8 +10,8 @@
 
 <script setup>
 import ContactSection from '@/components/ContactSection.vue'
-import ProjectList from '@/components/ProjectList.vue'
 import TheHeader from '@/components/TheHeader.vue'
+import WorkSection from '@/components/WorkSection.vue'
 </script>
 
 <style lang="scss" scoped>
@@ -19,10 +19,13 @@ import TheHeader from '@/components/TheHeader.vue'
 @use "@/styles/colours" as *;
 @use "@/styles/lines" as *;
 
-.container {
-  margin-top: 4.8rem;
-  @include for-tablet-landscape-up {
-    margin-top: 20rem;
-  }
+.sections {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(10rem, 20rem, 20vh);
+}
+
+.work {
+  padding: 0 1.6rem;
 }
 </style>
