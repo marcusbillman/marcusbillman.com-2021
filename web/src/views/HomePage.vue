@@ -23,28 +23,7 @@
           </div>
         </section>
         <WorkSection featured-only="true" />
-        <section class="socials section">
-          <div class="socials__content">
-            <LinkCard
-              title="GitHub"
-              desc="marcusbillman"
-              href="https://github.com/marcusbillman"
-              icon="code-slash"
-            ></LinkCard>
-            <LinkCard
-              title="SoundCloud"
-              desc="Marcus Billman"
-              href="https://soundcloud.com/xfoxx37"
-              icon="music"
-            ></LinkCard>
-            <LinkCard
-              title="Instagram"
-              desc="marcusbillman"
-              href="https://www.instagram.com/marcusbillman"
-              icon="instagram"
-            ></LinkCard>
-          </div>
-        </section>
+        <SocialsSection />
         <ContactSection />
       </div>
     </main>
@@ -53,10 +32,9 @@
 
 <script setup>
 import BaseButton from '@/components/BaseButton.vue'
-import BaseTag from '@/components/BaseTag.vue'
 import ContactSection from '@/components/ContactSection.vue'
 import HeroSection from '@/components/HeroSection.vue'
-import LinkCard from '@/components/LinkCard.vue'
+import SocialsSection from '@/components/SocialsSection.vue'
 import WorkSection from '@/components/WorkSection.vue'
 </script>
 
@@ -106,20 +84,6 @@ import WorkSection from '@/components/WorkSection.vue'
     pointer-events: none;
     @include for-desktop-up {
       display: block;
-    }
-  }
-}
-
-.socials {
-  display: grid;
-  place-items: center;
-  &__content {
-    display: flex;
-    flex-direction: column;
-    gap: 2.4rem;
-    @include for-tablet-landscape-up {
-      flex-direction: row;
-      gap: 3.2rem;
     }
   }
 }
