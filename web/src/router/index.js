@@ -1,6 +1,7 @@
 import { createWebHistory, createRouter } from 'vue-router'
 import store from '@/store'
 
+import AboutPage from '@/views/AboutPage.vue'
 import HomePage from '@/views/HomePage.vue'
 import PortfolioPage from '@/views/PortfolioPage.vue'
 import CaseStudyPage from '@/views/CaseStudyPage.vue'
@@ -29,6 +30,14 @@ const router = createRouter({
       path: '/portfolio/:slug',
       name: 'Case Study',
       component: CaseStudyPage
+    },
+    {
+      path: '/about',
+      name: 'About',
+      component: AboutPage,
+      meta: {
+        index: 2
+      }
     },
     {
       path: '/contact',

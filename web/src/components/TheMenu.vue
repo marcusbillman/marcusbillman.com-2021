@@ -23,6 +23,7 @@
         <h3>Menu</h3>
         <router-link class="menu__link" to="/">Home</router-link>
         <router-link class="menu__link" to="/portfolio">Portfolio</router-link>
+        <router-link class="menu__link" to="/about">About</router-link>
         <router-link class="menu__link" to="/contact">Contact</router-link>
       </div>
     </div>

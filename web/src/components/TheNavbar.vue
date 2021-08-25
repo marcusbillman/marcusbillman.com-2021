@@ -35,6 +35,7 @@
     <nav v-else class="navbar__links">
       <router-link class="navbar__link" to="/">Home</router-link>
       <router-link class="navbar__link" to="/portfolio">Portfolio</router-link>
+      <router-link class="navbar__link" to="/about">About</router-link>
       <router-link class="navbar__link" to="/contact">Contact</router-link>
     </nav>
   </header>
@@ -93,7 +94,7 @@ function holdFinish(e) {
   border: 2px solid $grey-200;
   padding: 0 2rem;
   z-index: 100;
-  @include for-tablet-portrait-up {
+  @include for-desktop-up {
     display: flex;
     top: 3.2rem;
     left: 50%;
