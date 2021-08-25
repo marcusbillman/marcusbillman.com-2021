@@ -2,6 +2,7 @@ import { createWebHistory, createRouter } from 'vue-router'
 import store from '@/store'
 
 import AboutPage from '@/views/AboutPage.vue'
+import NotFoundPage from '@/views/NotFoundPage.vue'
 import HomePage from '@/views/HomePage.vue'
 import PortfolioPage from '@/views/PortfolioPage.vue'
 import CaseStudyPage from '@/views/CaseStudyPage.vue'
@@ -46,6 +47,11 @@ const router = createRouter({
       meta: {
         index: 2
       }
+    },
+    {
+      path: '/:pathMatch(.*)*',
+      name: 'NotFound',
+      component: NotFoundPage
     }
   ],
   scrollBehavior(to, from, savedPosition) {
