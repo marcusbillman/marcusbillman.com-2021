@@ -16,37 +16,37 @@
         v-svg-inline
         class="illustration illustration--browser"
         src="@/assets/illustration-browser.svg"
-        alt="Bezier curve"
+        alt="Browser"
       />
       <img
         v-svg-inline
         class="illustration illustration--phone"
         src="@/assets/illustration-phone.svg"
-        alt="Bezier curve"
+        alt="Phone"
       />
       <img
         v-svg-inline
         class="illustration illustration--dropdown"
         src="@/assets/illustration-dropdown.svg"
-        alt="Bezier curve"
+        alt="Dropdown menu"
       />
       <img
         v-svg-inline
         class="illustration illustration--button-click"
         src="@/assets/illustration-button-click.svg"
-        alt="Bezier curve"
+        alt="Button being clicked"
       />
       <img
         v-svg-inline
         class="illustration illustration--code-block"
         src="@/assets/illustration-code-block.svg"
-        alt="Bezier curve"
+        alt="Code block"
       />
       <img
         v-svg-inline
         class="illustration illustration--switch"
         src="@/assets/illustration-switch.svg"
-        alt="Bezier curve"
+        alt="Switch"
       />
     </div>
   </section>
