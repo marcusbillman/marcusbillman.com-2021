@@ -124,10 +124,7 @@ const serializers = {
     bottom: 66%;
     width: 100%;
     height: 200vh;
-    background-image: radial-gradient($grey-200 2px, transparent 0);
-    background-size: 32px 32px;
-    background-position: center top;
-    background-attachment: fixed;
+    @include dotted-bg;
     z-index: -1;
   }
 }

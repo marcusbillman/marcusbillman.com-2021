@@ -29,10 +29,7 @@ defineProps(['title', 'description', 'transparent'])
   }
   @include for-tablet-landscape-up {
     &:not(&--transparent) {
-      background-image: radial-gradient($grey-200 2px, transparent 0);
-      background-size: 32px 32px;
-      background-position: center top;
-      background-attachment: fixed;
+      @include dotted-bg;
     }
     padding-top: 20rem;
     padding-bottom: 6.4rem;

@@ -28,11 +28,8 @@ import BaseButton from '@/components/BaseButton.vue'
   height: 100vh;
   min-height: 50rem;
   padding: 0 1.6rem;
-  background-image: radial-gradient($grey-200 2px, transparent 0);
-  background-size: 32px 32px;
-  background-position: center top;
-  background-attachment: fixed;
   text-align: center;
+  @include dotted-bg;
   @include for-tablet-portrait-up {
     gap: 6.4rem;
   }

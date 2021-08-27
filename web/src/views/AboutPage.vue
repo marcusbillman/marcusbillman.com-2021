@@ -152,10 +152,7 @@ import ContactSection from '@/components/ContactSection.vue'
     max-width: 40rem;
     max-height: 40rem;
     aspect-ratio: 1 / 1;
-    background-image: radial-gradient($grey-200 2px, transparent 0);
-    background-size: 32px 32px;
-    background-position: center top;
-    background-attachment: fixed;
+    @include dotted-bg;
     @include for-tablet-landscape-up {
       width: 40rem;
       height: 40rem;

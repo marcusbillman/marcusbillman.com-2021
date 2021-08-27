@@ -9,3 +9,10 @@ $grey-400: #babdc7;
 $grey-200: #e8e9ef;
 $grey-100: #f8f8f8;
 $white: #ffffff;
+
+@mixin dotted-bg {
+  background-image: radial-gradient($grey-200 2px, transparent 0);
+  background-size: 32px 32px;
+  background-position: center top;
+  background-attachment: fixed;
+}

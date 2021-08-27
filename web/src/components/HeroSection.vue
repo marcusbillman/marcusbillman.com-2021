@@ -66,10 +66,7 @@ import BaseIcon from '@/components/BaseIcon.vue'
   min-height: 50rem;
   display: grid;
   place-items: center;
-  background-image: radial-gradient($grey-200 2px, transparent 0);
-  background-size: 32px 32px;
-  background-position: center top;
-  background-attachment: fixed;
+  @include dotted-bg;
 
   // Floating box
   &__box {
