@@ -13,22 +13,3 @@
     }
   }
 }
-
-.flow {
-  display: grid;
-  justify-items: start;
-  gap: 2em;
-}
-
-.splitter {
-  > * + * {
-    margin-top: var(--splitter-spacing, 3.2rem);
-  }
-  @include for-tablet-landscape-up {
-    display: flex;
-    > * + * {
-      margin-top: 0;
-      margin-left: var(--splitter-spacing, 3.2rem);
-    }
-  }
-}
