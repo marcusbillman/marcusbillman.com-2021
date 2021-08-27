@@ -41,7 +41,6 @@ import WorkSection from '@/components/WorkSection.vue'
 <style lang="scss" scoped>
 @use "@/styles/breakpoints" as *;
 @use "@/styles/colours" as *;
-@use "@/styles/lines" as *;
 
 .sections {
   display: flex;
