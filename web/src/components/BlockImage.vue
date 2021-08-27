@@ -1,5 +1,5 @@
 <template>
-  <div class="image-block">
+  <div class="image-block container container--wide">
     <img class="image-block__img" :src="urlFor(asset)" :alt="alt" />
   </div>
 </template>
@@ -15,10 +15,6 @@ defineProps(['asset', 'alt'])
 @use "@/styles/breakpoints" as *;
 
 .image-block {
-  padding: 0 1.6rem;
-  @include for-tablet-landscape-up {
-    padding: 0 clamp(3.2rem, 40rem, 10vw - 2.4rem);
-  }
   &__img {
     object-fit: cover;
     border-radius: 1.6rem;

@@ -21,6 +21,5 @@ defineProps(['featuredOnly'])
   flex-direction: column;
   align-items: center;
   gap: 6.4rem;
-  padding: 0 1.6rem;
 }
 </style>

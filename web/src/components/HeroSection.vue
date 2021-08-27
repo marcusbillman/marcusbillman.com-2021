@@ -1,5 +1,5 @@
 <template>
-  <section class="hero">
+  <section class="hero container container--wide">
     <div class="hero__box">
       <div class="hero__main">
         <span class="hero__name">Marcus Billman</span>
@@ -66,14 +66,10 @@ import BaseIcon from '@/components/BaseIcon.vue'
   min-height: 50rem;
   display: grid;
   place-items: center;
-  padding: 0 1.6rem;
   background-image: radial-gradient($grey-200 2px, transparent 0);
   background-size: 32px 32px;
   background-position: center top;
   background-attachment: fixed;
-  @include for-tablet-portrait-up {
-    padding: 0 clamp(3.2rem, 40rem, 10vw - 2.4rem);
-  }
 
   // Floating box
   &__box {

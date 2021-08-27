@@ -9,6 +9,9 @@
   padding: 0 1.6rem;
   &--wide {
     max-width: 160rem;
+    @include for-tablet-landscape-up {
+      padding: 0 clamp(3.2rem, 40rem, 10vw - 2.4rem);
+    }
   }
 }
 

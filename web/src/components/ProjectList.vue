@@ -1,5 +1,5 @@
 <template>
-  <section class="projects">
+  <section class="projects container container--wide">
     <ProjectListCard
       v-for="(project, index) in projectsToShow"
       :key="project._key"
@@ -34,7 +34,6 @@ const projectsToShow = computed(() =>
   gap: 6.4rem;
   @include for-tablet-landscape-up {
     row-gap: clamp(6.4rem, 20rem, 10vw);
-    padding: 0 clamp(3.2rem, 40rem, 10vw - 2.4rem);
   }
   @include for-desktop-up {
     grid-template-columns: repeat(2, minmax(20rem, 1fr));

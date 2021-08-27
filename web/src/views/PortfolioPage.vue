@@ -24,8 +24,4 @@ import WorkSection from '@/components/WorkSection.vue'
   flex-direction: column;
   gap: clamp(10rem, 20rem, 20vh);
 }
-
-.work {
-  padding: 0 1.6rem;
-}
 </style>

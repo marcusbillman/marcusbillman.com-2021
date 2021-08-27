@@ -200,7 +200,6 @@ const serializers = {
     gap: 6.4rem 4.8rem;
     @include for-tablet-landscape-up {
       grid-template-columns: repeat(2, minmax(20rem, 1fr));
-      padding: 0 clamp(3.2rem, 40rem, 10vw - 2.4rem);
     }
   }
   &__img {
