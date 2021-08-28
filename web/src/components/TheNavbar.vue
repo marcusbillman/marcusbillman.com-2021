@@ -94,7 +94,7 @@ function holdFinish(e) {
   border: 2px solid $grey-200;
   padding: 0 2rem;
   z-index: 100;
-  @include for-desktop-up {
+  @include for-tablet-landscape-up {
     display: flex;
     top: 3.2rem;
     left: 50%;

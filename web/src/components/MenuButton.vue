@@ -30,14 +30,11 @@ import BaseIcon from '@/components/BaseIcon.vue'
   border-radius: 1000px;
   z-index: 101;
   cursor: pointer;
-  @include for-tablet-portrait-up {
+  @include for-tablet-landscape-up {
     top: 3.2rem;
-    right: 1.6rem;
+    right: 3.2rem;
     width: 4.8rem;
     height: 4.8rem;
-  }
-  @include for-tablet-landscape-up {
-    right: 3.2rem;
   }
 }
 </style>

@@ -90,8 +90,9 @@
   &__name {
     font-weight: 600;
   }
-  @include for-tablet-portrait-up {
+  @include for-tablet-landscape-up {
     top: 9.6rem;
+    right: 3.2rem;
     bottom: unset;
     padding: 6.4rem;
     h3 {
@@ -107,9 +108,6 @@
       font-size: 4rem;
       margin-bottom: 0.8rem;
     }
-  }
-  @include for-tablet-landscape-up {
-    right: 3.2rem;
   }
 }
 
