@@ -33,7 +33,7 @@ const projectsToShow = computed(() =>
   grid-template-columns: repeat(1, minmax(20rem, 1fr));
   gap: 6.4rem;
   @include for-tablet-landscape-up {
-    row-gap: clamp(6.4rem, 20rem, 10vw);
+    row-gap: clamp(6.4rem, 10vw, 20rem);
   }
   @include for-desktop-up {
     grid-template-columns: repeat(2, minmax(20rem, 1fr));

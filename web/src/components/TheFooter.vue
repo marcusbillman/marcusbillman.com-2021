@@ -32,7 +32,7 @@
 
 .footer {
   // General footer styles
-  margin-top: clamp(10rem, 20rem, 20vh);
+  margin-top: clamp(10rem, 20vh, 20rem);
   padding-bottom: 4.8rem;
   &__inner {
     display: flex;

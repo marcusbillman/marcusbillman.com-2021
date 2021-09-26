@@ -53,7 +53,7 @@ import TheHeader from '@/components/TheHeader.vue'
 .sections {
   display: flex;
   flex-direction: column;
-  gap: clamp(10rem, 20rem, 20vh);
+  gap: clamp(10rem, 20vh, 20rem);
   @include for-tablet-landscape-up {
     display: grid;
     grid-template-columns: 1fr auto;

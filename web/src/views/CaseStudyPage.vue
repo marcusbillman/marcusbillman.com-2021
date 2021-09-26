@@ -112,7 +112,7 @@ const serializers = {
 .sections {
   display: flex;
   flex-direction: column;
-  gap: clamp(10rem, 20rem, 20vh);
+  gap: clamp(10rem, 20vh, 20rem);
 }
 
 .main-image {
@@ -138,7 +138,7 @@ const serializers = {
     }
   }
   .image-block:not(:last-child) {
-    margin: clamp(10rem, 20rem, 20vh) 0;
+    margin: clamp(10rem, 20vh, 20rem) 0;
   }
 }
 

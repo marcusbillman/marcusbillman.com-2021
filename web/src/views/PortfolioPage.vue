@@ -21,6 +21,6 @@ import WorkSection from '@/components/WorkSection.vue'
 .sections {
   display: flex;
   flex-direction: column;
-  gap: clamp(10rem, 20rem, 20vh);
+  gap: clamp(10rem, 20vh, 20rem);
 }
 </style>

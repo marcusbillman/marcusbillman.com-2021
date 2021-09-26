@@ -110,39 +110,39 @@ import BaseIcon from '@/components/BaseIcon.vue'
     display: none;
     &--bezier-curve {
       display: block;
-      top: clamp(-2rem, 7rem, calc(20vw - 15rem));
-      left: clamp(3rem, 17rem, calc(20vw - 13rem));
+      top: clamp(-2rem, calc(20vw - 15rem), 7rem);
+      left: clamp(3rem, calc(20vw - 13rem), 17rem);
     }
     &--phone {
       display: block;
-      top: clamp(4rem, 6rem, calc(6vw + 0rem));
-      right: clamp(-4rem, 10rem, calc(13vw - 10rem));
+      top: clamp(4rem, calc(6vw + 0rem), 6rem);
+      right: clamp(-4rem, calc(13vw - 10rem), 10rem);
     }
     &--dropdown {
       display: block;
-      left: clamp(-4rem, 10rem, calc(13vw - 10rem));
-      bottom: clamp(5rem, 15rem, calc(10vw + 0rem));
+      left: clamp(-4rem, calc(13vw - 10rem), 10rem);
+      bottom: clamp(5rem, calc(10vw + 0rem), 15rem);
     }
     &--code-block {
       display: block;
-      right: clamp(-10rem, 15rem, calc(20vw - 20rem));
-      bottom: clamp(-2rem, 10rem, calc(15vw - 13rem));
+      right: clamp(-10rem, calc(20vw - 20rem), 15rem);
+      bottom: clamp(-2rem, calc(15vw - 13rem), 10rem);
     }
     @include for-tablet-landscape-up {
       &--browser {
         display: block;
         top: -2.3rem;
-        right: clamp(4rem, 23rem, calc(15vw + 0rem));
+        right: clamp(4rem, calc(15vw + 0rem), 23rem);
       }
       &--button-click {
         display: block;
-        left: clamp(20rem, 32rem, calc(30vw - 10rem));
-        bottom: clamp(-2rem, 5rem, calc(7vw - 6rem));
+        left: clamp(20rem, calc(30vw - 10rem), 32rem);
+        bottom: clamp(-2rem, calc(7vw - 6rem), 5rem);
       }
       &--switch {
         display: block;
-        right: clamp(4rem, 13rem, calc(15vw - 14rem));
-        bottom: clamp(15rem, 23rem, calc(10vw + 8rem));
+        right: clamp(4rem, calc(15vw - 14rem), 13rem);
+        bottom: clamp(15rem, calc(10vw + 8rem), 23rem);
       }
     }
   }
