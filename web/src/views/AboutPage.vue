@@ -105,12 +105,6 @@ import ContactSection from '@/components/ContactSection.vue'
 @use "@/styles/breakpoints" as *;
 @use "@/styles/colours" as *;
 
-.sections {
-  display: flex;
-  flex-direction: column;
-  gap: clamp(10rem, 20vh, 20rem);
-}
-
 .hello {
   &__container {
     display: flex;

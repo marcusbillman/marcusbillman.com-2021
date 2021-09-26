@@ -13,3 +13,9 @@
     }
   }
 }
+
+.sections {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(10rem, 20vh, 20rem);
+}

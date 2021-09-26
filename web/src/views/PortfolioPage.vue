@@ -17,10 +17,4 @@ import WorkSection from '@/components/WorkSection.vue'
 <style lang="scss" scoped>
 @use "@/styles/breakpoints" as *;
 @use "@/styles/colours" as *;
-
-.sections {
-  display: flex;
-  flex-direction: column;
-  gap: clamp(10rem, 20vh, 20rem);
-}
 </style>

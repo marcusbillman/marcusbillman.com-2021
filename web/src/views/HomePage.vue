@@ -43,9 +43,6 @@ import WorkSection from '@/components/WorkSection.vue'
 @use "@/styles/colours" as *;
 
 .sections {
-  display: flex;
-  flex-direction: column;
-  gap: clamp(10rem, 20vh, 20rem);
   padding-top: 6.4rem;
 }
 

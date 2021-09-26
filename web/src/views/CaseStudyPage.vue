@@ -109,12 +109,6 @@ const serializers = {
 @use "@/styles/breakpoints" as *;
 @use "@/styles/colours" as *;
 
-.sections {
-  display: flex;
-  flex-direction: column;
-  gap: clamp(10rem, 20vh, 20rem);
-}
-
 .main-image {
   position: relative;
   // Dotted background to replace the one that's normally in the page header
