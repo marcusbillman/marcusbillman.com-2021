@@ -1,53 +1,57 @@
 <template>
-  <section class="hero container container--wide">
-    <div class="hero__box">
-      <div class="hero__main">
-        <span class="hero__name">Marcus Billman</span>
-        <h1 class="hero__heading">Arranging links and shapes into melodies.</h1>
-        <BaseIcon name="arrow-down" size="32" />
+  <section class="hero">
+    <div class="hero__container container container--wide">
+      <div class="hero__box">
+        <div class="hero__main">
+          <span class="hero__name">Marcus Billman</span>
+          <h1 class="hero__heading">
+            Arranging links and shapes into melodies.
+          </h1>
+          <BaseIcon name="arrow-down" size="32" />
+        </div>
+        <img
+          v-svg-inline
+          class="illustration illustration--bezier-curve"
+          src="@/assets/illustration-bezier-curve.svg"
+          alt="Bezier curve"
+        />
+        <img
+          v-svg-inline
+          class="illustration illustration--browser"
+          src="@/assets/illustration-browser.svg"
+          alt="Browser"
+        />
+        <img
+          v-svg-inline
+          class="illustration illustration--phone"
+          src="@/assets/illustration-phone.svg"
+          alt="Phone"
+        />
+        <img
+          v-svg-inline
+          class="illustration illustration--dropdown"
+          src="@/assets/illustration-dropdown.svg"
+          alt="Dropdown menu"
+        />
+        <img
+          v-svg-inline
+          class="illustration illustration--button-click"
+          src="@/assets/illustration-button-click.svg"
+          alt="Button being clicked"
+        />
+        <img
+          v-svg-inline
+          class="illustration illustration--code-block"
+          src="@/assets/illustration-code-block.svg"
+          alt="Code block"
+        />
+        <img
+          v-svg-inline
+          class="illustration illustration--switch"
+          src="@/assets/illustration-switch.svg"
+          alt="Switch"
+        />
       </div>
-      <img
-        v-svg-inline
-        class="illustration illustration--bezier-curve"
-        src="@/assets/illustration-bezier-curve.svg"
-        alt="Bezier curve"
-      />
-      <img
-        v-svg-inline
-        class="illustration illustration--browser"
-        src="@/assets/illustration-browser.svg"
-        alt="Browser"
-      />
-      <img
-        v-svg-inline
-        class="illustration illustration--phone"
-        src="@/assets/illustration-phone.svg"
-        alt="Phone"
-      />
-      <img
-        v-svg-inline
-        class="illustration illustration--dropdown"
-        src="@/assets/illustration-dropdown.svg"
-        alt="Dropdown menu"
-      />
-      <img
-        v-svg-inline
-        class="illustration illustration--button-click"
-        src="@/assets/illustration-button-click.svg"
-        alt="Button being clicked"
-      />
-      <img
-        v-svg-inline
-        class="illustration illustration--code-block"
-        src="@/assets/illustration-code-block.svg"
-        alt="Code block"
-      />
-      <img
-        v-svg-inline
-        class="illustration illustration--switch"
-        src="@/assets/illustration-switch.svg"
-        alt="Switch"
-      />
     </div>
   </section>
 </template>
@@ -64,9 +68,13 @@ import BaseIcon from '@/components/BaseIcon.vue'
   // Full-screen hero container
   height: 100vh;
   min-height: 50rem;
-  display: grid;
-  place-items: center;
   @include dotted-bg;
+
+  &__container {
+    height: 100%;
+    display: grid;
+    place-items: center;
+  }
 
   // Floating box
   &__box {
