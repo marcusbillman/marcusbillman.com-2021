@@ -123,13 +123,13 @@ import BaseIcon from '@/components/BaseIcon.vue'
     }
     &--phone {
       display: block;
-      top: clamp(4rem, calc(6vw + 0rem), 6rem);
+      top: clamp(4rem, 6vw, 6rem);
       right: clamp(-4rem, calc(13vw - 10rem), 10rem);
     }
     &--dropdown {
       display: block;
       left: clamp(-4rem, calc(13vw - 10rem), 10rem);
-      bottom: clamp(5rem, calc(10vw + 0rem), 15rem);
+      bottom: clamp(5rem, 10vw, 15rem);
     }
     &--code-block {
       display: block;
@@ -140,7 +140,7 @@ import BaseIcon from '@/components/BaseIcon.vue'
       &--browser {
         display: block;
         top: -2.3rem;
-        right: clamp(4rem, calc(15vw + 0rem), 23rem);
+        right: clamp(4rem, 15vw, 23rem);
       }
       &--button-click {
         display: block;
