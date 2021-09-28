@@ -1,16 +1,12 @@
 <template>
   <section class="contact">
     <h2>Communication is key</h2>
-    <p>
-      Want to talk linear gradients or pentatonic scales (or just say hi)?
-      You’re welcome to drop a line or two.
-    </p>
-    <Button href="/contact">Contact me</Button>
+    <BaseButton href="/contact">Contact me</BaseButton>
   </section>
 </template>
 
 <script setup>
-import Button from '@/components/Button.vue'
+import BaseButton from '@/components/BaseButton.vue'
 </script>
 
 <style lang="scss" scoped>

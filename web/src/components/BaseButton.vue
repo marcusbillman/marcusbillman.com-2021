@@ -8,13 +8,13 @@
   >
     <div class="button__inner">
       <slot></slot>
-      <Icon :name="icon || 'arrow-right'" />
+      <BaseIcon :name="icon || 'arrow-right'" />
     </div>
   </component>
 </template>
 
 <script setup>
-import Icon from '@/components/Icon.vue'
+import BaseIcon from '@/components/BaseIcon.vue'
 import { defineProps } from 'vue'
 
 defineProps(['href', 'icon', 'variant', 'type'])
@@ -31,43 +31,27 @@ function getComponent(href, type) {
 </script>
 
 <style lang="scss" scoped>
-@use "@/styles/breakpoints" as *;
 @use "@/styles/colours" as *;
 
 .button {
-  width: 100%;
+  // General button styles
   position: relative;
   display: inline-block;
+  flex-shrink: 0;
   font-size: 1.6rem;
-  font-weight: 500;
+  font-weight: 700;
   text-decoration: none;
   background: transparent;
   border: none;
-  border-radius: 0.8rem;
+  border-radius: 1000px;
   padding: 0;
+  z-index: 0;
   cursor: pointer;
-  &::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: $blueberry-50;
-    border-radius: 0.8rem;
-    z-index: -1;
+  .icon {
+    margin-left: 1.2rem;
   }
-  &:hover {
-    .button__inner {
-      color: $blueberry-500;
-      background: transparent;
-      border-color: $blueberry-500;
-      transform: translate(-8px, -8px);
-    }
-  }
-  @include for-tablet-portrait-up {
-    width: auto;
-  }
+
+  // Main coloured element with content
   &__inner {
     width: 100%;
     display: flex;
@@ -76,20 +60,42 @@ function getComponent(href, type) {
     color: $white;
     background: $blueberry-500;
     border: 2px solid transparent;
-    border-radius: 0.8rem;
-    padding: 1.4rem 2.4rem;
+    border-radius: inherit;
+    padding: 1.6rem 3.2rem;
     transition: all 0.1s;
   }
+
+  // Faded background shape (visible when hovering)
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: $blueberry-50;
+    border-radius: inherit;
+    z-index: -1;
+  }
+
+  // Hover effect
+  &:hover .button__inner {
+    color: $blueberry-500;
+    background: transparent;
+    border-color: $blueberry-500;
+    transform: translate(-8px, -8px);
+  }
+
+  // Secondary variant
   &--secondary .button__inner {
     color: $blueberry-500;
     background: $blueberry-50;
   }
+
+  // Outline variant
   &--outline .button__inner {
     color: $blueberry-500;
     background: $white;
-  }
-  .icon {
-    margin-left: 1.2rem;
   }
 }
 </style>

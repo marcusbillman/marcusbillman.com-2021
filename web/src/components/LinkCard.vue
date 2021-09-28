@@ -1,16 +1,16 @@
 <template>
   <a class="link-card" :href="href">
-    <Icon :name="icon" size="32" />
+    <BaseIcon :name="icon" size="32" />
     <div class="link-card__content">
       <span class="link-card__title">{{ title }}</span>
       <span class="link-card__desc">{{ desc }}</span>
     </div>
-    <Icon name="arrow-top-right" />
+    <BaseIcon name="arrow-top-right" />
   </a>
 </template>
 
 <script setup>
-import Icon from '@/components/Icon.vue'
+import BaseIcon from '@/components/BaseIcon.vue'
 import { defineProps } from 'vue'
 
 defineProps(['title', 'desc', 'href', 'icon'])
@@ -21,7 +21,6 @@ defineProps(['title', 'desc', 'href', 'icon'])
 
 .link-card {
   display: flex;
-  flex-shrink: 0;
   align-items: center;
   background: $white;
   border-radius: 1.2rem;
@@ -29,14 +28,15 @@ defineProps(['title', 'desc', 'href', 'icon'])
   text-decoration: none;
   padding: 1.6rem 2.4rem;
   &__content {
+    flex-grow: 1;
     margin: 0 1.6rem;
   }
   span {
     display: block;
-    line-height: 1.5;
+    line-height: 1.2;
   }
   &__title {
-    font-weight: 600;
+    font-weight: 700;
   }
   &__desc {
     color: $grey-600;

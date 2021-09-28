@@ -23,6 +23,7 @@
         <h3>Menu</h3>
         <router-link class="menu__link" to="/">Home</router-link>
         <router-link class="menu__link" to="/portfolio">Portfolio</router-link>
+        <router-link class="menu__link" to="/about">About</router-link>
         <router-link class="menu__link" to="/contact">Contact</router-link>
       </div>
     </div>
@@ -89,8 +90,9 @@
   &__name {
     font-weight: 600;
   }
-  @include for-tablet-portrait-up {
+  @include for-tablet-landscape-up {
     top: 9.6rem;
+    right: 3.2rem;
     bottom: unset;
     padding: 6.4rem;
     h3 {
@@ -106,9 +108,6 @@
       font-size: 4rem;
       margin-bottom: 0.8rem;
     }
-  }
-  @include for-tablet-landscape-up {
-    right: 3.2rem;
   }
 }
 
