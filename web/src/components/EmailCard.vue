@@ -1,7 +1,7 @@
 <template>
   <div class="email-card">
     <div class="email-card__email">
-      <span ref="email">hello@marcusbillman.com</span>
+      <span>hello@marcusbillman.com</span>
     </div>
     <div class="email-card__actions">
       <a class="icon-link" @click="copyEmail">
