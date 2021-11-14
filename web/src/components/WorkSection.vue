@@ -1,7 +1,14 @@
 <template>
   <section class="work">
     <ProjectList :featured-only="featuredOnly" />
-    <BaseButton v-if="featuredOnly" href="/portfolio" icon="arrow-right">
+    <BaseButton
+      v-if="
+        featuredOnly &&
+        store.state.projects.length > store.getters.getFeaturedProjects.length
+      "
+      href="/portfolio"
+      icon="arrow-right"
+    >
       More work
     </BaseButton>
   </section>
@@ -11,7 +18,9 @@
 import BaseButton from '@/components/BaseButton.vue'
 import ProjectList from '@/components/ProjectList.vue'
 import { defineProps } from 'vue'
+import { useStore } from 'vuex'
 
+const store = useStore()
 defineProps(['featuredOnly'])
 </script>
 
