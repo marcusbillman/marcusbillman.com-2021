@@ -28,7 +28,7 @@
         <div class="info__container container">
           <div class="info__box">
             <div class="info__data">
-              <div class="info__group">
+              <div v-if="project.roleTags.length" class="info__group">
                 <h3>My roles</h3>
                 <ul class="info__list">
                   <li v-for="roleTag in project.roleTags" :key="roleTag._key">
@@ -36,7 +36,7 @@
                   </li>
                 </ul>
               </div>
-              <div class="info__group">
+              <div v-if="project.techTags.length" class="info__group">
                 <h3>Built with</h3>
                 <ul class="info__list">
                   <li v-for="techTag in project.techTags" :key="techTag._key">
@@ -44,18 +44,20 @@
                   </li>
                 </ul>
               </div>
-              <div class="info__group">
+              <div v-if="project.date" class="info__group">
                 <h3>Project date</h3>
                 <p class="info__date">{{ project.date }}</p>
               </div>
             </div>
             <div class="info__links">
               <BaseButton
+                v-if="project.primaryLink.url && project.primaryLink.text"
                 :href="project.primaryLink.url"
                 icon="arrow-top-right"
                 >{{ project.primaryLink.text }}</BaseButton
               >
               <BaseButton
+                v-if="project.secondaryLink.url && project.secondaryLink.text"
                 :href="project.secondaryLink.url"
                 icon="arrow-top-right"
                 variant="secondary"
