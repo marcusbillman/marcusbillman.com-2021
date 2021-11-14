@@ -10,18 +10,22 @@
             alt="Profile picture"
           />
           <p class="hello__body">
-            Hej! 👋 My name is Marcus and I’m a UI designer living in Umeå,
-            Sweden.
+            Hej! 👋 I’m Marcus and I love designing apps and websites that look
+            and feel great. I live in Sweden.
           </p>
         </div>
       </section>
       <section class="topic section">
         <div class="topic__container container">
           <p class="topic__body">
-            I can’t visit a website without examining its colours and layout. I
-            can’t walk past a building without noticing its shapes and textures.
-            I get overly excited by cute animations in apps. Design is the big
-            picture and the details, and everything is inspiration.
+            When I was a kid, I was blown away by automatic doors. They looked
+            so futuristic being made of glass, and they opened like magic as I
+            walked up to them! Since then, I’ve gotten over the doors, but I’m
+            still fascinated by all kinds of tech. When I got my first Android
+            phone, I spent lots of time customising it with wallpapers, icon
+            packs and apps. Making my phone look and work however I wanted was
+            an unexpected creative outlet. Today, my mind has ended up somewhere
+            between tech and design.
           </p>
         </div>
       </section>
@@ -48,10 +52,10 @@
             />
           </div>
           <p class="topic__body">
-            I have experience with front-end web development and realising
-            designs using tools like Vue, SCSS and GSAP. When designing, I
-            always consider the way elements adapt across screens and organise
-            component structures to avoid developer headaches.
+            I design mainly for the web and I have experience with front-end web
+            development using tools like Vue, React and SCSS. When designing and
+            building websites, I strive to make them useful, accessible and
+            enjoyable to use.
           </p>
         </div>
       </section>
@@ -84,10 +88,10 @@
             />
           </div>
           <p class="topic__body">
-            When free, I enjoy following the latest in tech and tinkering with
-            my devices. Music is also important to me, both listening and
-            creating, because sound is expressive and precise just like design
-            is.
+            When free and not designing or coding, I like following the latest
+            in tech news and tinkering with my devices. I also very much enjoy
+            music (both listening and creating) and playing video games with
+            friends.
           </p>
         </div>
       </section>
