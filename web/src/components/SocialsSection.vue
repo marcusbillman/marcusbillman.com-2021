@@ -2,6 +2,12 @@
   <section :class="{ 'socials--vertical': forceVertical }" class="socials">
     <div class="socials__content">
       <LinkCard
+        title="Dribbble"
+        desc="marcusbillman"
+        href="https://dribbble.com/marcusbillman"
+        icon="dribbble"
+      ></LinkCard>
+      <LinkCard
         title="GitHub"
         desc="marcusbillman"
         href="https://github.com/marcusbillman"
@@ -12,12 +18,6 @@
         desc="Marcus Billman"
         href="https://soundcloud.com/xfoxx37"
         icon="music"
-      ></LinkCard>
-      <LinkCard
-        title="Instagram"
-        desc="marcusbillman"
-        href="https://www.instagram.com/marcusbillman"
-        icon="instagram"
       ></LinkCard>
     </div>
   </section>

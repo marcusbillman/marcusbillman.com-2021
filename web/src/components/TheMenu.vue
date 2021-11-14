@@ -4,16 +4,14 @@
     <div class="menu__body">
       <div class="menu__socials">
         <h3>Socials</h3>
+        <a href="https://dribbble.com/marcusbillman" class="menu__social-link"
+          >Dribbble</a
+        >
         <a href="https://github.com/marcusbillman" class="menu__social-link"
           >GitHub</a
         >
         <a href="https://soundcloud.com/xfoxx37" class="menu__social-link"
           >SoundCloud</a
-        >
-        <a
-          href="https://www.instagram.com/marcusbillman"
-          class="menu__social-link"
-          >Instagram</a
         >
         <a href="mailto:hello@marcusbillman.com" class="menu__social-link"
           >Email</a
