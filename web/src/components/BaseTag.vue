@@ -16,6 +16,7 @@ defineProps(['text'])
 .tag {
   display: inline-block;
   white-space: nowrap;
+  font-size: 1.6rem;
   font-weight: 500;
   background: $white;
   border-radius: 1000px;

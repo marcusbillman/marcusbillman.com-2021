@@ -175,9 +175,6 @@ const serializers = {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    li {
-      font-size: 1.6rem;
-    }
   }
   &__date {
     line-height: 1;
