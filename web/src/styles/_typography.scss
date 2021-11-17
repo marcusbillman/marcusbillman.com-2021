@@ -27,10 +27,11 @@ h3 {
   font-weight: 700;
 }
 
-p {
+p,
+li {
   font-size: clamp(2rem, 3vw, 2.4rem);
   line-height: 1.6;
-  max-width: 60ch;
+  max-width: 80rem;
   color: $grey-900;
 }
 
