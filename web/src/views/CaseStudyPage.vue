@@ -126,11 +126,17 @@ const serializers = {
 }
 
 .body {
-  p {
+  p,
+  ul,
+  li {
     padding: 0 1.6rem;
     margin: 0 auto;
-    & + p {
+    & + p,
+    & + ul {
       margin-top: 3.2rem;
+    }
+    & + li {
+      margin-top: 1.6rem;
     }
   }
   .image-block:not(:last-child) {
@@ -169,6 +175,9 @@ const serializers = {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    li {
+      font-size: 1.6rem;
+    }
   }
   &__date {
     line-height: 1;
