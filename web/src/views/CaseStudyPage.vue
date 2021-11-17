@@ -138,7 +138,8 @@ const serializers = {
     padding: 0 1.6rem;
     margin: 0 auto;
     & + p,
-    & + ul {
+    & + ul,
+    & + h2 {
       margin-top: 3.2rem;
     }
     & + li {
