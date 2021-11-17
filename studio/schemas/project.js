@@ -6,12 +6,14 @@ export default {
     {
       name: 'title',
       title: 'Title',
-      type: 'string'
+      type: 'string',
+      validation: (Rule) => Rule.required()
     },
     {
       name: 'description',
       title: 'Description',
-      type: 'string'
+      type: 'string',
+      validation: (Rule) => Rule.required()
     },
     {
       name: 'slug',
@@ -20,20 +22,23 @@ export default {
       options: {
         source: 'title',
         maxLength: 96
-      }
+      },
+      validation: (Rule) => Rule.required()
     },
     {
       name: 'sortingIndex',
       title: 'Sorting index',
       type: 'number',
       description:
-        'Used for sorting the projects on the front-end and in the Studio'
+        'Used for sorting the projects on the front-end and in the Studio',
+      validation: (Rule) => Rule.required()
     },
     {
       name: 'featured',
       title: 'Featured',
       type: 'boolean',
-      description: 'Show this project on the Home page'
+      description: 'Show this project on the Home page',
+      validation: (Rule) => Rule.required()
     },
     {
       name: 'mainImage',
@@ -41,12 +46,14 @@ export default {
       type: 'image',
       options: {
         hotspot: true
-      }
+      },
+      validation: (Rule) => Rule.required()
     },
     {
       name: 'body',
       title: 'Body',
-      type: 'blockContent'
+      type: 'blockContent',
+      validation: (Rule) => Rule.required()
     },
     {
       name: 'additionalImages',
@@ -72,7 +79,8 @@ export default {
       name: 'roleTags',
       title: 'My roles',
       type: 'array',
-      of: [{ type: 'reference', to: { type: 'roleTag' } }]
+      of: [{ type: 'reference', to: { type: 'roleTag' } }],
+      validation: (Rule) => Rule.required()
     },
     {
       name: 'techTags',
@@ -102,7 +110,8 @@ export default {
       name: 'publishedAt',
       title: 'Published at',
       type: 'datetime',
-      description: 'Only for internal use, not shown on the front-end'
+      description: 'Only for internal use, not shown on the front-end',
+      validation: (Rule) => Rule.required()
     }
   ],
   initialValue: () => ({
