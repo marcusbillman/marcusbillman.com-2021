@@ -44,6 +44,11 @@ export default {
       }
     },
     {
+      name: 'body',
+      title: 'Body',
+      type: 'blockContent'
+    },
+    {
       name: 'additionalImages',
       title: 'Additional images',
       type: 'array',
@@ -62,11 +67,6 @@ export default {
           ]
         }
       ]
-    },
-    {
-      name: 'body',
-      title: 'Body',
-      type: 'blockContent'
     },
     {
       name: 'roleTags',
