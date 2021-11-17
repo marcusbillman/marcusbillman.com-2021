@@ -127,8 +127,14 @@ const serializers = {
 
 .body {
   p,
+  li,
+  h2 {
+    max-width: 80rem;
+  }
+  p,
   ul,
-  li {
+  li,
+  h2 {
     padding: 0 1.6rem;
     margin: 0 auto;
     & + p,
@@ -138,6 +144,10 @@ const serializers = {
     & + li {
       margin-top: 1.6rem;
     }
+  }
+  h2 {
+    font-size: clamp(3rem, 6vw, 4rem);
+    font-weight: 700;
   }
   .image-block:not(:last-child) {
     margin: clamp(10rem, 20vh, 20rem) 0;
