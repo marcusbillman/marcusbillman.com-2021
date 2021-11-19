@@ -18,7 +18,6 @@ const store = createStore({
 
       sanityClient.fetch(query).then((result) => {
         context.commit('setProjects', result)
-        console.log(result)
       })
     }
   },
