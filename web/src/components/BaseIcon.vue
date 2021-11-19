@@ -122,4 +122,8 @@ import { defineProps } from 'vue'
 defineProps(['name', 'size'])
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.icon {
+  flex-shrink: 0;
+}
+</style>
