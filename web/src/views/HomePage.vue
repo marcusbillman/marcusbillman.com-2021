@@ -23,6 +23,7 @@
           </div>
         </section>
         <WorkSection featured-only="true" />
+        <DribbbleSection />
         <SocialsSection />
         <ContactSection />
       </div>
@@ -33,6 +34,7 @@
 <script setup>
 import BaseButton from '@/components/BaseButton.vue'
 import ContactSection from '@/components/ContactSection.vue'
+import DribbbleSection from '@/components/DribbbleSection.vue'
 import HeroSection from '@/components/HeroSection.vue'
 import SocialsSection from '@/components/SocialsSection.vue'
 import WorkSection from '@/components/WorkSection.vue'
