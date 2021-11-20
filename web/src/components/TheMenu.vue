@@ -53,6 +53,7 @@
   padding: 2.4rem;
   transform: translateX(calc(100% + 3.2rem));
   z-index: 101;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
   &--open {
     transform: none;
   }
@@ -119,6 +120,7 @@
   opacity: 0;
   z-index: 100;
   pointer-events: none;
+  transition: opacity 0.3s;
   &--open {
     opacity: 0.8;
     pointer-events: initial;
