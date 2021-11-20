@@ -64,6 +64,7 @@ fetch(url)
   }
   &__image {
     border-radius: 1.6rem;
+    transition: transform 0.2s;
   }
   &__header {
     display: flex;
@@ -76,6 +77,11 @@ fetch(url)
   }
   .icon {
     margin-top: 0.4rem;
+  }
+  &:hover {
+    .shot__image {
+      transform: scale(0.95);
+    }
   }
 }
 </style>
