@@ -27,6 +27,7 @@ defineProps(['title', 'desc', 'href', 'icon'])
   border: 2px solid $grey-200;
   text-decoration: none;
   padding: 1.6rem 2.4rem;
+  transition: transform 0.2s;
   &__content {
     flex-grow: 1;
     margin: 0 1.6rem;
@@ -46,6 +47,9 @@ defineProps(['title', 'desc', 'href', 'icon'])
   }
   .icon:last-child {
     color: $grey-400;
+  }
+  &:hover {
+    transform: translateY(-8%);
   }
 }
 </style>
