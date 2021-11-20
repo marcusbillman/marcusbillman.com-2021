@@ -61,6 +61,7 @@ defineProps(['project', 'info-side', 'compact'])
     object-fit: cover;
     aspect-ratio: 4 / 3;
     border-radius: 1.6rem;
+    transition: transform 0.3s;
     @supports not (aspect-ratio: 1 / 1) {
       height: 46rem;
       @include for-tablet-landscape-up {
@@ -110,6 +111,12 @@ defineProps(['project', 'info-side', 'compact'])
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
+  }
+
+  &:hover {
+    .project__image {
+      transform: scale(0.97);
+    }
   }
 }
 </style>
