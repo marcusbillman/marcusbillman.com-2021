@@ -62,7 +62,7 @@ function getComponent(href, type) {
     border: 2px solid transparent;
     border-radius: inherit;
     padding: 1.6rem 3.2rem;
-    transition: all 0.1s;
+    transition: all 0.15s;
   }
 
   // Faded background shape (visible when hovering)
