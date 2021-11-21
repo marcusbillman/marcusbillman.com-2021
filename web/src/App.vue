@@ -44,6 +44,12 @@ watch(route, () => {
 
 body {
   background: $white;
+  cursor: url(/cursor-normal.svg) 0 0, auto;
+}
+
+a:hover,
+button:hover {
+  cursor: url(/cursor-pointer.svg) 12 0, auto !important;
 }
 
 #app {
