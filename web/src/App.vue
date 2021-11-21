@@ -52,6 +52,11 @@ button:hover {
   cursor: url(/cursor-pointer.svg) 12 0, auto !important;
 }
 
+::selection {
+  color: white;
+  background: $blueberry-500;
+}
+
 #app {
   overflow-x: hidden;
 }
