@@ -9,48 +9,13 @@
           </h1>
           <BaseIcon name="arrow-down" size="32" />
         </div>
-        <img
-          v-svg-inline
-          class="illustration illustration--bezier-curve"
-          src="@/assets/illustration-bezier-curve.svg"
-          alt="Bezier curve"
-        />
-        <img
-          v-svg-inline
-          class="illustration illustration--browser"
-          src="@/assets/illustration-browser.svg"
-          alt="Browser"
-        />
-        <img
-          v-svg-inline
-          class="illustration illustration--phone"
-          src="@/assets/illustration-phone.svg"
-          alt="Phone"
-        />
-        <img
-          v-svg-inline
-          class="illustration illustration--dropdown"
-          src="@/assets/illustration-dropdown.svg"
-          alt="Dropdown menu"
-        />
-        <img
-          v-svg-inline
-          class="illustration illustration--button-click"
-          src="@/assets/illustration-button-click.svg"
-          alt="Button being clicked"
-        />
-        <img
-          v-svg-inline
-          class="illustration illustration--code-block"
-          src="@/assets/illustration-code-block.svg"
-          alt="Code block"
-        />
-        <img
-          v-svg-inline
-          class="illustration illustration--switch"
-          src="@/assets/illustration-switch.svg"
-          alt="Switch"
-        />
+        <BaseIllustration name="bezier-curve" />
+        <BaseIllustration name="browser" />
+        <BaseIllustration name="phone" />
+        <BaseIllustration name="dropdown" />
+        <BaseIllustration name="button-click" />
+        <BaseIllustration name="code-block" />
+        <BaseIllustration name="switch" />
       </div>
     </div>
   </section>
@@ -58,6 +23,7 @@
 
 <script setup>
 import BaseIcon from '@/components/BaseIcon.vue'
+import BaseIllustration from '@/components/BaseIllustration.vue'
 </script>
 
 <style lang="scss" scoped>

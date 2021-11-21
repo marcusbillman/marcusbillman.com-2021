@@ -32,24 +32,9 @@
       <section class="topic section">
         <div class="topic__container container">
           <div class="topic__graphic">
-            <img
-              v-svg-inline
-              class="illustration illustration--browser"
-              src="@/assets/illustration-browser.svg"
-              alt="Browser"
-            />
-            <img
-              v-svg-inline
-              class="illustration illustration--code-block"
-              src="@/assets/illustration-code-block.svg"
-              alt="Code block"
-            />
-            <img
-              v-svg-inline
-              class="illustration illustration--phone"
-              src="@/assets/illustration-phone.svg"
-              alt="Phone"
-            />
+            <BaseIllustration name="browser" />
+            <BaseIllustration name="code-block" />
+            <BaseIllustration name="phone" />
           </div>
           <p class="topic__body">
             I design mainly for the web and I have experience with front-end web
@@ -62,30 +47,10 @@
       <section class="topic section">
         <div class="topic__container container">
           <div class="topic__graphic">
-            <img
-              v-svg-inline
-              class="illustration illustration--cable"
-              src="@/assets/illustration-cable.svg"
-              alt="Cable"
-            />
-            <img
-              v-svg-inline
-              class="illustration illustration--audio-file"
-              src="@/assets/illustration-audio-file.svg"
-              alt="Audio file"
-            />
-            <img
-              v-svg-inline
-              class="illustration illustration--daw"
-              src="@/assets/illustration-daw.svg"
-              alt="Music creation software"
-            />
-            <img
-              v-svg-inline
-              class="illustration illustration--knob"
-              src="@/assets/illustration-knob.svg"
-              alt="Knob"
-            />
+            <BaseIllustration name="cable" />
+            <BaseIllustration name="audio-file" />
+            <BaseIllustration name="daw" />
+            <BaseIllustration name="knob" />
           </div>
           <p class="topic__body">
             When free and not designing or coding, I like following the latest
@@ -101,6 +66,7 @@
 </template>
 
 <script setup>
+import BaseIllustration from '@/components/BaseIllustration.vue'
 import TheHeader from '@/components/TheHeader.vue'
 import ContactSection from '@/components/ContactSection.vue'
 </script>
