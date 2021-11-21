@@ -15,11 +15,23 @@
                 >About me</BaseButton
               >
             </div>
-            <img
-              v-svg-inline
+            <svg
               class="bio__ruler-border"
-              src="@/assets/home-ruler-border.svg"
-            />
+              preserveAspectRatio="none"
+              viewBox="0 0 1204 1216"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                vector-effect="non-scaling-stroke"
+                d="M2 0V1198C2 1206.84 9.16343 1214 18 1214H1186C1194.84 1214 1202 1206.84 1202 1198V0"
+                stroke="#3257E0"
+                stroke-width="3"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-dasharray="0.1 12"
+              />
+            </svg>
           </div>
         </section>
         <WorkSection featured-only="true" />
@@ -38,6 +50,29 @@ import DribbbleSection from '@/components/DribbbleSection.vue'
 import HeroSection from '@/components/HeroSection.vue'
 import SocialsSection from '@/components/SocialsSection.vue'
 import WorkSection from '@/components/WorkSection.vue'
+import { onMounted } from 'vue'
+import gsap from 'gsap'
+
+// Entrance animations
+onMounted(() => {
+  gsap.from('.bio__ruler-border', {
+    opacity: 0,
+    duration: 1,
+    delay: 1
+  })
+  gsap.from('.navbar', {
+    y: '-200%',
+    duration: 0.5,
+    delay: 1,
+    ease: 'power2.out'
+  })
+  gsap.from('.menu-button', {
+    x: '200%',
+    duration: 0.5,
+    delay: 1.2,
+    ease: 'power2.out'
+  })
+})
 </script>
 
 <style lang="scss" scoped>
