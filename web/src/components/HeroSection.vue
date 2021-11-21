@@ -24,6 +24,100 @@
 <script setup>
 import BaseIcon from '@/components/BaseIcon.vue'
 import BaseIllustration from '@/components/BaseIllustration.vue'
+import { onMounted } from 'vue'
+import { gsap } from 'gsap'
+import charming from 'charming'
+
+// Entrance animations
+onMounted(() => {
+  const heroHeading = document.querySelector('.hero__heading')
+  charming(heroHeading, {
+    split: function (string) {
+      return string.split(/(\s+)/)
+    }
+  })
+
+  gsap.from('.hero', {
+    scale: 0,
+    duration: 1,
+    ease: 'power2.out'
+  })
+  gsap.from('.hero__main span', {
+    opacity: 0,
+    duration: 1,
+    delay: 0.5,
+    stagger: 0.05
+  })
+  gsap.from('.hero .icon', {
+    y: 50,
+    opacity: 0,
+    duration: 1,
+    delay: 1,
+    ease: 'power2.out'
+  })
+
+  gsap
+    .timeline({
+      defaults: {
+        opacity: 0,
+        duration: 1,
+        ease: 'elastic.out(0.3, 0.3)'
+      },
+      delay: 0.5
+    })
+    .from('.illustration--bezier-curve', {
+      x: 50,
+      y: 50
+    })
+    .from(
+      '.illustration--browser',
+      {
+        x: -10,
+        y: 50
+      },
+      '<0.1'
+    )
+    .from(
+      '.illustration--phone',
+      {
+        x: -50,
+        y: 50
+      },
+      '<0.1'
+    )
+    .from(
+      '.illustration--switch',
+      {
+        x: -50,
+        y: -10
+      },
+      '<0.1'
+    )
+    .from(
+      '.illustration--code-block',
+      {
+        x: -50,
+        y: -50
+      },
+      '<0.1'
+    )
+    .from(
+      '.illustration--button-click',
+      {
+        x: 10,
+        y: -50
+      },
+      '<0.1'
+    )
+    .from(
+      '.illustration--dropdown',
+      {
+        x: 50,
+        y: -50
+      },
+      '<0.1'
+    )
+})
 </script>
 
 <style lang="scss" scoped>
