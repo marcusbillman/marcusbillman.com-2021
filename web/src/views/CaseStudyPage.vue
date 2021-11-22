@@ -150,6 +150,16 @@ const serializers = {
     font-size: clamp(3rem, 6vw, 4rem);
     font-weight: 700;
   }
+  li {
+    display: flex;
+    &::before {
+      content: '•';
+      font-size: 1.5em;
+      line-height: 1;
+      color: $blueberry-500;
+      margin-right: 0.8rem;
+    }
+  }
   .image-block:not(:last-child) {
     margin: clamp(10rem, 20vh, 20rem) 0;
   }
