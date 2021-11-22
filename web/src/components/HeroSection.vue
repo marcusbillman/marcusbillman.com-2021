@@ -39,24 +39,33 @@ onMounted(() => {
     }
   })
 
-  gsap.from('.hero', {
-    scale: 0,
-    duration: 1,
-    ease: 'power2.out'
-  })
-  gsap.from('.hero__main span', {
-    opacity: 0,
-    duration: 1,
-    delay: 0.5,
-    stagger: 0.05
-  })
-  gsap.from('.hero .icon', {
-    y: 50,
-    opacity: 0,
-    duration: 1,
-    delay: 1,
-    ease: 'power2.out'
-  })
+  gsap
+    .timeline({
+      defaults: {
+        duration: 1,
+        ease: 'power2.out'
+      }
+    })
+    .from('.hero', {
+      scale: 0
+    })
+    .from(
+      '.hero__main span',
+      {
+        yPercent: 100,
+        clipPath: 'inset(0 0 100% 0)',
+        stagger: 0.05
+      },
+      '-=0.7'
+    )
+    .from(
+      '.hero .icon',
+      {
+        y: 50,
+        opacity: 0
+      },
+      '-=0.7'
+    )
 
   gsap
     .timeline({
@@ -65,7 +74,7 @@ onMounted(() => {
         duration: 1,
         ease: 'elastic.out(0.3, 0.3)'
       },
-      delay: 0.5
+      delay: 1
     })
     .from('.illustration--bezier-curve', {
       x: 50,
@@ -216,5 +225,12 @@ onMounted(() => {
       }
     }
   }
+}
+</style>
+
+<style lang="scss">
+.hero__heading span {
+  display: inline-block;
+  margin-right: 0.6rem;
 }
 </style>
