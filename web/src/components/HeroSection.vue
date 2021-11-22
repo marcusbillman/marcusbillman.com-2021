@@ -30,6 +30,8 @@ import charming from 'charming'
 
 // Entrance animations
 onMounted(() => {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
+
   const heroHeading = document.querySelector('.hero__heading')
   charming(heroHeading, {
     split: function (string) {

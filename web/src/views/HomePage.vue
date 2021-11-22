@@ -55,6 +55,8 @@ import gsap from 'gsap'
 
 // Entrance animations
 onMounted(() => {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
+
   gsap.from('.bio__ruler-border', {
     opacity: 0,
     duration: 1,
