@@ -59,10 +59,12 @@ defineProps(['project', 'info-side', 'compact'])
     width: 100%;
     max-width: 100%;
     object-fit: cover;
-    aspect-ratio: 4 / 3;
     border-radius: 1.6rem;
     transition: transform 0.3s;
-    @supports not (aspect-ratio: 1 / 1) {
+    @supports (aspect-ratio: 4 / 3) {
+      aspect-ratio: 4 / 3;
+    }
+    @supports not (aspect-ratio: 4 / 3) {
       height: 46rem;
       @include for-tablet-landscape-up {
         height: 70rem;

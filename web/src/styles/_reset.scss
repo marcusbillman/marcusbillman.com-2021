@@ -16,7 +16,9 @@ html {
 
 body {
   min-height: 100vh;
-  scroll-behavior: smooth;
+  @supports (scroll-behavior: smooth) {
+    scroll-behavior: smooth;
+  }
 }
 
 ul[class],
@@ -46,6 +48,8 @@ select {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
+    @supports (scroll-behavior: auto) {
+      scroll-behavior: auto !important;
+    }
   }
 }

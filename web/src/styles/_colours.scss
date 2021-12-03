@@ -14,5 +14,7 @@ $white: #ffffff;
   background-image: radial-gradient($grey-200 2px, transparent 0);
   background-size: 32px 32px;
   background-position: center top;
-  background-attachment: fixed;
+  @supports (background-attachment: fixed) {
+    background-attachment: fixed;
+  }
 }

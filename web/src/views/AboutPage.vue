@@ -115,7 +115,9 @@ import ContactSection from '@/components/ContactSection.vue'
     height: 100%;
     max-width: 40rem;
     max-height: 40rem;
-    aspect-ratio: 1 / 1;
+    @supports (aspect-ratio: 1 / 1) {
+      aspect-ratio: 1 / 1;
+    }
     @include dotted-bg;
     @include for-tablet-landscape-up {
       width: 40rem;
