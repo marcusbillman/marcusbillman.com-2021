@@ -42,7 +42,6 @@
 .menu {
   position: fixed;
   width: calc(100% - 3.2rem);
-  max-width: 60rem;
   right: 1.6rem;
   bottom: 8.8rem;
   display: grid;
@@ -90,6 +89,7 @@
     font-weight: 600;
   }
   @include for-tablet-landscape-up {
+    max-width: 60rem;
     top: 9.6rem;
     right: 3.2rem;
     bottom: unset;
