@@ -17,15 +17,15 @@
               <div class="form__fields">
                 <div class="form__field">
                   <label for="name">Your name</label>
-                  <input id="name" type="text" name="name" />
+                  <input id="name" type="text" name="name" required />
                 </div>
                 <div class="form__field">
                   <label for="email">Your email</label>
-                  <input id="email" type="email" name="email" />
+                  <input id="email" type="email" name="email" required />
                 </div>
                 <div class="form__field">
                   <label for="message">Message</label>
-                  <textarea id="message" name="message"></textarea>
+                  <textarea id="message" name="message" required></textarea>
                 </div>
               </div>
               <BaseButton type="submit">Send message</BaseButton>
