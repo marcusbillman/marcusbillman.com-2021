@@ -32,7 +32,12 @@ import Piano from '@/assets/illustration-piano.svg'
 import Switch from '@/assets/illustration-switch.svg'
 import { defineProps } from 'vue'
 
-defineProps(['name'])
+defineProps({
+  name: {
+    type: String,
+    required: true
+  }
+})
 </script>
 
 <style lang="scss" scoped></style>

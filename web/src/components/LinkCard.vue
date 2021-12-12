@@ -1,6 +1,6 @@
 <template>
   <a class="link-card" :href="href">
-    <BaseIcon :name="icon" size="32" />
+    <BaseIcon :name="icon" :size="32" />
     <div class="link-card__content">
       <span class="link-card__title">{{ title }}</span>
       <span class="link-card__desc">{{ desc }}</span>
@@ -13,7 +13,21 @@
 import BaseIcon from '@/components/BaseIcon.vue'
 import { defineProps } from 'vue'
 
-defineProps(['title', 'desc', 'href', 'icon'])
+defineProps({
+  title: {
+    type: String,
+    required: true
+  },
+  desc: String,
+  href: {
+    type: String,
+    required: true
+  },
+  icon: {
+    type: String,
+    default: 'link'
+  }
+})
 </script>
 
 <style lang="scss" scoped>

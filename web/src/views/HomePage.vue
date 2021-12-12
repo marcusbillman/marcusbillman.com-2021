@@ -34,7 +34,7 @@
             </svg>
           </div>
         </section>
-        <WorkSection featured-only="true" />
+        <WorkSection :featured-only="true" />
         <DribbbleSection />
         <SocialsSection />
         <ContactSection />

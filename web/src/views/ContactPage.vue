@@ -32,7 +32,7 @@
             </form>
           </div>
         </section>
-        <SocialsSection force-vertical="true" />
+        <SocialsSection :force-vertical="true" />
       </div>
     </div>
   </div>

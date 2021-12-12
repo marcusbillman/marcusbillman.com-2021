@@ -8,7 +8,7 @@
   >
     <div class="button__inner">
       <slot></slot>
-      <BaseIcon :name="icon || 'arrow-right'" />
+      <BaseIcon :name="icon" />
     </div>
   </component>
 </template>
@@ -17,7 +17,15 @@
 import BaseIcon from '@/components/BaseIcon.vue'
 import { defineProps } from 'vue'
 
-defineProps(['href', 'icon', 'variant', 'type'])
+defineProps({
+  href: String,
+  icon: {
+    type: String,
+    default: 'arrow-right'
+  },
+  variant: String,
+  type: String // For form submit button: <button type="submit" />
+})
 
 function getComponent(href, type) {
   if (type) {

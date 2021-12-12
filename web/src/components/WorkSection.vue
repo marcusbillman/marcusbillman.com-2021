@@ -21,7 +21,12 @@ import { defineProps } from 'vue'
 import { useStore } from 'vuex'
 
 const store = useStore()
-defineProps(['featuredOnly'])
+defineProps({
+  featuredOnly: {
+    type: Boolean,
+    default: false
+  }
+})
 </script>
 
 <style lang="scss" scoped>

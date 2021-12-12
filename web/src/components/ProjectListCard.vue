@@ -39,7 +39,20 @@ import BaseTag from '@/components/BaseTag.vue'
 import { defineProps } from 'vue'
 import { urlFor } from '@/utilities/sanityImageUrl.js'
 
-defineProps(['project', 'info-side', 'compact'])
+defineProps({
+  project: {
+    type: Object,
+    required: true
+  },
+  infoSide: {
+    type: String,
+    default: 'left'
+  },
+  compact: {
+    type: Boolean,
+    default: false
+  }
+})
 </script>
 
 <style lang="scss" scoped>

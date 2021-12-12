@@ -4,7 +4,7 @@
       v-if="project"
       :title="project.title"
       :description="project.description"
-      transparent="true"
+      :transparent="true"
     />
     <div class="sections">
       <section v-if="project" class="main-image section">

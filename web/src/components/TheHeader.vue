@@ -12,7 +12,17 @@
 <script setup>
 import { defineProps } from 'vue'
 
-defineProps(['title', 'description', 'transparent'])
+defineProps({
+  title: {
+    type: String,
+    required: true
+  },
+  description: String,
+  transparent: {
+    type: Boolean,
+    default: false
+  }
+})
 </script>
 
 <style lang="scss" scoped>

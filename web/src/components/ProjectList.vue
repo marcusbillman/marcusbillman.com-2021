@@ -16,7 +16,16 @@ import { computed, defineProps, toRefs } from 'vue'
 import { useStore } from 'vuex'
 
 const store = useStore()
-const props = defineProps(['compact', 'featuredOnly'])
+const props = defineProps({
+  compact: {
+    type: Boolean,
+    default: false
+  },
+  featuredOnly: {
+    type: Boolean,
+    default: false
+  }
+})
 
 // Read the featuredOnly prop and decide what projects to show
 const { featuredOnly } = toRefs(props)

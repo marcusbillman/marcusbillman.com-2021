@@ -8,7 +8,16 @@
 import { urlFor } from '@/utilities/sanityImageUrl.js'
 import { defineProps } from 'vue'
 
-defineProps(['asset', 'alt'])
+defineProps({
+  asset: {
+    type: Object,
+    required: true
+  },
+  alt: {
+    type: String,
+    default: ''
+  }
+})
 </script>
 
 <style lang="scss" scoped>

@@ -7,7 +7,12 @@
 <script setup>
 import { defineProps } from 'vue'
 
-defineProps(['text'])
+defineProps({
+  text: {
+    type: String,
+    required: true
+  }
+})
 </script>
 
 <style lang="scss" scoped>

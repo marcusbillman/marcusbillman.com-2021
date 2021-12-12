@@ -6,7 +6,7 @@
           <img :src="shot.images.hidpi" :alt="shot.title" class="shot__image" />
           <div class="shot__header">
             <h3 class="shot__title">{{ shot.title }}</h3>
-            <BaseIcon name="arrow-top-right" size="16" />
+            <BaseIcon name="arrow-top-right" :size="16" />
           </div>
         </a>
       </article>

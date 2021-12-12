@@ -27,7 +27,12 @@
 import LinkCard from '@/components/LinkCard.vue'
 import { defineProps } from 'vue'
 
-defineProps(['forceVertical'])
+defineProps({
+  forceVertical: {
+    type: Boolean,
+    default: false
+  }
+})
 </script>
 
 <style lang="scss" scoped>

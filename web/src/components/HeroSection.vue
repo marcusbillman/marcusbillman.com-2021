@@ -7,7 +7,7 @@
           <h1 class="hero__heading">
             Arranging links and shapes into melodies.
           </h1>
-          <BaseIcon name="arrow-down" size="32" />
+          <BaseIcon name="arrow-down" :size="32" />
         </div>
         <BaseIllustration name="bezier-curve" />
         <BaseIllustration name="browser" />

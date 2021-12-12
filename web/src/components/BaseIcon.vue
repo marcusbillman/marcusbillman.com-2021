@@ -2,8 +2,8 @@
   <!-- Icons from https://css.gg -->
   <svg
     class="icon"
-    :width="size || 24"
-    :height="size || 24"
+    :width="size"
+    :height="size"
     viewBox="0 0 24 24"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
@@ -119,7 +119,16 @@
 <script setup>
 import { defineProps } from 'vue'
 
-defineProps(['name', 'size'])
+defineProps({
+  name: {
+    type: String,
+    required: true
+  },
+  size: {
+    type: Number,
+    default: 24
+  }
+})
 </script>
 
 <style lang="scss" scoped>
