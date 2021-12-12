@@ -107,7 +107,7 @@ const serializers = {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @use "@/styles/breakpoints" as *;
 @use "@/styles/colours" as *;
 
@@ -122,46 +122,6 @@ const serializers = {
     height: 200vh;
     @include dotted-bg;
     z-index: -1;
-  }
-}
-
-.body {
-  p,
-  li,
-  h2 {
-    max-width: 80rem;
-  }
-  p,
-  ul,
-  li,
-  h2 {
-    padding: 0 1.6rem;
-    margin: 0 auto;
-    & + p,
-    & + ul,
-    & + h2 {
-      margin-top: 3.2rem;
-    }
-    & + li {
-      margin-top: 1.6rem;
-    }
-  }
-  h2 {
-    font-size: clamp(3rem, 6vw, 4rem);
-    font-weight: 700;
-  }
-  li {
-    display: flex;
-    &::before {
-      content: '•';
-      font-size: 1.5em;
-      line-height: 1;
-      color: $blueberry-500;
-      margin-right: 0.8rem;
-    }
-  }
-  .image-block:not(:last-child) {
-    margin: clamp(10rem, 20vh, 20rem) 0;
   }
 }
 
@@ -240,5 +200,51 @@ const serializers = {
 .next-project {
   display: grid;
   place-items: center;
+}
+</style>
+
+/* Case study content can't have scoped styles because it lives inside child
+components of the SanityBlocks component. */
+<style lang="scss">
+@use "@/styles/colours" as *;
+
+.body {
+  p,
+  li,
+  h2 {
+    max-width: 80rem;
+  }
+  p,
+  ul,
+  li,
+  h2 {
+    padding: 0 1.6rem;
+    margin: 0 auto;
+    & + p,
+    & + ul,
+    & + h2 {
+      margin-top: 3.2rem;
+    }
+    & + li {
+      margin-top: 1.6rem;
+    }
+  }
+  h2 {
+    font-size: clamp(3rem, 6vw, 4rem);
+    font-weight: 700;
+  }
+  li {
+    display: flex;
+    &::before {
+      content: '•';
+      font-size: 1.5em;
+      line-height: 1;
+      color: $blueberry-500;
+      margin-right: 0.8rem;
+    }
+  }
+  .image-block:not(:last-child) {
+    margin: clamp(10rem, 20vh, 20rem) 0;
+  }
 }
 </style>
