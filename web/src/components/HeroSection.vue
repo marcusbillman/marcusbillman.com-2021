@@ -173,7 +173,7 @@ onMounted(() => {
     }
   }
   &__name {
-    @include for-tablet-portrait-up {
+    @include for-tablet-landscape-up {
       display: none;
     }
   }
