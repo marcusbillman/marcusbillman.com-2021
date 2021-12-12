@@ -28,13 +28,9 @@ defineProps({
 })
 
 function getComponent(href, type) {
-  if (type) {
-    return 'button'
-  } else if (/^\/.*/.test(href)) {
-    return 'router-link'
-  } else {
-    return 'a'
-  }
+  if (type) return 'button'
+  if (href.startsWith('/')) return 'router-link'
+  return 'a'
 }
 </script>
 
