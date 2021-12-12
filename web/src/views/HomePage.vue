@@ -66,7 +66,8 @@ onMounted(() => {
     y: '-200%',
     duration: 0.5,
     delay: 1,
-    ease: 'power2.out'
+    ease: 'power2.out',
+    clearProps: 'transform'
   })
   gsap.from('.menu-button', {
     x: '200%',
