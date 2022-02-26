@@ -73,6 +73,7 @@
   border: 2px solid $grey-200;
   border-radius: 1.6rem;
   padding: 2.4rem;
+  overflow-y: auto;
   transform: translateX(calc(100% + 3.2rem));
   z-index: 101;
   transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
@@ -113,6 +114,7 @@
   }
   @include for-tablet-landscape-up {
     max-width: 60rem;
+    max-height: calc(100vh - 12rem);
     top: 9.6rem;
     right: 3.2rem;
     bottom: unset;
@@ -121,7 +123,7 @@
       display: block;
     }
     &__body {
-      margin: 15rem 0;
+      margin: 6.4rem 0;
     }
     &__socials {
       display: block;
