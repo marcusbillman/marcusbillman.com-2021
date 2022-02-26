@@ -244,7 +244,7 @@ components of the SanityBlocks component. */
     }
   }
   .image-block:not(:last-child) {
-    margin: clamp(10rem, 20vh, 20rem) 0;
+    margin: clamp(10rem, 15vw, 20rem) 0;
   }
 }
 </style>
