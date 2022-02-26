@@ -87,7 +87,7 @@
   h3 {
     display: none;
     font-weight: 600;
-    color: $grey-400;
+    color: $grey-600;
     margin-bottom: 4.8rem;
   }
   &__body {
@@ -106,7 +106,7 @@
     margin-bottom: 1.6rem;
   }
   .router-link-exact-active:not(&__name) {
-    font-weight: 500;
+    font-weight: 700;
     color: $blueberry-500;
   }
   &__name {
