@@ -2,6 +2,12 @@
   <section :class="{ 'socials--vertical': forceVertical }" class="socials">
     <div class="socials__content">
       <LinkCard
+        title="LinkedIn"
+        desc="marcusbillman"
+        href="https://www.linkedin.com/in/marcusbillman"
+        icon="user"
+      ></LinkCard>
+      <LinkCard
         title="Dribbble"
         desc="marcusbillman"
         href="https://dribbble.com/marcusbillman"
@@ -48,7 +54,7 @@ defineProps({
     gap: 2.4rem;
   }
   &:not(&--vertical) &__content {
-    @include for-tablet-landscape-up {
+    @include for-desktop-up {
       flex-direction: row;
       gap: 3.2rem;
     }

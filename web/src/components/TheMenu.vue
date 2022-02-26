@@ -5,6 +5,13 @@
       <div class="menu__socials">
         <h3>Socials</h3>
         <a
+          href="https://www.linkedin.com/in/marcusbillman"
+          class="menu__social-link"
+          target="_blank"
+          rel="noopener noreferrer"
+          >LinkedIn</a
+        >
+        <a
           href="https://dribbble.com/marcusbillman"
           class="menu__social-link"
           target="_blank"

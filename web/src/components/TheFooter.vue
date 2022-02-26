@@ -6,6 +6,13 @@
         <div class="footer__navigation">
           <a
             class="footer__link"
+            href="https://www.linkedin.com/in/marcusbillman"
+            target="_blank"
+            rel="noopener noreferrer"
+            >LinkedIn</a
+          >
+          <a
+            class="footer__link"
             href="https://dribbble.com/marcusbillman"
             target="_blank"
             rel="noopener noreferrer"
