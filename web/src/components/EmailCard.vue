@@ -8,7 +8,12 @@
         <BaseIcon name="copy" />
         <span>{{ copyLinkText }}</span>
       </a>
-      <a class="icon-link" href="mailto:hello@marcusbillman.com">
+      <a
+        class="icon-link"
+        href="mailto:hello@marcusbillman.com"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <BaseIcon name="arrow-top-right" />
         <span>Open email app</span>
       </a>

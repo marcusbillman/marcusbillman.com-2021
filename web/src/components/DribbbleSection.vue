@@ -2,7 +2,12 @@
   <section class="dribbble">
     <div class="dribbble__container container container--wide">
       <article v-for="shot in shots" :key="shot.id" class="shot">
-        <a :href="shot.html_url" class="shot__link-wrapper">
+        <a
+          :href="shot.html_url"
+          class="shot__link-wrapper"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <img :src="shot.images.hidpi" :alt="shot.title" class="shot__image" />
           <div class="shot__header">
             <h3 class="shot__title">{{ shot.title }}</h3>

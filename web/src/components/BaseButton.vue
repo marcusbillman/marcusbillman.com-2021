@@ -5,6 +5,8 @@
     :class="variant ? `button--${variant}` : ''"
     :href="href"
     :to="href"
+    target="_blank"
+    rel="noopener noreferrer"
   >
     <div class="button__inner">
       <slot></slot>

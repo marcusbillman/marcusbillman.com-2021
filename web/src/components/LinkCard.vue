@@ -1,5 +1,5 @@
 <template>
-  <a class="link-card" :href="href">
+  <a class="link-card" :href="href" target="_blank" rel="noopener noreferrer">
     <BaseIcon :name="icon" :size="32" />
     <div class="link-card__content">
       <span class="link-card__title">{{ title }}</span>

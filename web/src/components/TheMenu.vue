@@ -4,16 +4,32 @@
     <div class="menu__body">
       <div class="menu__socials">
         <h3>Socials</h3>
-        <a href="https://dribbble.com/marcusbillman" class="menu__social-link"
+        <a
+          href="https://dribbble.com/marcusbillman"
+          class="menu__social-link"
+          target="_blank"
+          rel="noopener noreferrer"
           >Dribbble</a
         >
-        <a href="https://github.com/marcusbillman" class="menu__social-link"
+        <a
+          href="https://github.com/marcusbillman"
+          class="menu__social-link"
+          target="_blank"
+          rel="noopener noreferrer"
           >GitHub</a
         >
-        <a href="https://soundcloud.com/xfoxx37" class="menu__social-link"
+        <a
+          href="https://soundcloud.com/xfoxx37"
+          class="menu__social-link"
+          target="_blank"
+          rel="noopener noreferrer"
           >SoundCloud</a
         >
-        <a href="mailto:hello@marcusbillman.com" class="menu__social-link"
+        <a
+          href="mailto:hello@marcusbillman.com"
+          class="menu__social-link"
+          target="_blank"
+          rel="noopener noreferrer"
           >Email</a
         >
       </div>
