@@ -90,11 +90,6 @@
     color: $grey-600;
     margin-bottom: 4.8rem;
   }
-  &__body {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    gap: 10rem;
-  }
   &__socials {
     display: none;
   }
@@ -123,6 +118,9 @@
       display: block;
     }
     &__body {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 10rem;
       margin: 6.4rem 0;
     }
     &__socials {
