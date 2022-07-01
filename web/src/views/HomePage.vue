@@ -57,24 +57,33 @@ import gsap from 'gsap'
 onMounted(() => {
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
 
-  gsap.from('.bio__ruler-border', {
-    opacity: 0,
-    duration: 1,
-    delay: 1
-  })
-  gsap.from('.navbar', {
-    y: '-200%',
-    duration: 0.5,
-    delay: 1,
-    ease: 'power2.out',
-    clearProps: 'transform'
-  })
-  gsap.from('.menu-button', {
-    x: '200%',
-    duration: 0.5,
-    delay: 1.2,
-    ease: 'power2.out'
-  })
+  gsap
+    .timeline({
+      defaults: {
+        duration: 0.5,
+        ease: 'power2.out'
+      },
+      delay: 1
+    })
+    .from('.bio__ruler-border', {
+      opacity: 0,
+      y: -50,
+      duration: 1
+    })
+    .from(
+      '.navbar',
+      {
+        opacity: 0
+      },
+      '<0.5'
+    )
+    .from(
+      '.menu-button',
+      {
+        opacity: 0
+      },
+      '<0.3'
+    )
 })
 </script>
 
