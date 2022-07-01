@@ -43,8 +43,9 @@ onMounted(() => {
     .timeline({
       defaults: {
         duration: 1,
-        ease: 'power2.out'
-      }
+        ease: 'power4.out'
+      },
+      delay: 0.2
     })
     .from('.hero', {
       scale: 0,
