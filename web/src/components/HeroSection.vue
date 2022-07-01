@@ -47,7 +47,8 @@ onMounted(() => {
       }
     })
     .from('.hero', {
-      scale: 0
+      scale: 0,
+      clearProps: 'all'
     })
     .from(
       '.hero__main span',
