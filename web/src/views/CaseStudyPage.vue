@@ -8,7 +8,10 @@
     />
     <div class="sections">
       <section v-if="project" class="main-image section">
-        <BlockImage :asset="project.mainImage" :alt="project.title" />
+        <BlockImage
+          :asset="project.mainImage"
+          :alt="project.mainImage.alt || project.title"
+        />
       </section>
       <section v-if="project" class="body section">
         <SanityBlocks :blocks="project.body" :serializers="serializers" />
