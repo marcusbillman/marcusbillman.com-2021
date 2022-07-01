@@ -1,7 +1,7 @@
 <template>
   <footer class="footer">
     <div class="container footer__inner">
-      <p class="footer__name">Marcus Billman</p>
+      <router-link class="footer__name" to="/">Marcus Billman</router-link>
       <div class="footer__links">
         <div class="footer__navigation">
           <a
@@ -68,7 +68,9 @@
 
   // Name (left on desktop)
   &__name {
+    font-size: clamp(2rem, 3vw, 2.4rem);
     font-weight: 500;
+    text-decoration: none;
   }
 
   // Links (right on desktop)
