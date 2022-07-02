@@ -21,11 +21,22 @@ import TheNavbar from '@/components/TheNavbar.vue'
 import { ref, watch } from 'vue'
 import { useRoute } from 'vue-router'
 import { useStore } from 'vuex'
+import Plausible from 'plausible-tracker'
 
 const route = useRoute()
 const store = useStore()
 
 store.dispatch('fetchContent')
+
+// Plausible Analytics
+
+const plausible = Plausible({
+  domain: 'marcusbillman.com',
+  apiHost: 'https://analytics.marcusbillman.com'
+})
+plausible.enableAutoPageviews()
+
+store.commit('setPlausible', plausible)
 
 // Skip link
 

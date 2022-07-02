@@ -5,7 +5,8 @@ const store = createStore({
   state() {
     return {
       projects: [],
-      menuOpen: false
+      menuOpen: false,
+      plausible: null
     }
   },
   actions: {
@@ -58,6 +59,9 @@ const store = createStore({
     },
     toggleMenuOpen(state) {
       state.menuOpen = !state.menuOpen
+    },
+    setPlausible(state, value) {
+      state.plausible = value
     }
   }
 })
