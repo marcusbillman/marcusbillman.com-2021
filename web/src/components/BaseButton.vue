@@ -1,11 +1,11 @@
 <template>
   <component
-    :is="getComponent(href, type)"
+    :is="component"
     class="button"
     :class="variant ? `button--${variant}` : ''"
     :href="href"
     :to="href"
-    target="_blank"
+    :target="component === 'a' ? '_blank' : ''"
     rel="noopener noreferrer"
   >
     <div class="button__inner">
@@ -17,9 +17,9 @@
 
 <script setup>
 import BaseIcon from '@/components/BaseIcon.vue'
-import { defineProps } from 'vue'
+import { computed, defineProps } from 'vue'
 
-defineProps({
+const props = defineProps({
   href: String,
   icon: {
     type: String,
@@ -29,11 +29,11 @@ defineProps({
   type: String // For form submit button: <button type="submit" />
 })
 
-function getComponent(href, type) {
-  if (type) return 'button'
-  if (href.startsWith('/')) return 'router-link'
+const component = computed(() => {
+  if (props.type) return 'button'
+  if (props.href.startsWith('/')) return 'router-link'
   return 'a'
-}
+})
 </script>
 
 <style lang="scss" scoped>
