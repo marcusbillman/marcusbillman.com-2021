@@ -237,9 +237,11 @@ components of the SanityBlocks component. */
     font-weight: 700;
   }
   li {
-    display: flex;
+    list-style: none;
     &::before {
       content: '•';
+      display: inline;
+      vertical-align: top;
       font-size: 1.5em;
       line-height: 1;
       color: $blueberry-500;
