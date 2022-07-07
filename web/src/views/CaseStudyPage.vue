@@ -54,13 +54,13 @@
             </div>
             <div class="info__links">
               <BaseButton
-                v-if="project.primaryLink.url && project.primaryLink.text"
+                v-if="project.primaryLink?.url && project.primaryLink?.text"
                 :href="project.primaryLink.url"
                 icon="arrow-top-right"
                 >{{ project.primaryLink.text }}</BaseButton
               >
               <BaseButton
-                v-if="project.secondaryLink.url && project.secondaryLink.text"
+                v-if="project.secondaryLink?.url && project.secondaryLink?.text"
                 :href="project.secondaryLink.url"
                 icon="arrow-top-right"
                 variant="secondary"
