@@ -72,6 +72,10 @@ button:hover {
   overflow-x: hidden;
 }
 
+#main {
+  min-height: 100vh;
+}
+
 .skip-link {
   position: absolute;
   top: 3.2rem;
