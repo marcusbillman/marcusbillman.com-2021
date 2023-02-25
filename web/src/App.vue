@@ -21,22 +21,17 @@ import TheNavbar from '@/components/TheNavbar.vue'
 import { ref, watch } from 'vue'
 import { useRoute } from 'vue-router'
 import { useStore } from 'vuex'
-import Plausible from 'plausible-tracker'
+import { inject } from '@vercel/analytics'
 
 const route = useRoute()
 const store = useStore()
 
 store.dispatch('fetchContent')
 
-// Plausible Analytics
-
-const plausible = Plausible({
-  domain: 'marcusbillman.com',
-  apiHost: 'https://analytics.marcusbillman.com'
+// Audiences in Vercel Analytics
+inject({
+  mode: process.env.NODE_ENV
 })
-plausible.enableAutoPageviews()
-
-store.commit('setPlausible', plausible)
 
 // Skip link
 
