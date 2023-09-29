@@ -51,10 +51,7 @@ export default {
         {
           name: 'alt',
           type: 'string',
-          title: 'Alt text',
-          options: {
-            isHighlighted: true
-          }
+          title: 'Alt text'
         }
       ],
       validation: (Rule) => Rule.required()
@@ -76,10 +73,7 @@ export default {
             {
               name: 'caption',
               type: 'string',
-              title: 'Caption / Alt text',
-              options: {
-                isHighlighted: true
-              }
+              title: 'Caption / Alt text'
             }
           ]
         }
