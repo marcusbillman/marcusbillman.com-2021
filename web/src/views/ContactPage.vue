@@ -12,8 +12,11 @@
           </div>
           <div class="contact-methods__form-wrapper">
             <p class="contact-methods__heading">...or use this nifty form.</p>
-            <form class="form" method="post" name="contact" netlify>
-              <input type="hidden" name="form-name" value="contact" />
+            <form
+              class="form"
+              action="https://formspree.io/f/xnqkojbe"
+              method="POST"
+            >
               <div class="form__fields">
                 <div class="form__field">
                   <label for="name">Your name</label>
