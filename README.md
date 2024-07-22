@@ -1,17 +1,20 @@
-# marcusbillman.com
+# marcusbillman.com (2021)
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/a356e4ba-4f3a-4af9-b518-5005f42fb830/deploy-status)](https://app.netlify.com/sites/keen-bhabha-0efbc3/deploys) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
-My personal website and portfolio, hosted at [marcusbillman.com](https://marcusbillman.com). This monorepo contains both the front-end web application and the Studio application where I can edit the website's cloud-hosted data.
+> [!NOTE]  
+> **I have rebuilt my website and this repo is for the old one that is no longer maintained.** Check out the [new repo](https://github.com/marcusbillman/marcusbillman.com-2024) or the [new live site](https://marcusbillman.com). For the time being, the old one is still available at [old.marcusbillman.com](https://old.marcusbillman.com), with all its content frozen in time.
+
+My previous personal website and portfolio, hosted at [old.marcusbillman.com](https://old.marcusbillman.com). This monorepo contains both the front-end web application and the Sanity Studio application where I can edit the website's cloud-hosted data.
 
 ## Built with
 
-These are some of the nifty technologies I've used:
+These are some of the technologies powering the site:
 
 - [Vue](https://vuejs.org/)
-- [Vite](https://vitejs.dev/)
+- [GSAP](https://gsap.com/)
 - [Sanity](https://www.sanity.io)
-- [Netlify](https://www.netlify.com/)
+- [Vercel](https://www.vercel.com/)
 
 ## Code style
 
